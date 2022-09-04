@@ -3,26 +3,31 @@ html {
 }
 
 body {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: [header] 200px [main] auto [footer] 200px;
   min-height: 100vh;
   overflow-x: hidden;
 }
 
 /* Layout */
 
-header {
-  background: green;
+article {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: [header] auto [main] 1fr [footer] auto;
+  min-height: 100vh;
+
+  main {
+    display: grid;
+     justify-items: center;
+
+    section {
+    max-width: var(--content-width);
+    padding: var(--content-padding);
+    width: 100%;
+    }
+  }
 }
 
-main {
-  background: red;
-}
 
-footer {
-  background: grey;
-}
 
 /* froala editor css */
 

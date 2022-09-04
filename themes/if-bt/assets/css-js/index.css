@@ -75,24 +75,25 @@ html {
 }
 
 body {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: [header] 200px [main] auto [footer] 200px;
   min-height: 100vh;
   overflow-x: hidden;
 }
 
 /* Layout */
-header {
-  background: green;
+article {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: [header] auto [main] 1fr [footer] auto;
+  min-height: 100vh;
 }
-
-main {
-  background: red;
+article main {
+  display: grid;
+  justify-items: center;
 }
-
-footer {
-  background: grey;
+article main section {
+  max-width: var(--content-width);
+  padding: var(--content-padding);
+  width: 100%;
 }
 
 /* froala editor css */
@@ -555,6 +556,54 @@ a.imglink:hover > img, a.imglink:hover > picture {
   padding-left: 0px;
 }
 
+footer {
+  background: var(--beige);
+  display: grid;
+  place-items: center;
+}
+footer section {
+  border: 1px solid red;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  max-width: var(--content-width);
+  padding: var(--content-padding);
+  width: 100%;
+}
+footer section div {
+  border: 1px solid red;
+  flex-shrink: 1;
+  max-width: calc(var(--content-width) / 3);
+  width: 100%;
+}
+footer section div a {
+  text-decoration: none;
+}
+footer section div a:hover, footer section div a:active, footer section div a:focus {
+  text-decoration: underline !important;
+}
+footer section div .fas, footer section div .far {
+  width: 1.5rem;
+}
+footer section div .contact {
+  background-color: #79aca6;
+  color: white;
+}
+footer section div .contact a, footer section div .contact a:hover, footer section div .contact a:visited, footer section div .contact a:focus, footer section div .contact a:active {
+  color: white;
+  text-decoration: underline;
+}
+footer section div .contact h3, footer section div .contact .h3 {
+  padding: 0;
+}
+footer section div .contact img {
+  border: 1px solid white;
+  filter: grayscale(10);
+}
+footer section div .contact img:hover {
+  filter: grayscale(0);
+}
+
 .gallery {
   /*
   	100% Height for Opera as the max-height seems to be ignored, not optimal for large screens
@@ -703,6 +752,128 @@ a.imglink:hover > img, a.imglink:hover > picture {
   height: 100%;
 }
 
+header {
+  background: var(--grey);
+  display: grid;
+  place-items: center;
+}
+header nav {
+  max-width: var(--content-width);
+  padding: var(--content-padding);
+  width: 100%;
+}
+header nav .mainnav .active a,
+header nav .mainnav a:hover {
+  color: #81050c;
+}
+header nav .navbar {
+  background: white;
+  border-bottom: 0px solid #ffffff;
+  transition: top 0.3s;
+}
+header nav .navbar .container-fluid, header nav .navbar .container-xxl, header nav .navbar .container-xl, header nav .navbar .container-lg, header nav .navbar .container-md, header nav .navbar .container-sm {
+  padding: 0 0.5rem 0 0.75rem;
+}
+header nav .navbar .navbar-toggler {
+  right: 10px !important;
+}
+header nav .navbar .navbar-toggler span {
+  color: #333333;
+}
+header nav .search-btn i {
+  color: #333333;
+}
+header nav ul {
+  margin-right: 1rem;
+}
+header nav ul li.active {
+  font-weight: 600;
+}
+header nav ul li a {
+  background-color: transparent !important;
+  color: #333333;
+  text-decoration: none;
+}
+header nav ul li a :hover {
+  color: #81050c;
+}
+header nav ul li div, header nav ul li ul {
+  background-color: white !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+header nav ul li div a,
+header nav ul li div a.active,
+header nav ul li div a :active {
+  color: #333333 !important;
+}
+header nav ul li div a:hover {
+  color: #81050c !important;
+}
+
+/* ////// Logo /////////// */
+header .logo {
+  display: block;
+}
+header #logo {
+  height: 75px;
+  width: 320px;
+}
+header .logo-small {
+  display: none;
+}
+header #logo-small {
+  height: 75px;
+  width: 170px;
+}
+
+@media only screen and (min-width: 1px) and (max-width: 310px) {
+  header .navbar {
+    padding-right: 0;
+  }
+
+  header .container-fluid, header .container-xxl, header .container-xl, header .container-lg, header .container-md, header .container-sm {
+    padding: 0 0 0 0;
+  }
+
+  header #languageselect {
+    display: none;
+  }
+
+  .logo {
+    display: none !important;
+  }
+
+  .logo-small {
+    display: block !important;
+  }
+
+  #logo-small {
+    height: 60px;
+    width: 140px;
+  }
+}
+@media only screen and (min-width: 311px) and (max-width: 576px) {
+  header .navbar {
+    padding-right: 0;
+  }
+
+  header .container-fluid, header .container-xxl, header .container-xl, header .container-lg, header .container-md, header .container-sm {
+    padding: 0 0 0 0;
+  }
+
+  header #languageselect {
+    display: none;
+  }
+
+  .logo {
+    display: none !important;
+  }
+
+  .logo-small {
+    display: block !important;
+  }
+}
 .svg-inline--fa {
   width: 1rem;
   height: 1rem;

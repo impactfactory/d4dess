@@ -7,7 +7,7 @@ default = 0
 [staticMenu]
 code = "main"
 
-[cookiesBar]
+
 
 [localePicker]
 forceUrl = 1
@@ -28,29 +28,29 @@ forceUrl = 1
   {% component 'seoTags' %}
 {# end head #}
 <body class="page-{{ this.page.id }} layout-{{ this.page.layout }}">
+<article>
 
         <header>
             {% partial 'html_body/header' %}
         </header>
 
         <main>
-          
+          <section>
             {% page %}
-        
+          </section>
         </main>
 
         <footer>
-              {% partial 'html_body/endlinks' %}
-              {% partial 'html_body/byline' %}
+              {% partial 'html_body/footer' %}
         </footer>
 
 
 
       {% partial 'html_body/contactbox' %}
 
-      {% component 'cookiesBar' %}
+  
 
-      
+ </article>     
       {% placeholder json ignore=true %}
 
       {% partial 'html_body/scripts' %}

@@ -1,4 +1,13 @@
 header {
+  background: var(--grey);
+  display: grid;
+   place-items: center;
+
+   nav {
+    max-width: var(--content-width);
+    padding: var(--content-padding);
+    width: 100%;
+
 
   .mainnav .active a,
   .mainnav a:hover {
@@ -64,6 +73,7 @@ header {
          }
     }
   }
+}
 }
 
 /* ////// Logo /////////// */

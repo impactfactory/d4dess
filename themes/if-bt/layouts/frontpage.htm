@@ -21,10 +21,6 @@ forceUrl = 1
 [viewBag]
 ==
 <?php
-function onStart()
-{
-    
-}
 ?>
 ==
 
@@ -33,26 +29,22 @@ function onStart()
 {# end head #}
 <body class="page-{{ this.page.id }} layout-{{ this.page.layout }}">
 
-      <div>
-
         <header>
             {% partial 'html_body/header' %}
         </header>
 
         <main>
-          <div>
+          
             {% page %}
-          </div>
+        
         </main>
 
         <footer>
-          <section>
               {% partial 'html_body/endlinks' %}
               {% partial 'html_body/byline' %}
-          </section>
         </footer>
 
-      </div>
+
 
       {% partial 'html_body/contactbox' %}
 

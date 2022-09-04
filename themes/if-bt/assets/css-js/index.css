@@ -58,6 +58,10 @@
 :root .primary {
   color: rgb(var(--primary));
 }
+:root .placeitemscenter {
+  display: grid;
+  place-items: center;
+}
 
 /* primary */
 /* secondary */
@@ -71,35 +75,24 @@ html {
 }
 
 body {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: [header] 200px [main] auto [footer] 200px;
+  min-height: 100vh;
   overflow-x: hidden;
 }
 
-body:not(.user-is-tabbing) .btn-check:focus,
-body:not(.user-is-tabbing) .btn-primary:focus,
-body:not(.user-is-tabbing) .btn-secondary:focus,
-body:not(.user-is-tabbing) .accordion-button:focus,
-body:not(.user-is-tabbing) input:focus,
-body:not(.user-is-tabbing) select:focus,
-body:not(.user-is-tabbing) textarea:focus {
-  outline: none !important;
-  box-shadow: none;
+/* Layout */
+header {
+  background: green;
 }
 
-/* vertical space because navbar component is doing something strange ???
-.layout-frontpage .topmargin {
-  height:90px;
-  width:100%;
+main {
+  background: red;
 }
 
-.layout-default .topmargin {
-  height:90px;
-  width:100%;
-}
-*/
-/* lazy man centering where needed :) */
-.placeitemscenter {
-  display: grid;
-  place-items: center;
+footer {
+  background: grey;
 }
 
 /* froala editor css */
@@ -266,16 +259,6 @@ a.imglink:hover > img, a.imglink:hover > picture {
 }
 .tpl-primary-light .card .text-muted, .tpl-primary-light .card h1 + h2, .tpl-primary-light .card .h1 + h2, .tpl-primary-light .card h1 + .h2, .tpl-primary-light .card .h1 + .h2, .tpl-primary-light .card .layout-frontpage .textpic h1 + h3.card-title, .layout-frontpage .textpic .tpl-primary-light .card h1 + h3.card-title, .tpl-primary-light .card .layout-frontpage .textpic .h1 + h3.card-title, .layout-frontpage .textpic .tpl-primary-light .card .h1 + h3.card-title, .tpl-primary-light .card .layout-frontpage .textpic h1 + .card-title.h3, .layout-frontpage .textpic .tpl-primary-light .card h1 + .card-title.h3, .tpl-primary-light .card .layout-frontpage .textpic .h1 + .card-title.h3, .layout-frontpage .textpic .tpl-primary-light .card .h1 + .card-title.h3 {
   color: rgba(255, 255, 255, 0.5) !important;
-}
-
-blockquote {
-  border-left: 6px dotted #79aca6;
-  color: #79aca6;
-  display: block !important;
-  font-size: 18px !important;
-  font-style: italic;
-  margin: 2rem 0 2rem 6rem !important;
-  padding: 1rem 0 1rem 2rem;
 }
 
 .postdetail {
@@ -572,94 +555,6 @@ blockquote {
   padding-left: 0px;
 }
 
-footer {
-  /*
-    .deeplinks {
-      background-color: $if-secondary;
-      color: $if-white;
-
-      a, a:visited, a:focus, a:active {
-        color: $if-white!important;
-        text-decoration:none;
-      }
-
-      .footer-text {
-        padding-right: 2.5rem;
-      }
-
-      .posts-list {
-        border-left: 1px solid $if-white-50;
-        //padding-left: 1.5rem;
-      }
-
-      li {
-        line-height:1rem;
-        background: rgba(255,255,255,0.2);
-        border-radius: 4px;
-        padding: 0px 3px 0px 0px;
-
-        .thumb {
-          margin: 0 20px 0px 0;
-
-          img {
-            border-radius:4px 0 0 4px;
-          }
-        }
-
-        .title {
-          position: relative;
-          top: 4px;
-        }
-      }
-
-    li:hover {
-      background: $if-primary;//rgba(255,255,255,0.5);
-
-      a {
-        text-decoration: none!important;
-      }
-    }
-  }
-  */
-}
-footer a {
-  text-decoration: none;
-}
-footer a:hover, footer a:active, footer a:focus {
-  text-decoration: underline !important;
-}
-footer .fas, footer .far {
-  width: 1.5rem;
-}
-footer .contact {
-  background-color: #79aca6;
-  color: white;
-}
-footer .contact a, footer .contact a:hover, footer .contact a:visited, footer .contact a:focus, footer .contact a:active {
-  color: white;
-  text-decoration: underline;
-}
-footer .contact h3, footer .contact .h3 {
-  padding: 0;
-}
-footer .contact img {
-  border: 1px solid white;
-  filter: grayscale(10);
-}
-footer .contact img:hover {
-  filter: grayscale(0);
-}
-footer .endlinks {
-  background-color: #50726e;
-  color: white;
-}
-footer .endlinks a {
-  color: white !important;
-}
-footer .byline {
-  font-size: 10px;
-}
-
 .gallery {
   /*
   	100% Height for Opera as the max-height seems to be ignored, not optimal for large screens
@@ -808,118 +703,6 @@ footer .byline {
   height: 100%;
 }
 
-header .mainnav .active a,
-header .mainnav a:hover {
-  color: #81050c;
-}
-header .navbar {
-  background: white;
-  border-bottom: 0px solid #ffffff;
-  transition: top 0.3s;
-}
-header .navbar .container-fluid, header .navbar .container-xxl, header .navbar .container-xl, header .navbar .container-lg, header .navbar .container-md, header .navbar .container-sm {
-  padding: 0 0.5rem 0 0.75rem;
-}
-header .navbar .navbar-toggler {
-  right: 10px !important;
-}
-header .navbar .navbar-toggler span {
-  color: #333333;
-}
-header .search-btn i {
-  color: #333333;
-}
-header ul {
-  margin-right: 1rem;
-}
-header ul li.active {
-  font-weight: 600;
-}
-header ul li a {
-  background-color: transparent !important;
-  color: #333333;
-  text-decoration: none;
-}
-header ul li a :hover {
-  color: #81050c;
-}
-header ul li div, header ul li ul {
-  background-color: white !important;
-  border: none !important;
-  box-shadow: none !important;
-}
-header ul li div a,
-header ul li div a.active,
-header ul li div a :active {
-  color: #333333 !important;
-}
-header ul li div a:hover {
-  color: #81050c !important;
-}
-
-/* ////// Logo /////////// */
-header .logo {
-  display: block;
-}
-header #logo {
-  height: 75px;
-  width: 320px;
-}
-header .logo-small {
-  display: none;
-}
-header #logo-small {
-  height: 75px;
-  width: 170px;
-}
-
-@media only screen and (min-width: 1px) and (max-width: 310px) {
-  header .navbar {
-    padding-right: 0;
-  }
-
-  header .container-fluid, header .container-xxl, header .container-xl, header .container-lg, header .container-md, header .container-sm {
-    padding: 0 0 0 0;
-  }
-
-  header #languageselect {
-    display: none;
-  }
-
-  .logo {
-    display: none !important;
-  }
-
-  .logo-small {
-    display: block !important;
-  }
-
-  #logo-small {
-    height: 60px;
-    width: 140px;
-  }
-}
-@media only screen and (min-width: 311px) and (max-width: 576px) {
-  header .navbar {
-    padding-right: 0;
-  }
-
-  header .container-fluid, header .container-xxl, header .container-xl, header .container-lg, header .container-md, header .container-sm {
-    padding: 0 0 0 0;
-  }
-
-  header #languageselect {
-    display: none;
-  }
-
-  .logo {
-    display: none !important;
-  }
-
-  .logo-small {
-    display: block !important;
-  }
-}
 .svg-inline--fa {
   width: 1rem;
   height: 1rem;

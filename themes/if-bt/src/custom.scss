@@ -16,7 +16,7 @@
 
 //////////////// components imports //////////////////////
 
-//@import "partials/blockquotes.scss";
+@import "partials/buttons.scss";
 //@import "partials/clientinfo.scss";
 @import "partials/contactbox.scss";
 //@import "partials/contactsection.scss";
@@ -25,8 +25,8 @@
 ////@import "partials/elements-keyvisuals.scss";
 //@import "partials/elements-listblocks.scss";
 //@import "partials/elements-tabs.scss";
-@import "partials/elements-textpics.scss";
-@import "partials/elements-textvideos.scss";
+//@import "partials/elements-textpics.scss";
+//@import "partials/elements-textvideos.scss";
 //@import "partials/elements-toasts.scss";
 @import "partials/faq.scss";
 @import "partials/faq-faqcategory.scss";
@@ -36,6 +36,7 @@
 @import "partials/header.scss";
 @import "partials/icons.scss";
 @import "partials/languageswitch.scss";
+@import "partials/normalize.scss";
 @import "partials/map-snippet.scss";
 @import "partials/medicosearch-widget.scss";
 @import "partials/pagetitle.scss";
@@ -56,13 +57,13 @@
 // see bootsrap base file for details; unused modules are commented out
 // same with javascript modules
 
-@import "../node_modules/bootstrap/scss/bootstrap";
+//@import "../node_modules/bootstrap/scss/bootstrap";
 
 ///////////////// extending classes ////////////////////////
 //we make our life easier and extend some global elements with already existing for this projects
 //- f.e. indent x-dimension with the class, but adapt y-dimension locally
 
-@import "partials/globals-extensions.scss";
+//@import "partials/globals-extensions.scss";
 
 //////////////// print ////////////////////////
 //at the very end of all we can do the print adaptions, thats reducing some loading time

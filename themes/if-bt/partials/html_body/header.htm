@@ -1,27 +1,49 @@
-[viewBag] 
-
+[staticMenu mainMenu]
+code = "main"
 ==
-
-<nav>
-  <div style="width:200px;">
-    <a
-      class="navbar-brand logo"
-      href="/{{ localePicker.activeLocale }}"
-      title="Home"
-    >
-      {% partial
-      'html_body/svg-icons/logo-de' %} 
-    </a>
-  </div>
-
-   
-
-
-   <div>
-      {% partial 'html_body/mainnav' %} 
-      
-      {% partial 'html_body/languageswitcher'
-      %}
+<header>
+  <section>
+    <div id="logo" style="width: 300px">
+      <a class="logo" href="/{{ localePicker.activeLocale }}" title="Home">
+      {% partial 'html_body/svg-icons/logo-de' %} 
+      </a>   
     </div>
 
-</nav>
+    <input id="menu-toggle" type="checkbox" />
+    <label class='menu-button-container' for="menu-toggle">
+      <div class='menu-button'></div>
+    </label>
+
+    <ul class="menu">
+    {% for item in mainMenu.menuItems %}
+      <li>
+        <a title="{{ item.title }}" 
+           class="" 
+           href="/{{ item.url }}"
+           onclick="hideMenu()">
+           {{ item.title }}
+        </a>
+      </li>
+    {% endfor %}
+    </ul>
+
+  </section>
+</header>
+
+
+
+<!--
+
+ {% partial 'html_body/languageswitcher'%}
+ 
+
+-->
+
+{% put scripts %}
+  <script>
+    function hideMenu() {
+      const checkbox = document.getElementById('menu-toggle');
+      checkbox.click();
+    }
+  </script>
+{% endput %}

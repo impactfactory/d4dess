@@ -1,6 +1,7 @@
 ///////////////// variable overrides ///////////
 //first we define some project variabels and override some cherrypicked variables of bootstrap
 
+@import "partials/normalize.scss";
 @import "partials/variables.scss";
 
 ///////////////// map some bootstrap variables to my own theme variables ////////////////////////
@@ -36,7 +37,7 @@
 @import "partials/header.scss";
 @import "partials/icons.scss";
 @import "partials/languageswitch.scss";
-@import "partials/normalize.scss";
+@import "partials/main.scss";
 @import "partials/map-snippet.scss";
 @import "partials/medicosearch-widget.scss";
 @import "partials/pagetitle.scss";

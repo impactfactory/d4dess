@@ -1,6 +1,7 @@
 footer {
-  background: var(--beige);
+  background: rgb(var(--beige));
   display: grid;
+   grid-template-rows: 500px;
    place-items: center;
 
   section {

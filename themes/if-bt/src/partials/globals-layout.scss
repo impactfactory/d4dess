@@ -11,20 +11,9 @@ body {
 
 article {
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: [header] auto [main] 1fr [footer] auto;
+   grid-template-columns: 1fr;
+   grid-template-rows: [header] auto [main] 1fr [footer] auto;
   min-height: 100vh;
-
-  main {
-    display: grid;
-     justify-items: center;
-
-    section {
-    max-width: var(--content-width);
-    padding: var(--content-padding);
-    width: 100%;
-    }
-  }
 }
 
 

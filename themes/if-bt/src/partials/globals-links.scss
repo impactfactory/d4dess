@@ -16,7 +16,7 @@ li {
 
 
 a.imglink:hover {
-  background-color: $if-primary;
+  background-color: var(--primary);
   display:block;
   border-radius: 8px;
 }

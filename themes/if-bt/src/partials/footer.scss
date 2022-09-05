@@ -5,23 +5,43 @@ footer {
 
   section {
     border: 1px solid red;
-   display: flex;
-    align-items: stretch;
-    justify-content: space-between;
-    
-   max-width: var(--content-width);
-   padding: var(--content-padding);
-   width: 100%;
+    display: grid;
+     grid-template-columns: 1fr;
+    max-width: var(--content-width);
+    padding: var(--content-padding);
+    width: 100%;
 
 
    div {
     border: 1px solid red;
-    flex-shrink: 1;
-    max-width: calc(var(--content-width)/3);
-    width: 100%;
+    }
+  }
+}
+
+@media only screen and (min-width: 576px) {
+  footer section {
+    grid-template-columns: repeat(2, 1fr);
+
+    div:nth-child(3) {
+      grid-column: 1 / 4;
+      padding: 0 3rem 0 3rem;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  footer section {
+    grid-template-columns: repeat(3, 1fr);
+
+    div:nth-child(3) {
+      grid-column: 3 / 4;
+      padding: 0;
+    }
+  }
+}
  
    
-
+/*
   a {
     text-decoration: none;
   }
@@ -34,18 +54,18 @@ footer {
 
 
   .contact {
-    background-color: $if-secondary-dark;
-    color: $if-white;
+    background-color: var(--secondary);
+    color: var(--white);
 
     a, a:hover, a:visited, a:focus, a:active {
-      color: $if-white;
+      color: var(--white);
       text-decoration:underline;
     }
 
     h3 { padding:0; }
 
     img {
-      border: 1px solid $if-white;
+      border: 1px solid var(--white);
       filter: grayscale(10);
       }
 
@@ -55,9 +75,7 @@ footer {
 
 
   }
+  */
 
 
 
-}
-}
-}

@@ -16,7 +16,7 @@
   .accordion-button:not(.collapsed) {
     background-color: transparent;
     border-bottom: none;
-    color: $if-dark;
+    color: var(--black);
     font-weight: 600;
   }
 

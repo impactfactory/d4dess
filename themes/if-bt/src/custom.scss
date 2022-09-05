@@ -5,26 +5,21 @@
 
 ///////////////// map some bootstrap variables to my own theme variables ////////////////////////
 
-@import "partials/variables-mapping.scss";
+//@import "partials/variables-mapping.scss";
 
 ////////////////// project globals ////////////////////////
 //we import some general layout globals for this project
 
 @import "partials/globals-layout.scss";
 @import "partials/globals-links.scss";
-@import "partials/section-templates.scss";
+//@import "partials/section-templates.scss";
 
 //////////////// components imports //////////////////////
 
 //@import "partials/blockquotes.scss";
-////@import "partials/blog-cards.scss";
-@import "partials/blog-medseo.scss";
-//@import "partials/blog-postsall.scss";
-//@import "partials/blog-tagcloud.scss";
-//@import "partials/blog-keyvisual.scss";
-@import "partials/clientinfo.scss";
+//@import "partials/clientinfo.scss";
 @import "partials/contactbox.scss";
-@import "partials/contactsection.scss";
+//@import "partials/contactsection.scss";
 //@import "partials/elements-accordionplus.scss";
 //@import "partials/elements-flipcards.scss";
 ////@import "partials/elements-keyvisuals.scss";
@@ -46,10 +41,10 @@
 @import "partials/pagetitle.scss";
 //@import "partials/payment.scss";
 //@import "partials/referrals.scss";
-@import "partials/team-partnerbox.scss";
+//@import "partials/team-partnerbox.scss";
 @import "partials/team-portraitbox.scss";
-@import "partials/team-teamlist.scss";
-@import "partials/team-teamperson.scss";
+//@import "partials/team-teamlist.scss";
+//@import "partials/team-teamperson.scss";
 //@import "partials/searchfield.scss";
 //@import "partials/searchresult.scss";
 ////@import "partials/threerowh1.scss";

@@ -4,27 +4,27 @@
   a.imglink:hover {}
 
   p a {
-        color: $if-dark;
+        color: var(--black);
       }
 
   p a:hover {
-    color: $if-primary;
+    color: var(--primary);
   }
 
   .portraitlink {
-    background-color: $if-primary-light;
-    color: $if-white;
+    background-color: var(--primary);
+    color: var(--white);
     margin: 10px 0 0 0;
     position:relative;
     padding: 4px 8px 4px 8px;
 
     a {
-      color: $if-white;
+      color: var(--white);
       text-decoration: none;
     }
 
     a:hover, :focus, :active {
-        color: $if-white;
+        color: var(--white);
       }
    }
 
@@ -51,7 +51,7 @@
      }
    }
 
-   .left:hover, .right:hover { background-color: $if-primary; }
+   .left:hover, .right:hover { background-color: var(--primary); }
 
    .picpositionright .card-body {
      padding-left:0!important;

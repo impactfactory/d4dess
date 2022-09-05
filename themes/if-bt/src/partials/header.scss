@@ -11,12 +11,12 @@ header {
 
   .mainnav .active a,
   .mainnav a:hover {
-    color: $if-primary;
+    color: var(--primary);
     }
 
   .navbar {
 
-    background: $if-white;
+    background: var(--white);
     border-bottom:0px solid #ffffff;
     transition: top 0.3s;
 
@@ -29,13 +29,13 @@ header {
          right: 10px !important;
 
       span {
-        color: $if-dark;
+        color: var(--black);
       }
     }
   }
 
   .search-btn i {
-    color: $if-dark;
+    color: var(--black);
   }
 
   ul {
@@ -49,16 +49,16 @@ header {
     li {
       a {
       background-color: transparent !important;
-      color: $if-dark;
+      color: var(--black);
       text-decoration:none;
 
         :hover {
-          color: $if-primary;
+          color: var(--primary);
         }
       }
 
       div, ul {
-        background-color:$if-white!important;
+        background-color: var(--white)!important;
         border: none!important;
         box-shadow: none!important;
       }
@@ -66,10 +66,10 @@ header {
       div a,
       div a.active,
       div a :active {
-        color: $if-dark !important;
+        color: var(--black) !important;
         }
       div a:hover {
-           color: $if-primary !important;
+           color: var(--primary) !important;
          }
     }
   }

@@ -32,8 +32,8 @@ article {
 /* froala editor css */
 
 .fr-img-caption {
-  background: $if-white;
-  border-radius: 4px;
+  background: var (--white);
+  border-radius: var(--rad-xs);
   display: block;
   margin: 0 0 20px 0;
   padding: 0 0 5px 0;
@@ -49,7 +49,6 @@ article {
 .fr-inner {
   display: block;
   font-size: 12px;
-  //text-transform: capitalize;
   padding: 10px 10px 5px 10px;
   margin: 0;
 }

@@ -3,9 +3,9 @@
 }
 
 .tooltips::before {
-  background: $if-black;
+  background: var(--black);
   border-radius: 5px;
-  color: $if-white;
+  color: var(--white);
   content: attr(data);
   display: inline-block;
   position: absolute;

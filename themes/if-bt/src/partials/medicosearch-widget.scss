@@ -43,7 +43,7 @@
 
   .mbw-link-edit {
     border-radius: 4px;
-    border: 1px solid $if-primary;
+    border: 1px solid var(--primary);
     padding: 4px 8px 4px 8px;
     transform: translate(0px, 56px);
   }

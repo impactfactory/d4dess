@@ -1,13 +1,13 @@
 #contactbox {
-  background: $if-primary;
-  color: $if-white;
+  background: var(--primary);
+  color: var(--white);
   position: fixed;
   bottom: 1rem;
   right: 1rem;
   text-align: center;
 
   a {
-    color: $if-white;
+    color: var(--white);
     text-decoration: none !important;
   }
 
@@ -16,14 +16,14 @@
       }
 
   div#links {
-    font-size: $if-fs-sm!important;
+    font-size: var(--fs-xs)!important;
   }
 
   div#booking {
-    background: $if-primary-light;
-    border: 0px solid $if-white;
+    background: rgb(var(--white), 0.5);
+    border: 0px solid var(--white);
     border-radius: 4px;
-    font-size: $if-fs-sm!important;
+    font-size: var(--fs-xs)!important;
     margin: .4rem auto .5rem auto;
     padding: 0 0 0 0;
     width: 90%;

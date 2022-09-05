@@ -2,6 +2,40 @@
 {% set faqs = __SELF__.faqs %}
 {% set bg = __SELF__.bg %}
 
+
+
+  {% for index, category in categories %}
+      {% if category.is_published == 1 %}
+      <h3>{{ category.name }}</h3>
+      {% for index, faq in category.faqs %}
+        {% if faq.is_published == 1 %}
+          <details id="cat1-q1">
+            <summary>
+              <h4>{{ faq.question }}</h4>
+            </summary>
+            <div>
+              {{ faq.answer|raw | parseSnippets }}
+            </div>
+          </details>
+        {% endif %}
+      {% endfor %}
+      {% endif %}
+    {% endfor %}
+
+
+
+
+
+       
+
+
+
+
+
+
+
+<!--
+
 <section class="fullwrap faq tpl-{% if bg == '1' %}white{% elseif bg == '2' %}grey{% elseif bg == '3' %}secondary-light{% elseif bg == '4' %}secondary{% elseif bg == '5' %}secondary-dark{% elseif bg == '6' %}primary-light{% else %}transparent{% endif %}">
   <div class="indent-me">
 
@@ -39,7 +73,7 @@
 
   </div> {# end indent-me #}
 </section> {# end fullwrap #}
-
+-->
 
 {% put json %}
   <script type="application/ld+json">

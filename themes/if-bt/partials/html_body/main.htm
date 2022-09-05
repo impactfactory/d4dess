@@ -1,15 +1,23 @@
+
  <main>
     <div class="indent-me">
         {% content 'intro.htm' %}
     </div>
 
 
+    <div id="faq">
+        <section class="indent-me">
+            {% content 'faq.htm' %}
+            {% component 'faq' %}
+        </section>
+    </div>
 
-    <div class="indent-me">
+    <div id="termin" class="indent-me">
+        {% content 'termin.htm' %}
         {% partial 'snippets/medicosearch.htm' %}
     </div>
 
-    <div class="indent-me">
+    <div id="anreise" class="indent-me">
         {% content 'anreise.htm' %}
     </div>
 

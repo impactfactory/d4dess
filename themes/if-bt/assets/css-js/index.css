@@ -546,50 +546,73 @@ a.imglink:hover > img, a.imglink:hover > picture {
   width: 90%;
 }
 
-.faq h2.h3 {
-  border: none;
-  padding-top: 2.5rem;
+#faq {
+  background: yellow;
+  width: 100%;
 }
-.faq h3 {
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
+#faq details {
+  border-top: 1px solid #ccc;
+  padding: 1rem 0 1rem 0;
 }
-.faq .accordion-button {
-  padding: 0.5rem 0 0.5rem 0;
+#faq details:last-child {
+  border-bottom: 1px solid #ccc;
 }
-.faq .accordion-button:not(.collapsed) {
-  background-color: transparent;
-  border-bottom: none;
-  color: var(--black);
-  font-weight: 600;
+#faq details[open] {
+  padding-bottom: 0;
 }
-.faq .accordion-collapse {
-  border: none;
+#faq summary {
+  padding: 0 1rem 0 1rem;
+  margin: 0;
+  cursor: pointer;
+  border-radius: 5px;
 }
-.faq .accordion-body {
-  padding-left: 0px;
+#faq summary::-webkit-details-marker,
+#faq summary::marker {
+  display: none !important;
+  content: "";
+  /* fix for chrome */
 }
-
-.faqcategory h2 {
-  border: none;
-  padding-top: 0 !important;
+#faq summary:after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  transform: rotate(45deg);
+  transition: all 0.5s ease-out;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+  float: right;
 }
-.faqcategory h3 {
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
+#faq details[open] div {
+  animation: blend-in 0.5s ease-out;
+  background: linear-gradient(to bottom, #fff 0%, #eee 100%);
+  margin: 1rem 0 0 0;
+  padding: 0 1rem 0.5rem 1rem;
 }
-.faqcategory .accordion-button {
-  padding: 0.5rem 0 0.5rem 0;
+@keyframes blend-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
-.faqcategory .accordion-button:not(.collapsed) {
-  background-color: transparent;
-  border-bottom: none;
-  color: var(--black);
-  font-weight: 600;
+#faq details[open] summary:after {
+  content: "";
+  transform: rotate(-135deg);
+  margin-top: 8px;
 }
-.faqcategory .accordion-collapse {
-  border: none;
+#faq details[open] summary:after {
+  content: "";
+  transform: rotate(-135deg);
+  margin-top: 8px;
 }
-.faqcategory .accordion-body {
-  padding-left: 0px;
+#faq summary > h4 {
+  display: inline;
+  font-size: 20px;
+  font-weight: 400;
+}
+#faq details[open] summary > h3 {
+  font-weight: 800;
 }
 
 footer {
@@ -996,6 +1019,7 @@ header section {
 main {
   display: grid;
   justify-items: center;
+  width: 100%;
   /* base for modules */
 }
 main .indent-me {

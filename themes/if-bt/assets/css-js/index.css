@@ -711,7 +711,7 @@ footer section div {
   height: 150px;
 }
 .gallery .lb-overlay {
-  background: var(--secondary);
+  background: rgb(var(--blue), 1);
   display: none !important;
   height: 0px;
   overflow: hidden;
@@ -733,7 +733,7 @@ footer section div {
   z-index: 1001;
 }
 .gallery .lb-overlay .controls .svg-inline--fa {
-  color: var(--black);
+  color: rgb(var(--black), 1);
   height: 50px;
   width: 50px;
 }
@@ -747,7 +747,7 @@ footer section div {
   max-width: 90vw;
 }
 .gallery .lb-overlay .info {
-  color: var(--black);
+  color: rgb(var(--black), 1);
   margin: 10px auto 0 auto;
   max-width: 1000px;
   opacity: 0;
@@ -758,7 +758,7 @@ footer section div {
 }
 .gallery .lb-overlay .info h3 {
   display: inline-block;
-  border-right: 1px solid var(--black);
+  border-right: 1px solid rgb(var(--black));
   padding: 0.75rem 1rem 0.75rem 0 !important;
 }
 .gallery .lb-overlay .info p {
@@ -1214,58 +1214,62 @@ main .indent-me {
   }
 }
 
-.portraitbox {
+#team {
+  background: #dedede;
+  width: 100%;
+}
+#team .portraitbox {
   /* thirdwith views */
   /* thirdwith views */
 }
-.portraitbox p a {
+#team .portraitbox p a {
   color: var(--black);
 }
-.portraitbox p a:hover {
+#team .portraitbox p a:hover {
   color: var(--primary);
 }
-.portraitbox .portraitlink {
+#team .portraitbox .portraitlink {
   background-color: var(--primary);
   color: var(--white);
   margin: 10px 0 0 0;
   position: relative;
   padding: 4px 8px 4px 8px;
 }
-.portraitbox .portraitlink a {
+#team .portraitbox .portraitlink a {
   color: var(--white);
   text-decoration: none;
 }
-.portraitbox .portraitlink a:hover, .portraitbox .portraitlink :focus, .portraitbox .portraitlink :active {
+#team .portraitbox .portraitlink a:hover, #team .portraitbox .portraitlink :focus, #team .portraitbox .portraitlink :active {
   color: var(--white);
 }
-.portraitbox .right {
+#team .portraitbox .right {
   left: -4rem;
   border-radius: 1em 1em;
   border-radius: 1em 1em;
   width: 800px;
 }
-.portraitbox .right i {
+#team .portraitbox .right i {
   margin-left: 10px;
 }
-.portraitbox .left {
+#team .portraitbox .left {
   left: -1.5rem;
   border-radius: 0 1rem 1em 0;
   border-bottom-right-radius: 1em 1em;
   width: 450px;
 }
-.portraitbox .left i {
+#team .portraitbox .left i {
   margin-left: 10px;
 }
-.portraitbox .left:hover, .portraitbox .right:hover {
+#team .portraitbox .left:hover, #team .portraitbox .right:hover {
   background-color: var(--primary);
 }
-.portraitbox .picpositionright .card-body {
+#team .portraitbox .picpositionright .card-body {
   padding-left: 0 !important;
 }
-.portraitbox .thirdwidth {
+#team .portraitbox .thirdwidth {
   margin: 0;
 }
-.portraitbox .thirdwidth .btn-primary {
+#team .portraitbox .thirdwidth .btn-primary {
   margin-bottom: 0.5rem;
 }
 

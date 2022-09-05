@@ -396,10 +396,6 @@ template {
 :root .primary {
   color: rgb(var(--primary));
 }
-:root .placeitemscenter {
-  display: grid;
-  place-items: center;
-}
 
 html {
   scroll-behavior: smooth;
@@ -416,6 +412,20 @@ article {
   grid-template-columns: 1fr;
   grid-template-rows: [header] auto [main] 1fr [footer] auto;
   min-height: 100vh;
+}
+
+/* helper classes for html */
+.placeitemscenter {
+  display: grid;
+  place-items: center;
+}
+
+.indent-me {
+  box-sizing: border-box;
+  max-width: var(--content-width);
+  padding: var(--content-padding);
+  margin: 0 auto;
+  width: 100%;
 }
 
 /* froala editor css */
@@ -619,14 +629,13 @@ footer {
   background: rgb(var(--beige));
   display: grid;
   grid-template-rows: 500px;
-  place-items: center;
 }
 footer section {
   border: 2px solid orange;
   display: grid;
   grid-template-columns: 1fr;
+  margin: 0 auto;
   max-width: var(--content-width);
-  padding: var(--content-padding);
   width: 100%;
 }
 footer section div {
@@ -1022,12 +1031,6 @@ main {
   width: 100%;
   /* base for modules */
 }
-main .indent-me {
-  max-width: var(--content-width);
-  padding: var(--content-padding);
-  margin: 0 auto;
-  width: 100%;
-}
 
 .map-snippet h2 {
   padding-top: 0 !important;
@@ -1218,61 +1221,98 @@ main .indent-me {
   background: #dedede;
   width: 100%;
 }
-#team .portraitbox {
-  /* thirdwith views */
-  /* thirdwith views */
+#team .indent-me .portraitbox {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
 }
-#team .portraitbox p a {
-  color: var(--black);
+#team .indent-me .portraitbox box {
+  width: 100%;
 }
-#team .portraitbox p a:hover {
-  color: var(--primary);
-}
-#team .portraitbox .portraitlink {
-  background-color: var(--primary);
-  color: var(--white);
-  margin: 10px 0 0 0;
-  position: relative;
-  padding: 4px 8px 4px 8px;
-}
-#team .portraitbox .portraitlink a {
-  color: var(--white);
+#team .indent-me .portraitbox box h3 {
   text-decoration: none;
 }
-#team .portraitbox .portraitlink a:hover, #team .portraitbox .portraitlink :focus, #team .portraitbox .portraitlink :active {
-  color: var(--white);
+@media only screen and (min-width: 576px) {
+  #team .indent-me .portraitbox {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
 }
-#team .portraitbox .right {
-  left: -4rem;
-  border-radius: 1em 1em;
-  border-radius: 1em 1em;
-  width: 800px;
+@media only screen and (min-width: 768px) {
+  #team .indent-me .portraitbox {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+  }
 }
-#team .portraitbox .right i {
-  margin-left: 10px;
-}
-#team .portraitbox .left {
-  left: -1.5rem;
-  border-radius: 0 1rem 1em 0;
-  border-bottom-right-radius: 1em 1em;
-  width: 450px;
-}
-#team .portraitbox .left i {
-  margin-left: 10px;
-}
-#team .portraitbox .left:hover, #team .portraitbox .right:hover {
-  background-color: var(--primary);
-}
-#team .portraitbox .picpositionright .card-body {
-  padding-left: 0 !important;
-}
-#team .portraitbox .thirdwidth {
-  margin: 0;
-}
-#team .portraitbox .thirdwidth .btn-primary {
-  margin-bottom: 0.5rem;
-}
+/*
+  // see custom.css for img hover
+  a.imglink:hover {}
 
+  p a {
+        color: rgb(var(--black),1);
+      }
+
+  p a:hover {
+    color: rgb(var(--primary),1);
+  }
+
+  .portraitlink {
+    background-color: rgb(var(--primary),1);
+    color: rgb(var(--white),1);
+    margin: 10px 0 0 0;
+    position:relative;
+    padding: 4px 8px 4px 8px;
+
+    a {
+      color: rgb(var(--white),1);
+      text-decoration: none;
+    }
+
+    a:hover, :focus, :active {
+        color: rgb(var(--white),1);
+      }
+   }
+
+   .right {
+     left: -4rem;
+     border-radius:    1em 1em;
+     border-radius: 1em 1em;
+     width: 800px;
+
+     i {
+       margin-left:10px;
+     }
+
+   }
+
+   .left {
+     left: -1.5rem;
+     border-radius: 0 1rem 1em 0;
+     border-bottom-right-radius: 1em 1em;
+     width:450px;
+
+     i {
+       margin-left:10px;
+     }
+   }
+
+   .left:hover, .right:hover { background-color: rgb(var(--primary),1); }
+
+   .picpositionright .card-body {
+     padding-left:0!important;
+   }
+
+   /* thirdwith views 
+
+   .thirdwidth {
+     margin: 0;
+
+     .btn-primary {
+       margin-bottom: .5rem;
+     }
+   }
+
+   /* thirdwith views */
 .tooltips {
   position: relative;
 }

@@ -1,15 +1,15 @@
-footer {
+footer { 
   background: rgb(var(--beige));
   display: grid;
    grid-template-rows: 500px;
-   place-items: center;
 
   section {
     border: 2px solid orange;
     display: grid;
      grid-template-columns: 1fr;
+    margin: 0 auto;
     max-width: var(--content-width);
-    padding: var(--content-padding);
+    //padding: var(--content-padding);
     width: 100%;
 
 

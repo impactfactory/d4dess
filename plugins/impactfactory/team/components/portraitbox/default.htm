@@ -10,12 +10,11 @@
 
 {% if boxposition == 'begin' %}
   <article id="portraitbox-{{ person.id }}"
-           class="portraitbox fullwrap px-4 row tpl-{% if bg == '1' %}white{% elseif bg == '2' %}grey{% elseif bg == '3' %}secondary-light{% elseif bg == '4' %}secondary{% elseif bg == '5' %}secondary-dark{% elseif bg == '6' %}primary-light{% else %}transparent{% endif %}">
-    <div  class="indent-me">
+           class="portraitbox">
 {% endif %}
 
 {% if boxsize != 'fullwidth' and boxposition == 'begin' %}
-      <div class="row">
+     
 {% endif %}
 
 
@@ -39,10 +38,10 @@
 
 
 {% if boxsize != 'fullwidth'  and boxposition == 'end' %}
-      </div> {# end row #}
+    
 {% endif %}
 
 {% if boxposition == 'end' %}
-  </div> {# end indent-me #}
+  </div> 
 </article>
 {% endif %}

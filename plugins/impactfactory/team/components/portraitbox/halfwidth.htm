@@ -1,25 +1,26 @@
-<div class="card halfwidth col-12 col-sm-6 pt-0 px-0 placeitemscenter">
+<div class="box">
   {% if person.boxlink %}
   <a href="/{{ localePicker.activeLocale }}/team/{{ person.slug }}" title="{% if person.honorific %} }{{ person.honorific}} {% endif %}{{ person.first_name }} {{ person.last_name }}">
   {% endif %}
-    <picture>
+  <h3 class="box-title">{% if person.honorific %} {{ person.honorific}} {% endif %}{{ person.first_name }} {{ person.last_name }}</h3>
+  <picture>
       <source type="image/webp" srcset="{{ person.imgbox | media | resize(500, 450, { mode: 'cover', format: 'webp' }) }}">
       <source type="image/jpg" srcset="{{ person.imgbox | media | resize(500, 450, { mode: 'cover' }) }}">
       <img type="image/jpg"
            src="{{  person.imgbox | media | resize(500, 450, { mode: 'cover' }) }}"
            class="img-fluid"
-           width="500"
-           height="450"
+           width="100%"
+           height="auto"
            loading="lazy"
            alt="Foto {% if person.honorific %} {{ person.honorific}} {% endif %}{{ person.first_name }} {{ person.last_name }}"
       >
-    </picture>
+   </picture>
   {% if person.boxlink %}
   </a>
   {% endif %}
-  <div class="card-body">
-    <h5 class="card-title">{% if person.honorific %} {{ person.honorific}} {% endif %}{{ person.first_name }} {{ person.last_name }}</h5>
-    <p class="card-text">
+  <div class="box-body">
+    
+    <p class="box-text">
       {{ person.boxtext|raw }}
     </p>
     {% if person.boxlink %}

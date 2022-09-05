@@ -1,14 +1,18 @@
 
  <main>
 
+
+
     <div class="indent-me">
         {% content 'intro.htm' %}
     </div>
 
+    
+
     <div id="team" style="width: 100%">
         <section class="indent-me">
             {% content 'team.htm' %}
-            
+
             {% component 'portraitBox' 
                person="8" 
                picposition="left"
@@ -26,6 +30,7 @@
                bg="white" %}
         </section>
     </div>
+    
 
     <div id="praxis" style="width: 100%">
         <section class="indent-me">
@@ -34,6 +39,8 @@
         </section>
     </div>
 
+    
+
     <div id="faq">
         <section class="indent-me">
             {% content 'faq.htm' %}
@@ -41,15 +48,20 @@
         </section>
     </div>
 
+    
+
     <div id="termin" class="indent-me">
         {% content 'termin.htm' %}
         {% partial 'snippets/medicosearch.htm' %}
     </div>
 
+    
+
+  
     <div id="anreise" class="indent-me">
         {% content 'anreise.htm' %}
     </div>
 
-    {% partial 'html_body/map' %}
+    {% partial 'html_body/map' %}   
 
  </main>

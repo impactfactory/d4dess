@@ -10,6 +10,7 @@ class TeamList extends ComponentBase
     //public $person;
     public $teams;
     public $organisation;
+    public $main;
 
     public function componentDetails()
     {
@@ -50,5 +51,10 @@ class TeamList extends ComponentBase
             ->find($this->property('organisation'))
         ;
         $this->teams = $this->organisation ? $this->organisation->teams : [];
+
+        
+      $this->main = Organisation::where('type', 'main')->first();
+      $this->page['main'] = $this->main;
+    
     }
 }

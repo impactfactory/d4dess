@@ -1,20 +1,73 @@
+<div class="card">
+
+  <div class="portrait">
+    <picture>
+        {# Safari <=14 falls back on img if there is not type attribute present at each line! #}
+      <source type="image/webp" srcset="{{ person.imglist | media | resize(200, 200, { mode: 'cover', format: 'webp' }) }}">
+      <source type="image/jpg" srcset="{{ person.imglist | media | resize(200, 200, { mode: 'cover' }) }}">
+      <img type="image/jpg"
+          src="{{ person.imglist|media|resize(200, 200, { mode: 'cover'}) }}"
+          alt="{{ person.name }}">
+    </picture>
+  </div>
+
+  <div class="name">
+    <h3>{% if person.honorific %}{{ person.honorific }} {% endif%}{{ person.name }}</h3>
+    <h4>{{ person.role }}</h4>
+  </div>
+
+    {% if person.phone %}
+    <div class="phone">
+          {% partial 'html_body/svg-icons/phone' %}
+           {{ 'team.person.phone'|_ }}:
+        
+        <a href="tel:{{ person.phone }}" title="{{ person.phone }}">{{ person.phone }}</a>
+     </div>
+    {% endif %}
+
+    {% if person.email %}
+    <div class="email">
+    {% partial 'html_body/svg-icons/email' %}
+           {{ 'team.person.email' |_ }}:
+   
+
+        <script>
+          user = '{{ mailuser }}';
+          site = '{{ maildomain }}';
+          document.write('<a href=\"mailto:' + user + '@' + site + '\" data-toggle=\"tooltip\" data-placement=\"top\" title=\"{{ 'contactbox.mail.tooltip'|_ }}\">' + user + '@' + site + '</a>');
+        </script>
+     </div>
+    {% endif %}
+
+    {% if person.availability %}
+    <div class="availability">
+          {% partial 'html_body/svg-icons/smile-beam' %}
+           {{ 'team.person.availability' |_ }}:
+      
+        {{ person.availability}}
+     </div>
+    {% endif %}
+
+    {% if person.booking == 1 %}
+    <div class="booking">
+          book me!
+     </div>
+    {% endif %}
+
+</div>
+
+
+
+
+<!--
+
 <div class="card mb-3 p-4">
     <div class="row g-0">
       {% if person.portrait %}
         <div class="col-md-4 pr-4">
-          {% if person.show_detail == '1' %}
-              <a href="{{ 'team/person'|page({slug:person.slug }) }}" class="" title="Portrait {% if person.honorific %}{{ person.honorific }} {% endif%}{{ person.name }}">
-          {% endif %}
-            <picture>
-              {# Safari <=14 falls back on img if there is not type attribute present at each line! #}
-              <source type="image/webp" srcset="{{ person.imglist | media | resize(200, 200, { mode: 'cover', format: 'webp' }) }}">
-              <source type="image/jpg" srcset="{{ person.imglist | media | resize(200, 200, { mode: 'cover' }) }}">
-              <img class="rounded z-depth-1"
-                   type="image/jpg"
-                   src="{{ person.imglist|media|resize(200, 200, { mode: 'cover'}) }}"
-                   alt="{{ person.name }}">
-            </picture>
-          {% if person.show_detail == '1' %}</a>{% endif %}
+          
+            
+          
         </div>
       {% endif %}
     <div class="col-md-8">
@@ -27,12 +80,9 @@
         </h3>
         <p class="card-text text-muted">{{ person.role }}</p>
         <p class="boxtext">{{ person.boxtext | raw }}</p>
-        {% if person.show_detail %}
-          <a href="{{ 'team/person'|page({slug:person.slug }) }}" class="btn btn-primary" title="Portrait {% if person.honorific %}{{ person.honorific }} {% endif%}{{ person.name }}">
-            {{ 'team.list.more'|_ }} {{ person.name }}
-          </a>
-        {% endif %}
+        
       </div>
     </div>
   </div>
 </div>
+-->

@@ -338,16 +338,15 @@ template {
 }
 
 :root {
-  --petrol: 47, 141, 133;
-  --grey: 235, 232, 229;
-  --beige: 250, 243, 236;
-  --blue: 209, 243, 247;
-  --orange: 248, 143, 6;
-  --denim: 54, 65, 88;
-  --black: 0, 0, 0;
-  --white: 255, 255, 255;
-  --primary: var(--orange);
-  --secondary: var(--blue);
+  --petrol: 211 52% 22%;
+  --beige: 47 47% 95%;
+  --black: 0 50% 7%;
+  /* hsl(0 0% 7% / 1); /* #111111;*/
+  --grey: 0 0% 90%;
+  --light: 0 100% 98%;
+  --white: 0 100% 100%;
+  --primary: hsl(var(--beige) / 1);
+  --secondary: hsl(var(--petrol) / 0.5);
   --success: 0, 255, 0;
   --info: var(--denim);
   --btn-bg: rgb(var(--petrol), 1);
@@ -374,10 +373,9 @@ template {
     rgb(var(--petrol), 1) 0%,
     rgb(var(--petrol), 1) 15%,
     rgb(var(--blue), 1) 50%,
-    rgb(var(--petrol), 1) 100%
-  );
-  --body-bg: rgb(var(--petrol), 1);
-  --body-color: rgb(var(--beige));
+    rgb(var(--petrol), 1) 100% );
+  --body-bg: hsl(var(--light) / 1);
+  --body-color: hsl(var(--black) / 1);
   --body-fs: var(--fs-md);
   --padd-xs: 0.25rem;
   --padd-md: 0.5rem;
@@ -402,6 +400,7 @@ html {
 }
 
 body {
+  background: var(--body-bg);
   min-height: 100vh;
   overflow-x: hidden;
 }
@@ -477,6 +476,10 @@ html {
   -webkit-font-smoothing: antialiased;
 }
 
+body {
+  color: var(--body-color);
+}
+
 /* Copy & Lists */
 p {
   line-height: 1.5rem;
@@ -517,7 +520,7 @@ h4,
 h5,
 h6 {
   /* Change heading typefaces here */
-  font-family: sans-serif;
+  /*font-family: sans-serif;*/
   margin-top: 1.5rem;
   margin-bottom: 0;
   line-height: 1.5rem;
@@ -718,7 +721,8 @@ code {
 }
 
 footer {
-  background: rgb(var(--beige));
+  background: hsl(var(--petrol)/1);
+  color: hsl(var(--light));
   display: grid;
   grid-template-rows: 500px;
 }
@@ -1196,119 +1200,10 @@ main {
   max-width: 140px;
 }
 
-.pagetitle {
-  background: #c9e7e4;
-  background: linear-gradient(180deg, #c9e7e4 0%, #b7d9d5 35%, #79aca6 100%);
-  /* media queries */
+#team {
+  background: hsl(var(--beige)/1);
+  border-top: 10px solid hsl(var(--white)/0.5);
 }
-.pagetitle .card-img-overlay {
-  background: #c9e7e4;
-  background: linear-gradient(180deg, #c9e7e4 0%, #b7d9d5 35%, #79aca6 100%);
-}
-.pagetitle .card-img-overlay h1, .pagetitle .card-img-overlay h2 {
-  text-shadow: 0 0px 10px rgba(0, 0, 0, 0.2);
-}
-@media only screen and (min-width: 20px) and (max-width: 280px) {
-  .pagetitle {
-    margin-bottom: 64vw;
-  }
-  .pagetitle img {
-    display: none;
-  }
-  .pagetitle .card-img-overlay {
-    height: 60vw;
-  }
-  .pagetitle h1 {
-    padding-top: 1vw;
-  }
-}
-@media screen and (min-width: 281px) and (max-width: 320px) {
-  .pagetitle {
-    margin-bottom: 64vw;
-  }
-  .pagetitle img {
-    display: none;
-  }
-  .pagetitle .card-img-overlay {
-    height: 60vw;
-  }
-  .pagetitle h1 {
-    padding-top: 4vw;
-  }
-}
-@media screen and (min-width: 321px) and (max-width: 360px) {
-  .pagetitle {
-    margin-bottom: 64vw;
-  }
-  .pagetitle img {
-    display: none;
-  }
-  .pagetitle .card-img-overlay {
-    height: 60vw;
-  }
-  .pagetitle h1 {
-    padding-top: 4vw;
-  }
-}
-@media screen and (min-width: 361px) and (max-width: 567px) {
-  .pagetitle {
-    margin-bottom: 54vw;
-  }
-  .pagetitle img {
-    display: none;
-  }
-  .pagetitle .card-img-overlay {
-    height: 50vw;
-  }
-  .pagetitle h1 {
-    padding-top: 5vw;
-  }
-}
-@media screen and (min-width: 568px) and (max-width: 768px) {
-  .pagetitle {
-    margin-bottom: 4vw;
-  }
-  .pagetitle .card-img-overlay {
-    background: transparent;
-  }
-  .pagetitle h1 {
-    padding-top: 6vw;
-  }
-}
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-  .pagetitle {
-    margin-bottom: 4vw;
-  }
-  .pagetitle .card-img-overlay {
-    background: transparent;
-  }
-  .pagetitle h1 {
-    padding-top: 8vw;
-  }
-}
-@media screen and (min-width: 1025px) and (max-width: 1399px) {
-  .pagetitle {
-    margin-bottom: 4vw;
-  }
-  .pagetitle .card-img-overlay {
-    background: transparent;
-  }
-  .pagetitle h1 {
-    padding-top: 6vw;
-  }
-}
-@media screen and (min-width: 1400px) {
-  .pagetitle {
-    margin-bottom: 4vw;
-  }
-  .pagetitle .card-img-overlay {
-    background: transparent;
-  }
-  .pagetitle h1 {
-    padding-top: 7vw;
-  }
-}
-
 #team .team-list {
   display: grid;
   grid-template-columns: 1fr;
@@ -1316,11 +1211,15 @@ main {
   gap: 20px 0px;
 }
 #team .team-list .card {
+  background: hsl(var(--white)/1);
   display: grid;
   grid-template-columns: 200px 1fr;
   grid-template-rows: 200px 1fr 1fr;
   gap: 0.25rem;
   width: 100%;
+}
+#team .team-list .card .phone, #team .team-list .card .email, #team .team-list .card .availability, #team .team-list .card .booking {
+  background: hsl(var(--grey)/1);
 }
 #team .team-list .card .portrait {
   grid-area: 1/1/2/2;
@@ -1388,7 +1287,7 @@ main {
     grid-area: 2/3/3/4;
   }
   #team .team-list .card .booking {
-    grid-area: 2/4/3/5;
+    grid-area: 2/4/3/6;
   }
 }
 .tooltips {
@@ -1430,28 +1329,6 @@ main {
   left: -100px;
 }
 
-/* Making sure here that all root layout indents are as intended */
-.h1-snippet {
-  padding: 0 0.25rem 0 0.25rem;
-}
-
-.content-container > ul {
-  padding: 0 2rem 0 2rem;
-}
-
-/*
-
-@media (min-width: 768px){
-
-
-  .h1-snippet {
-    padding: 0 5rem 0 5rem;
-  }
-
-  .content-container > ul {
-    padding: 0 7rem 0 7rem;
-  }
-}*/
 @media print {
   @page {
     size: A4 portrait;

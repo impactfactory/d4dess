@@ -1,5 +1,6 @@
 footer { 
-  background: rgb(var(--beige));
+  background: hsl(var(--petrol) / 1);
+  color: hsl(var(--light));
   display: grid;
    grid-template-rows: 500px;
 

@@ -3,7 +3,13 @@
     "description": "Free, open-source, self-hosted CMS platform based on the Laravel PHP Framework. Originally known as October CMS.",
     "homepage": "https://wintercms.com",
     "type": "project",
-    "keywords": ["winter", "cms", "wintercms", "laravel", "cmf"],
+    "keywords": [
+        "winter",
+        "cms",
+        "wintercms",
+        "laravel",
+        "cmf"
+    ],
     "license": "MIT",
     "authors": [
         {

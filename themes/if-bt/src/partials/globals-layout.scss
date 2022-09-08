@@ -17,6 +17,10 @@ article {
   min-height: 100vh;
 }
 
+div, footer {
+  box-sizing: border-box;
+}
+
 /* helper classes for html */
 
 .placeitemscenter {

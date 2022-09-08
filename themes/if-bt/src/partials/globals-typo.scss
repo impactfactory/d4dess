@@ -18,7 +18,12 @@ p {
   line-height: 1.5rem;
   margin-top: 1.5rem;
   margin-bottom: 0;
+
+  a {text-decoration: underline;}
 }
+
+a {text-decoration: none;}
+
 ul,
 ol {
   margin-top: 1.5rem;
@@ -54,26 +59,26 @@ h6 {
   line-height: 1.5rem;
 }
 h1 {
-  font-size: 4.242rem;
-  line-height: 4.5rem;
+  font-size: calc(4.242rem / 1.2);
+  line-height: calc(4.5rem  / 1.2);
   margin-top: 3rem;
 }
 h2 {
-  font-size: 2.828rem;
-  line-height: 3rem;
+  font-size: calc(2.828rem / 1.2);
+  line-height: calc(3rem / 1.2);
   margin-top: 3rem;
 }
 h3 {
-  font-size: 1.414rem;
+  font-size: calc(1.414rem / 1.2);
 }
 h4 {
-  font-size: 0.707rem;
+  font-size: calc(0.707rem / 1.5);
 }
 h5 {
-  font-size: 0.4713333333333333rem;
+  font-size: calc(0.4713333333333333rem / 1.2);
 }
 h6 {
-  font-size: 0.3535rem;
+  font-size: calc(0.3535rem / 1.2);
 }
 /* Tables */
 table {

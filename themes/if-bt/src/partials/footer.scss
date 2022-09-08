@@ -1,43 +1,41 @@
 footer { 
-  background: hsl(var(--petrol) / 1);
+  background: hsl(var(--grey-drk) / 1);
   color: hsl(var(--light));
-  display: grid;
-   grid-template-rows: 500px;
+  display:block;
+  font-size: var(--fs-md);
+  height: 500px;
 
-  section {
-    border: 2px solid orange;
-    display: grid;
-     grid-template-columns: 1fr;
+    a {
+      color: hsl(var(--light));
+    }
+
+    a:hover, a:focus {
+      text-decoration: underline;
+    }
+
+  .faq {
+    background: hsl(var(--grey-drk) / 1);
     margin: 0 auto;
     max-width: var(--content-width);
-    //padding: var(--content-padding);
-    width: 100%;
 
-
-   div {
-    border: 1px solid red;
+    #byline {
+      border-top: 1px solid hsl(var(--light) / .5);
+      border-bottom: 1px solid hsl(var(--light) / .5);
+      padding: var(--content-padding);
     }
   }
+
+  
 }
 
-@media only screen and (min-width: 576px) {
+
+@media only screen and (min-width: 76px) {
   footer section {
     grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 80% 20%;
 
     div:nth-child(3) {
-      grid-column: 1 / 4;
-      padding: 0 3rem 0 3rem;
-    }
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  footer section {
-    grid-template-columns: repeat(3, 1fr);
-
-    div:nth-child(3) {
-      grid-column: 3 / 4;
-      padding: 0;
+      grid-column: 1 / 3;
     }
   }
 }

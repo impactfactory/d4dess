@@ -4,11 +4,11 @@
   // the dark side of the force
   --black-: 0 0% 0%; /* #000 */
   --dark: 0 50% 7%; /* hsl(0 0% 7% / 1); /* #111111;*/
-  --grey-drk: 0 0% 90%;
+  --grey-drk: 0 0% 20%;
 
   // primary
   --prim-lgt: 211 52% 22%;
-  --prim: 211 52% 22% /* petrol / #2f8d85 */
+  --prim: 211 52% 22%; /* petrol / #2f8d85 */
   --prim-drk: 211 52% 22%;
 
   // secondary
@@ -34,6 +34,7 @@
 
   // Font /////////////////
   --fs-xs: 10px;
+  --fs-sm: 14px;
   --fs-md: 18px;
   --fs-lg: 36px;
   --fs-xl: 64px;

@@ -1,11 +1,9 @@
-#faq {
-  background: yellow;
+#faq, .faq {
+  background: hsl(var(--light));
   width: 100%;
 
-
-
   details {
-    border-top: 1px solid #ccc;
+    border-top: 1px solid hsl(var(--light) / .5);
     padding: 1rem 0 1rem 0;
   }
 
@@ -38,8 +36,8 @@
   height: 10px;
   transform: rotate(45deg);
   transition: all 0.5s ease-out;
-  border-bottom: 1px solid black;
-  border-right: 1px solid black;
+  border-bottom: 1px solid hsl(var(--light));
+  border-right: 1px solid hsl(var(--light));
   float: right;
 }
 
@@ -47,7 +45,7 @@ details div {}
 
 details[open] div {
   animation: blend-in .5s ease-out;
-  background: linear-gradient(to bottom, #fff 0%, #eee 100%);
+  /*background: linear-gradient(to bottom, #fff 0%, #eee 100%);*/
   margin: 1rem 0 0 0;
   padding: 0 1rem .5rem 1rem;
 }

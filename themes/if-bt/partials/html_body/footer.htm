@@ -1,24 +1,48 @@
 <footer>
- <section>
-  <div>erstes</div>
-  <div>zweites</div>
-  <div>drittes</div>
- </section>
+  <section class="faq">
+    <div class="indent-me"
+      <div></div>
+      <details id="footer-2">
+          <summary>
+            <h4>Datenschutz</h4>
+          </summary>
+          <div>
+            text
+          </div>
+        </details>
+        <details id="footer-1">
+          <summary>
+            <h4>Impressum</h4>
+          </summary>
+          <div>
+              text
+          </div>
+        </details>
+
+        <div>
+      <div id="byline">
+        <a href="https://digital4docs.ch" title="Praxis Websites für Ärzte" rel="noopener">Powered by Digital4Docs</a> &nbsp;&nbsp;|&nbsp;&nbsp;
+        <a href="/{{ activeLocale }}">&copy; 2022 - {{ "now"|date("Y") }} {{ orgaMeta.meta.schema_name }}</a> &nbsp;&nbsp;|&nbsp;&nbsp;
+        Icons used with kind permission by <a href="https://www.freepik.com" rel="noopener" title="Freepik">Freepik</a> and <a href="https://fontawesome.com/license" rel="noopener">Fontawesome</a>.</p>
+      </div>
+    </div>
+
+    {% partial 'html_body/languageswitcher-footer' %}
+  </section>
+</div>
+
+  
+
+
+
+
+
+  
+
+    
+
+
 </footer>
 
-<!--
 
-<p class="d-inline-block">
-  <a id="up" href="#top" title="{{ 'footer.backtotop.label'|_ }}" class="d-inline-block">
-    {% partial 'html_body/svg-icons/up' %}
-  </a> <br>
-  <a href="#top" title="{{ 'footer.backtotop.label'|_ }}">
-    {{ 'footer.backtotop.label'|_ }}
-  </a>
-  <br>
-  {% partial 'html_body/languageswitcher-footer' %}
-  <br>
 
-   {% partial 'html_body/byline' %}
-</p>
--->

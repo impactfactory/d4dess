@@ -11,12 +11,20 @@ html {
 
 body {
   color: var(--body-color);
+
+  a {
+    text-decoration: none;
+  }
 }
 
 p {
   line-height: var(--leading);
   margin-top: var(--leading);
   margin-bottom: 0;
+
+  a {
+    text-decoration: underline;
+  }
 }
 
 ul,
@@ -67,7 +75,7 @@ h3 {
   font-size: calc(1 * var(--scale) * 1rem);
 }
 h4 {
-  font-size: calc(var(--scale) / 2 * 1rem);
+  font-size: calc(var(--scale) / 1.414 * 1rem);
 }
 h5 {
   font-size: calc(var(--scale) / 3 * 1rem);

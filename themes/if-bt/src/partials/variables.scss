@@ -22,7 +22,7 @@
   --acc-drk: 0 0% 0;
 
   // jedi power
-  --grey-lgt: 0 100% 100%;
+  --grey-lgt: 0 3% 80%;
   --light: 0 100% 98%;
   --white: 0 100% 100%;
 
@@ -79,7 +79,7 @@
   --content-width: 1100px;
   --content-padding: var(--padd-lg);
 
-  //Breakpoints
+  /*Breakpoints
   // custom properties don't work in media queries ;(
   --break-xs: 280px;
   --break-sm: 320px;
@@ -88,6 +88,7 @@
   --break-lg: 768px;
   --break-xl: 1024px;
   --break-xxl: 1400px;
+  */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -107,8 +108,5 @@
     --grey-lgt: 0 100% 100%;
     --light: 0 0% 10%; /* light turns to dark grey */
     --white: 0 100% 0%; /* white turns to dark */
-
-    /* --body-bg: hsl(var(--light) / 1);
-    --body-color: hsl(var(--black)); /*hsl(var(--black) / 1); */
   }
 }

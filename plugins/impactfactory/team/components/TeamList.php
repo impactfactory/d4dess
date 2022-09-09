@@ -55,6 +55,8 @@ class TeamList extends ComponentBase
         
       $this->main = Organisation::where('type', 'main')->first();
       $this->page['main'] = $this->main;
+
+      
     
     }
 }

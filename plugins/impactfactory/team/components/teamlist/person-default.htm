@@ -1,4 +1,9 @@
-<div class="card">
+
+{% set mail = person.email|split('@') %}
+
+
+
+<section class="card">
 
   <div class="portrait">
     <picture>
@@ -14,47 +19,42 @@
   <div class="name">
     <h3>{% if person.honorific %}{{ person.honorific }} {% endif%}{{ person.name }}</h3>
     <h4>{{ person.role }}</h4>
+    {{ person.background | raw }}
   </div>
 
     {% if person.phone %}
     <div class="phone">
           {% partial 'html_body/svg-icons/phone' %}
-           {{ 'team.person.phone'|_ }}:
-        
-        <a href="tel:{{ person.phone }}" title="{{ person.phone }}">{{ person.phone }}</a>
+           <a href="tel:{{ person.phone }}" title="{{ person.phone }}">{{ person.phone }}</a>
      </div>
     {% endif %}
 
     {% if person.email %}
     <div class="email">
     {% partial 'html_body/svg-icons/email' %}
-           {{ 'team.person.email' |_ }}:
-   
 
         <script>
-          user = '{{ mailuser }}';
-          site = '{{ maildomain }}';
-          document.write('<a href=\"mailto:' + user + '@' + site + '\" data-toggle=\"tooltip\" data-placement=\"top\" title=\"{{ 'contactbox.mail.tooltip'|_ }}\">' + user + '@' + site + '</a>');
+          user = '{{ mail[0] }}';
+          site = '{{ mail[1] }}';
+          document.write('<a href=\"mailto:' + user + '@' + site + '\" data-toggle=\"tooltip\" data-placement=\"top\" title=\"{{ 'contactbox.mail.tooltip'|_ }}\">E-Mail</a>');
         </script>
      </div>
     {% endif %}
 
     {% if person.availability %}
     <div class="availability">
-          {% partial 'html_body/svg-icons/smile-beam' %}
-           {{ 'team.person.availability' |_ }}:
-      
-        {{ person.availability}}
+          {% partial 'html_body/svg-icons/clock' %}
+          {{ person.availability}}
      </div>
     {% endif %}
 
     {% if person.booking == 1 %}
     <div class="booking">
-          book me!
+          <a href="termin" title="Konsultation buchen">Termin reservieren</a>
      </div>
     {% endif %}
 
-</div>
+</section>
 
 
 

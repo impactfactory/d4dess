@@ -27,17 +27,23 @@
   --white: 0 100% 100%;
 
   // Buttons /////////////////
-  --btn-bg: rgb(var(--petrol), 1);
-  --btn-color: rgb(var(--white), 1);
+  --btn-bg: hsl(var(--prim) / 1);
+  --btn-color: hsl(var(--light) / 1);
   --btn-padding: 0.5rem 0.5rem 0.5rem 0.5rem;
   --btn-radius: 10px;
 
-  // Font /////////////////
+  // Typography /////////////////
+  --baseFontSize: 18; // in pixels. This would result in 22px on desktop
+  --baseLineHeight: 1.5; // how large the line height is as a multiple of font size
+  --leading: calc(var(--baseLineHeight) * 1rem);
+  --scale: 1.414 /* original: 1.414 */;
+
   --fs-xs: 10px;
   --fs-sm: 14px;
   --fs-md: 18px;
   --fs-lg: 36px;
   --fs-xl: 64px;
+
   --fw-xs: 200;
   --fw-sm: 300;
   --fw-md: 400;
@@ -82,9 +88,27 @@
   --break-lg: 768px;
   --break-xl: 1024px;
   --break-xxl: 1400px;
+}
 
-  // Helper classes for use in html  /////////////////
-  .primary {
-    color: hsl(var(--prim) / 1);
+@media (prefers-color-scheme: dark) {
+  :root {
+    --black: 0 100% 100%; /* black turns white */
+    --dark: 0 100% 98%; /* dark turn to light */
+    --grey-drk: 0 0% 20%;
+    --prim-lgt: 211 52% 22%;
+    --prim: 211 52% 22%; /* petrol / #2f8d85 */
+    --prim-drk: 211 52% 22%;
+    --sec-lgt: 47 47% 95%;
+    --sec: 47 47% 95%; //#f5f1e3
+    --sec-drk: 47 47% 95%;
+    --acc-lgt: 0 0% 0;
+    --acc: 0 0% 0;
+    --acc-drk: 0 0% 0;
+    --grey-lgt: 0 100% 100%;
+    --light: 0 0% 10%; /* light turns to dark grey */
+    --white: 0 100% 0%; /* white turns to dark */
+
+    /* --body-bg: hsl(var(--light) / 1);
+    --body-color: hsl(var(--black)); /*hsl(var(--black) / 1); */
   }
 }

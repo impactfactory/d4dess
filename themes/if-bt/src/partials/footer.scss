@@ -36,6 +36,7 @@ footer {
 
       a.selected {
         background: hsl(var(--light) / 0.2);
+        border-radius: var(--rad-xs);
       }
     }
 

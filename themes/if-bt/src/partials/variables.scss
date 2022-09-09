@@ -18,7 +18,7 @@
 
   // accent
   --acc-lgt: 0 0% 0;
-  --acc: 0 0% 0;
+  --acc: 0 80% 60%;
   --acc-drk: 0 0% 0;
 
   // jedi power
@@ -61,10 +61,10 @@
   // Body /////////////////
   --body-bg-gradient: linear-gradient(
     to bottom,
-    rgb(var(--petrol), 1) 0%,
-    rgb(var(--petrol), 1) 15%,
-    rgb(var(--blue), 1) 50%,
-    rgb(var(--petrol), 1) 100%
+    rgb(0, 0, 0, 0.1) 0%,
+    rgb(0, 0, 0, 0.3) 15%,
+    rgb(0, 0, 0, 0.7) 50%,
+    rgb(0, 0, 0, 0.1) 100%
   );
   --body-bg: hsl(var(--light) / 1);
   --body-color: hsl(var(--black) / 1);

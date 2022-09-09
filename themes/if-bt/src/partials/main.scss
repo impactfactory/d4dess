@@ -1,8 +1,36 @@
 main {
-    display: grid;
-     justify-items: center;
-    width: 100%;
+  display: grid;
+  justify-items: center;
+  width: 100%;
 
-    /* base for modules */
-    
+  #intro,
+  #team,
+  #praxis,
+  #faq,
+  #termin,
+  #anreise {
+    border-top: 3px solid hsl(var(--white) / 0.5);
+    width: 100%;
   }
+
+  #intro {
+    background: hsl(var(--light) / 0.8);
+  }
+  #team {
+    background: hsl(var(--prim) / 0.8);
+  }
+  #praxis {
+    background: hsl(var(--acc) / 0.8);
+  }
+  #faq {
+    background: hsl(var(--prim-lgt) / 0.8);
+  }
+  #termin {
+    background: hsl(var(--light) / 0.8);
+  }
+  #anreise {
+    background: hsl(var(--sec) / 0.8);
+  }
+
+  /* base for modules */
+}

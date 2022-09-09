@@ -19,7 +19,7 @@ body {
 
 p {
   line-height: var(--leading);
-  margin-top: var(--leading);
+  margin-top: calc(var(--leading) / 1.6);
   margin-bottom: 0;
 
   a {

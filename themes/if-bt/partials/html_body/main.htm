@@ -1,13 +1,17 @@
 <main>
-  <div class="indent-me">{% content 'intro.htm' %}</div>
+  <div id="intro">
+    <div class="indent-me">
+      {% content 'intro.htm' %}
+    </div>
+  </div>
 
-  <div id="team" style="width: 100%">
+  <div id="team">
     <section class="indent-me">
       {% content 'team.htm' %} {% component 'teamList' %}
     </section>
   </div>
 
-  <div id="praxis" style="width: 100%">
+  <div id="praxis">
     <section class="indent-me">
       {% content 'praxis.htm' %} {% component 'gallerydisplay' %}
     </section>
@@ -19,13 +23,19 @@
     </section>
   </div>
 
-  {#
-  <div id="termin" class="indent-me">
-    {% content 'termin.htm' %} {% partial 'snippets/medicosearch.htm' %}
+  
+  <div id="termin">
+    <div class="indent-me">
+      {% content 'termin.htm' %} {% partial 'snippets/medicosearch.htm' %}
+    </div>
   </div>
-  #}
+  
 
-  <div id="anreise" class="indent-me">{% content 'anreise.htm' %}</div>
+  <div id="anreise" >
+    <div class="indent-me">
+    {% content 'anreise.htm' %}
+    </div>
+  </div>
 
   {% partial 'html_body/map' %}
 </main>

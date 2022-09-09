@@ -351,7 +351,7 @@ template {
   --sec: 47 47% 95%;
   --sec-drk: 47 47% 95%;
   --acc-lgt: 0 0% 0;
-  --acc: 0 0% 0;
+  --acc: 0 80% 60%;
   --acc-drk: 0 0% 0;
   --grey-lgt: 0 3% 80%;
   --light: 0 100% 98%;
@@ -382,10 +382,10 @@ template {
     0px 10px 15px -3px rgb(var(--beige), 0.1);
   --body-bg-gradient: linear-gradient(
     to bottom,
-    rgb(var(--petrol), 1) 0%,
-    rgb(var(--petrol), 1) 15%,
-    rgb(var(--blue), 1) 50%,
-    rgb(var(--petrol), 1) 100%
+    rgb(0, 0, 0, 0.1) 0%,
+    rgb(0, 0, 0, 0.3) 15%,
+    rgb(0, 0, 0, 0.7) 50%,
+    rgb(0, 0, 0, 0.1) 100%
   );
   --body-bg: hsl(var(--light) / 1);
   --body-color: hsl(var(--black) / 1);
@@ -439,6 +439,7 @@ html {
 
 body {
   background: var(--body-bg);
+  background: var(--body-bg-gradient);
   min-height: 100vh;
   overflow-x: hidden;
 }
@@ -514,7 +515,7 @@ body a {
 
 p {
   line-height: var(--leading);
-  margin-top: var(--leading);
+  margin-top: calc(var(--leading) / 1.6);
   margin-bottom: 0;
 }
 p a {
@@ -700,34 +701,40 @@ code {
   width: 90%;
 }
 
-#faq, .faq {
-  background: hsl(var(--light));
+#faq,
+.faq {
   width: 100%;
 }
-#faq details, .faq details {
+#faq details,
+.faq details {
   border-top: 1px solid hsl(var(--light)/0.5);
   padding: 1rem 0 1rem 0;
 }
-#faq details:last-child, .faq details:last-child {
+#faq details:last-child,
+.faq details:last-child {
   border-bottom: 1px solid #ccc;
 }
-#faq details[open], .faq details[open] {
+#faq details[open],
+.faq details[open] {
   padding-bottom: 0;
 }
-#faq summary, .faq summary {
+#faq summary,
+.faq summary {
   padding: 0 1rem 0 1rem;
   margin: 0;
   cursor: pointer;
   border-radius: 5px;
 }
 #faq summary::-webkit-details-marker,
-#faq summary::marker, .faq summary::-webkit-details-marker,
+#faq summary::marker,
+.faq summary::-webkit-details-marker,
 .faq summary::marker {
   display: none !important;
   content: "";
   /* fix for chrome */
 }
-#faq summary:after, .faq summary:after {
+#faq summary:after,
+.faq summary:after {
   content: "";
   width: 10px;
   height: 10px;
@@ -737,7 +744,8 @@ code {
   border-right: 1px solid hsl(var(--light));
   float: right;
 }
-#faq details[open] div, .faq details[open] div {
+#faq details[open] div,
+.faq details[open] div {
   animation: blend-in 0.5s ease-out;
   /*background: linear-gradient(to bottom, #fff 0%, #eee 100%);*/
   margin: 1rem 0 0 0;
@@ -751,22 +759,26 @@ code {
     opacity: 1;
   }
 }
-#faq details[open] summary:after, .faq details[open] summary:after {
+#faq details[open] summary:after,
+.faq details[open] summary:after {
   content: "";
   transform: rotate(-135deg);
   margin-top: 8px;
 }
-#faq details[open] summary:after, .faq details[open] summary:after {
+#faq details[open] summary:after,
+.faq details[open] summary:after {
   content: "";
   transform: rotate(-135deg);
   margin-top: 8px;
 }
-#faq summary > h4, .faq summary > h4 {
+#faq summary > h4,
+.faq summary > h4 {
   display: inline;
   font-size: 20px;
   font-weight: 400;
 }
-#faq details[open] summary > h3, .faq details[open] summary > h3 {
+#faq details[open] summary > h3,
+.faq details[open] summary > h3 {
   font-weight: 800;
 }
 
@@ -1005,18 +1017,13 @@ footer .faq .langselect a.selected {
   height: 100%;
 }
 
-header {
-  background: grey;
-}
 header section {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  background-color: #00BAF0;
-  background: linear-gradient(to left, #f46b45, #eea849);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  color: #FFF;
+  color: #fff;
   height: 50px;
   max-width: var(--content-width);
   margin: 0 auto;
@@ -1193,6 +1200,33 @@ main {
   width: 100%;
   /* base for modules */
 }
+main #intro,
+main #team,
+main #praxis,
+main #faq,
+main #termin,
+main #anreise {
+  border-top: 3px solid hsl(var(--white)/0.5);
+  width: 100%;
+}
+main #intro {
+  background: hsl(var(--light)/0.8);
+}
+main #team {
+  background: hsl(var(--prim)/0.8);
+}
+main #praxis {
+  background: hsl(var(--acc)/0.8);
+}
+main #faq {
+  background: hsl(var(--prim-lgt)/0.8);
+}
+main #termin {
+  background: hsl(var(--light)/0.8);
+}
+main #anreise {
+  background: hsl(var(--sec)/0.8);
+}
 
 .map-snippet h2 {
   padding-top: 0 !important;
@@ -1266,9 +1300,6 @@ main {
   max-width: 140px;
 }
 
-#team {
-  border-top: 10px solid hsl(var(--white)/0.5);
-}
 #team .team-list {
   display: grid;
   grid-template-columns: 1fr;

@@ -1,23 +1,21 @@
 header {
-  background: grey;
+  //background: grey;
 
   section {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    background-color: #00BAF0;
-    background: linear-gradient(to left, #f46b45, #eea849);
+    //background-color: #00baf0;
+    //background: linear-gradient(to left, #f46b45, #eea849);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    color: #FFF;
+    color: #fff;
     height: 50px;
     max-width: var(--content-width);
     margin: 0 auto;
     padding: 1em;
-      
   }
 }
-
 
 .menu {
   display: flex;
@@ -60,12 +58,12 @@ header {
 }
 
 .menu-button::before {
-  content: '';
+  content: "";
   margin-top: -8px;
 }
 
 .menu-button::after {
-  content: '';
+  content: "";
   margin-top: 8px;
 }
 
@@ -128,4 +126,3 @@ header {
     border-bottom: 1px solid #444;
   }
 }
-

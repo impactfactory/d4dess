@@ -1,9 +1,9 @@
-#faq, .faq {
-  background: hsl(var(--light));
+#faq,
+.faq {
   width: 100%;
 
   details {
-    border-top: 1px solid hsl(var(--light) / .5);
+    border-top: 1px solid hsl(var(--light) / 0.5);
     padding: 1rem 0 1rem 0;
   }
 
@@ -24,48 +24,55 @@
 
   summary::-webkit-details-marker,
   summary::marker {
-  display: none!important;
-  content: ""; /* fix for chrome */
-}
+    display: none !important;
+    content: ""; /* fix for chrome */
+  }
 
-  summary:hover, summary:focus {}
+  summary:hover,
+  summary:focus {
+  }
 
   summary:after {
-  content: "";
-  width: 10px;
-  height: 10px;
-  transform: rotate(45deg);
-  transition: all 0.5s ease-out;
-  border-bottom: 1px solid hsl(var(--light));
-  border-right: 1px solid hsl(var(--light));
-  float: right;
-}
+    content: "";
+    width: 10px;
+    height: 10px;
+    transform: rotate(45deg);
+    transition: all 0.5s ease-out;
+    border-bottom: 1px solid hsl(var(--light));
+    border-right: 1px solid hsl(var(--light));
+    float: right;
+  }
 
-details div {}
+  details div {
+  }
 
-details[open] div {
-  animation: blend-in .5s ease-out;
-  /*background: linear-gradient(to bottom, #fff 0%, #eee 100%);*/
-  margin: 1rem 0 0 0;
-  padding: 0 1rem .5rem 1rem;
-}
+  details[open] div {
+    animation: blend-in 0.5s ease-out;
+    /*background: linear-gradient(to bottom, #fff 0%, #eee 100%);*/
+    margin: 1rem 0 0 0;
+    padding: 0 1rem 0.5rem 1rem;
+  }
 
-@keyframes blend-in {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
-}
+  @keyframes blend-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 
-details[open] summary:after {
-  content: "";
-  transform: rotate(-135deg);
-  margin-top: 8px;
-}
+  details[open] summary:after {
+    content: "";
+    transform: rotate(-135deg);
+    margin-top: 8px;
+  }
 
-details[open] summary:after {
-  content: "";
-  transform: rotate(-135deg);
-  margin-top: 8px;
-}
+  details[open] summary:after {
+    content: "";
+    transform: rotate(-135deg);
+    margin-top: 8px;
+  }
 
   summary > h4 {
     display: inline;

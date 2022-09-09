@@ -381,12 +381,14 @@ template {
     rgb(var(--petrol), 1) 0%,
     rgb(var(--petrol), 1) 15%,
     rgb(var(--blue), 1) 50%,
-    rgb(var(--petrol), 1) 100% );
+    rgb(var(--petrol), 1) 100%
+  );
   --body-bg: hsl(var(--light) / 1);
   --body-color: hsl(var(--black) / 1);
   --body-fs: var(--fs-md);
   --padd-xs: 0.25rem;
-  --padd-md: 0.5rem;
+  --padd-sm: 0.5rem;
+  --padd-md: 0.75rem;
   --padd-lg: 1rem;
   --padd-xl: 4rem;
   --content-width: 1100px;
@@ -745,23 +747,40 @@ footer {
   color: hsl(var(--light));
   display: block;
   font-size: var(--fs-md);
-  height: 500px;
+  height: auto;
 }
 footer a {
   color: hsl(var(--light));
 }
-footer a:hover, footer a:focus {
+footer a:hover,
+footer a:focus {
   text-decoration: underline;
 }
 footer .faq {
   background: hsl(var(--grey-drk)/1);
   margin: 0 auto;
   max-width: var(--content-width);
+  /*.faq {
+
+    border-bottom: 1px solid hsl(var(--light) / 0.5);
+    padding: var(--content-padding);
+  }*/
 }
-footer .faq #byline {
+footer .faq .byline {
   border-top: 1px solid hsl(var(--light)/0.5);
-  border-bottom: 1px solid hsl(var(--light)/0.5);
+  line-height: 1.1rem;
   padding: var(--content-padding);
+}
+footer .faq .langselect {
+  border-top: 1px solid hsl(var(--light)/0.5);
+  padding: var(--content-padding);
+}
+footer .faq .langselect a {
+  display: inline-block;
+  padding: var(--padd-xs);
+}
+footer .faq .langselect a.selected {
+  background: hsl(var(--light)/0.2);
 }
 
 @media only screen and (min-width: 76px) {

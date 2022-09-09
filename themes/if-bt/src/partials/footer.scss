@@ -1,33 +1,51 @@
-footer { 
+footer {
   background: hsl(var(--grey-drk) / 1);
   color: hsl(var(--light));
-  display:block;
+  display: block;
   font-size: var(--fs-md);
-  height: 500px;
+  height: auto;
 
-    a {
-      color: hsl(var(--light));
-    }
+  a {
+    color: hsl(var(--light));
+  }
 
-    a:hover, a:focus {
-      text-decoration: underline;
-    }
+  a:hover,
+  a:focus {
+    text-decoration: underline;
+  }
 
   .faq {
     background: hsl(var(--grey-drk) / 1);
     margin: 0 auto;
     max-width: var(--content-width);
 
-    #byline {
-      border-top: 1px solid hsl(var(--light) / .5);
-      border-bottom: 1px solid hsl(var(--light) / .5);
+    .byline {
+      border-top: 1px solid hsl(var(--light) / 0.5);
+      line-height: 1.1rem;
       padding: var(--content-padding);
     }
+
+    .langselect {
+      border-top: 1px solid hsl(var(--light) / 0.5);
+      padding: var(--content-padding);
+
+      a {
+        display: inline-block;
+        padding: var(--padd-xs);
+      }
+
+      a.selected {
+        background: hsl(var(--light) / 0.2);
+      }
+    }
+
+    /*.faq {
+      
+      border-bottom: 1px solid hsl(var(--light) / 0.5);
+      padding: var(--content-padding);
+    }*/
   }
-
-  
 }
-
 
 @media only screen and (min-width: 76px) {
   footer section {
@@ -39,8 +57,7 @@ footer {
     }
   }
 }
- 
-   
+
 /*
   a {
     text-decoration: none;
@@ -76,6 +93,3 @@ footer {
 
   }
   */
-
-
-

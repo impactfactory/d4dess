@@ -1,42 +1,31 @@
+<main>
+  <div class="indent-me">{% content 'intro.htm' %}</div>
 
- <main>
+  <div id="team" style="width: 100%">
+    <section class="indent-me">
+      {% content 'team.htm' %} {% component 'teamList' %}
+    </section>
+  </div>
 
+  <div id="praxis" style="width: 100%">
+    <section class="indent-me">
+      {% content 'praxis.htm' %} {% component 'gallerydisplay' %}
+    </section>
+  </div>
 
+  <div id="faq">
+    <section class="indent-me">
+      {% content 'faq.htm' %} {% component 'faq' %}
+    </section>
+  </div>
 
-    <div class="indent-me">
-        {% content 'intro.htm' %}
-    </div> 
+  {#
+  <div id="termin" class="indent-me">
+    {% content 'termin.htm' %} {% partial 'snippets/medicosearch.htm' %}
+  </div>
+  #}
 
-    <div id="team" style="width: 100%">
-        <section class="indent-me">
-            {% content 'team.htm' %}
-            {% component 'teamList' %}
-        </section>
-    </div>
+  <div id="anreise" class="indent-me">{% content 'anreise.htm' %}</div>
 
-    <div id="praxis" style="width: 100%">
-        <section class="indent-me">
-            {% content 'praxis.htm' %}
-            {% component 'gallerydisplay' %}
-        </section>
-    </div>
-
-    <div id="faq">
-        <section class="indent-me">
-            {% content 'faq.htm' %}
-            {% component 'faq' %}
-        </section>
-    </div>
-
-    <div id="termin" class="indent-me">
-        {% content 'termin.htm' %}
-        {% partial 'snippets/medicosearch.htm' %}
-    </div>
-  
-    <div id="anreise" class="indent-me">
-        {% content 'anreise.htm' %}
-    </div>
-
-    {% partial 'html_body/map' %}   
-
- </main>
+  {% partial 'html_body/map' %}
+</main>

@@ -58,14 +58,16 @@
     rgb(var(--petrol), 1) 0%,
     rgb(var(--petrol), 1) 15%,
     rgb(var(--blue), 1) 50%,
-    rgb(var(--petrol), 1) 100% );
+    rgb(var(--petrol), 1) 100%
+  );
   --body-bg: hsl(var(--light) / 1);
   --body-color: hsl(var(--black) / 1);
   --body-fs: var(--fs-md);
 
   // Spaces /////////////////
   --padd-xs: 0.25rem;
-  --padd-md: 0.5rem;
+  --padd-sm: 0.5rem;
+  --padd-md: 0.75rem;
   --padd-lg: 1rem;
   --padd-xl: 4rem;
   --content-width: 1100px;
@@ -85,7 +87,4 @@
   .primary {
     color: hsl(var(--prim) / 1);
   }
-
-  
 }
-

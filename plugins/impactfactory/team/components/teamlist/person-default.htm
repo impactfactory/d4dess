@@ -22,14 +22,7 @@
     {{ person.background | raw }}
   </div>
 
-    {% if person.phone %}
-    <div class="phone">
-          {% partial 'html_body/svg-icons/phone' %}
-           <a href="tel:{{ person.phone }}" title="{{ person.phone }}">{{ person.phone }}</a>
-     </div>
-    {% endif %}
-
-    {% if person.email %}
+  {% if person.email %}
     <div class="email">
     {% partial 'html_body/svg-icons/email' %}
 
@@ -38,6 +31,13 @@
           site = '{{ mail[1] }}';
           document.write('<a href=\"mailto:' + user + '@' + site + '\" data-toggle=\"tooltip\" data-placement=\"top\" title=\"{{ 'contactbox.mail.tooltip'|_ }}\">E-Mail</a>');
         </script>
+     </div>
+    {% endif %}
+
+    {% if person.phone %}
+    <div class="phone">
+          {% partial 'html_body/svg-icons/phone' %}
+           <a href="tel:{{ person.phone }}" title="{{ person.phone }}">{{ person.phone }}</a>
      </div>
     {% endif %}
 
@@ -50,7 +50,8 @@
 
     {% if person.booking == 1 %}
     <div class="booking">
-          <a href="termin" title="Konsultation buchen">Termin reservieren</a>
+        {% partial 'html_body/svg-icons/calendarcheck' %}
+        <a href="#termin" title="Konsultation buchen">Termin</a>
      </div>
     {% endif %}
 

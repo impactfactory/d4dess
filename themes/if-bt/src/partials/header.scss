@@ -1,5 +1,8 @@
 header {
-  //background: grey;
+  background: hsl(var(--white) / 0.95);
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
 
   section {
     display: flex;

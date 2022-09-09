@@ -1,28 +1,83 @@
 #team {
+  padding-bottom: var(--padd-lg);
+
   .team-list {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
-    gap: 20px 0px;
+    gap: var(--padd-lg) 0px;
     margin-top: var(--padd-lg);
 
+    .card:nth-child(2n) {
+      background: radial-gradient(
+        hsl(var(--grey-lgt) / 1) 0%,
+        hsl(var(--grey-lgt) / 0.2) 100%
+      );
+    }
+
     .card {
-      background: hsl(var(--white) / 0.9);
+      background: hsl(var(--white) / 1);
+      background: radial-gradient(
+        hsl(var(--white) / 1) 0%,
+        hsl(var(--white) / 0.2) 100%
+      );
+      border: 2px solid hsl(var(--white) / 0.5);
       border-radius: var(--rad-lg);
+      box-shadow: (var(--shad-md));
       display: grid;
       grid-template-columns: 200px 1fr;
       grid-template-rows: 200px 1fr 1fr;
       gap: 2px;
       overflow: hidden;
+      padding: 10px;
       width: 100%;
 
-      .name,
+      a {
+        color: var(--body-color);
+
+        &:hover {
+          color: var(--primary);
+        }
+      }
+
       .phone,
       .email,
       .availability,
       .booking {
-        background: hsl(var(--grey-lgt) / 1);
+        background: radial-gradient(
+          hsl(var(--prim) / 0) 0%,
+          hsl(var(--prim) / 0) 100%
+        );
+        //border-top: 1px solid hsl(var(--dark) / 0.2);
+        align-self: center;
+        font-size: calc(var(--scale) / 1.6 * 1rem);
         padding: var(--padd-sm);
+        transition: 3s;
+
+        svg {
+          height: 20px;
+          position: relative;
+          top: 3px;
+          width: 20px;
+        }
+      }
+
+      .phone,
+      .email,
+      .booking {
+        &:hover {
+          background: radial-gradient(
+            hsl(var(--prim) / 1) 0%,
+            hsl(var(--prim) / 0.6) 100%
+          );
+
+          a,
+          .fa-envelope,
+          .fa-phone-alt,
+          .fa-calendar-check {
+            color: hsl(var(--white) / 1);
+          }
+        }
       }
 
       .portrait {
@@ -92,7 +147,7 @@
 
 @media only screen and (min-width: 768px) {
   #team .team-list .card {
-    grid-template-columns: 200px 1fr 1fr 1fr 1fr;
+    grid-template-columns: 200px 1fr 1fr 1fr;
     grid-template-rows: 200px 1fr;
 
     .portrait {
@@ -100,19 +155,19 @@
     }
 
     .name {
-      grid-area: 1 / 2 / 2 / 6;
-    }
-    .phone {
-      grid-area: 2 / 1 / 3 / 2;
+      grid-area: 1 / 2 / 2 / 5;
     }
     .email {
+      grid-area: 2 / 1 / 3 / 2;
+    }
+    .phone {
       grid-area: 2 / 2 / 3 / 3;
     }
     .availability {
       grid-area: 2 / 3 / 3 / 4;
     }
     .booking {
-      grid-area: 2 / 4 / 3 / 6;
+      grid-area: 2 / 4 / 3 / 5;
     }
   }
 }

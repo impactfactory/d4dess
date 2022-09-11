@@ -1,38 +1,45 @@
 <main>
-  <div id="intro">
+  <div class="intro">
+    <div id="intro" class="anchor"></div>
     <div class="indent-me">
       {% content 'intro.htm' %}
     </div>
   </div>
 
-  <div id="team">
+  <div class="team">
+    <div id="team" class="anchor"></div>
     <section class="indent-me">
       {% content 'team.htm' %} {% component 'teamList' %}
     </section>
   </div>
 
-  <div id="praxis">
+  <div class="practice">
+    <div id="practice" class="anchor"></div>
     <section class="indent-me">
       {% content 'praxis.htm' %} {% component 'gallerydisplay' %}
     </section>
   </div>
   
-  <div id="termin">
+  <div class="reservation">
+    <div id="reservation" class="anchor"></div>
     <div class="indent-me">
       {% content 'termin.htm' %} {% partial 'snippets/medicosearch.htm' %}
     </div>
   </div>
   
 
-  <div id="anreise" >
+  <div class="arrival" >
+    
     <div class="indent-me">
+    <div id="arrival" class="anchor"></div>
     {% content 'anreise.htm' %}
     </div>
   </div>
 
   {% partial 'html_body/map' %}
 
-  <div id="faq">
+  <div class="faq">
+    <div id="faq" class="anchor"></div>
     <section class="indent-me">
       {% content 'faq.htm' %} {% component 'faq' %}
     </section>

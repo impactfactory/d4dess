@@ -1,9 +1,13 @@
 items:
     -
         title: Team
+        nesting: null
         type: url
         url: '#team'
         code: nav.main.team
+        reference: null
+        cmsPage: null
+        replace: null
         viewBag:
             locale:
                 en:
@@ -16,7 +20,7 @@ items:
     -
         title: Praxis
         type: url
-        url: '#praxis'
+        url: '#practice'
         code: nav.main.clinic
         viewBag:
             locale:
@@ -30,7 +34,7 @@ items:
     -
         title: Termin
         type: url
-        url: '#termin'
+        url: '#reservation'
         code: nav.main.reservation
         viewBag:
             locale:
@@ -44,7 +48,7 @@ items:
     -
         title: Anreise
         type: url
-        url: '#anreise'
+        url: '#arrival'
         code: nav.main.travel
         viewBag:
             locale:

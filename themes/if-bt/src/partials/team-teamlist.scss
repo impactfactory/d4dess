@@ -1,4 +1,4 @@
-#team {
+.team {
   padding-bottom: var(--padd-lg);
 
   .team-list {
@@ -120,7 +120,7 @@
 }
 
 @media only screen and (min-width: 576px) {
-  #team .team-list .card {
+  .team .team-list .card {
     grid-template-columns: 200px 1fr;
     grid-template-rows: 200px 1fr 1fr;
 
@@ -147,7 +147,7 @@
 }
 
 @media only screen and (min-width: 768px) {
-  #team .team-list .card {
+  .team .team-list .card {
     grid-template-columns: 200px 1fr 1fr 1fr;
     grid-template-rows: 200px 1fr;
 

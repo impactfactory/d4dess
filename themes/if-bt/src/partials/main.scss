@@ -1,24 +1,23 @@
 main {
   --opacity: 1;
-
   display: grid;
   justify-items: center;
   width: 100%;
 
-  #intro,
-  #team,
-  #praxis,
-  #faq,
-  #termin,
-  #anreise {
+  .intro,
+  .team,
+  .practice,
+  .faq,
+  .reservation,
+  .arrival {
     border-top: 3px solid hsl(var(--light) / 1);
     width: 100%;
   }
 
-  #intro {
+  .intro {
     //background: hsl(var(--light) / var(--opacity));
   }
-  #team {
+  .team {
     background: hsl(var(--main-lgt) / var(--opacity));
     /*background: linear-gradient(
       to bottom,
@@ -26,7 +25,7 @@ main {
       hsl(var(--main) / 0.5) 100%
     );*/
   }
-  #praxis {
+  .practice {
     background: hsl(var(--acc1-lgt) / var(--opacity));
     /*background: linear-gradient(
       to bottom,
@@ -34,7 +33,7 @@ main {
       hsl(var(--acc1) / 0.5) 100%
     );*/
   }
-  #faq {
+  .faq {
     background: hsl(var(--prim-lgt) / var(--opacity));
     /*background: linear-gradient(
       to bottom,
@@ -42,7 +41,7 @@ main {
       hsl(var(--prim) / 0.5) 100%
     );*/
   }
-  #termin {
+  .reservation {
     background: hsl(var(--acc2-lgt) / var(--opacity));
     /*background: linear-gradient(
       to bottom,
@@ -50,7 +49,7 @@ main {
       hsl(var(--acc2) / 0.5) 100%
     );*/
   }
-  #anreise {
+  .arrival {
     background: hsl(var(--tec-lgt) / var(--opacity));
     /*background: linear-gradient(
       to bottom,

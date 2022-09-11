@@ -446,6 +446,12 @@ body {
   overflow-x: hidden;
 }
 
+.anchor {
+  display: block;
+  position: relative;
+  top: -120px;
+}
+
 /* Layout */
 article {
   display: grid;
@@ -1193,7 +1199,7 @@ header nav #logo {
     border-bottom: 1px solid #444;
   }
 }
-#intro h1 span {
+.intro h1 span {
   animation: blendIn 4s ease-in-out 1s forwards;
   font-size: calc(1.8 * var(--scale) * 1rem);
   font-weight: var(--fw-xl);
@@ -1248,16 +1254,16 @@ main {
   width: 100%;
   /* base for modules */
 }
-main #intro,
-main #team,
-main #praxis,
-main #faq,
-main #termin,
-main #anreise {
+main .intro,
+main .team,
+main .practice,
+main .faq,
+main .reservation,
+main .arrival {
   border-top: 3px solid hsl(var(--light)/1);
   width: 100%;
 }
-main #team {
+main .team {
   background: hsl(var(--main-lgt)/var(--opacity));
   /*background: linear-gradient(
     to bottom,
@@ -1265,7 +1271,7 @@ main #team {
     hsl(var(--main) / 0.5) 100%
   );*/
 }
-main #praxis {
+main .practice {
   background: hsl(var(--acc1-lgt)/var(--opacity));
   /*background: linear-gradient(
     to bottom,
@@ -1273,7 +1279,7 @@ main #praxis {
     hsl(var(--acc1) / 0.5) 100%
   );*/
 }
-main #faq {
+main .faq {
   background: hsl(var(--prim-lgt)/var(--opacity));
   /*background: linear-gradient(
     to bottom,
@@ -1281,7 +1287,7 @@ main #faq {
     hsl(var(--prim) / 0.5) 100%
   );*/
 }
-main #termin {
+main .reservation {
   background: hsl(var(--acc2-lgt)/var(--opacity));
   /*background: linear-gradient(
     to bottom,
@@ -1289,7 +1295,7 @@ main #termin {
     hsl(var(--acc2) / 0.5) 100%
   );*/
 }
-main #anreise {
+main .arrival {
   background: hsl(var(--tec-lgt)/var(--opacity));
   /*background: linear-gradient(
     to bottom,
@@ -1370,24 +1376,24 @@ main #anreise {
   max-width: 140px;
 }
 
-#team {
+.team {
   padding-bottom: var(--padd-lg);
 }
-#team .team-list {
+.team .team-list {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
   gap: var(--padd-lg) 0px;
   margin-top: var(--padd-lg);
 }
-#team .team-list .card:nth-child(2n) {
+.team .team-list .card:nth-child(2n) {
   background: hsl(var(--light));
   /*background: radial-gradient(
     hsl(var(--acc1-lgt) / 1) 0%,
     hsl(var(--acc1-lgt) / 0.4) 100%
   );*/
 }
-#team .team-list .card {
+.team .team-list .card {
   background: hsl(var(--light)/1);
   /*background: radial-gradient(
     hsl(var(--white) / 1) 0%,
@@ -1404,124 +1410,124 @@ main #anreise {
   padding: 10px;
   width: 100%;
 }
-#team .team-list .card a {
+.team .team-list .card a {
   color: var(--body-color);
 }
-#team .team-list .card a:hover {
+.team .team-list .card a:hover {
   color: var(--primary);
 }
-#team .team-list .card .phone,
-#team .team-list .card .email,
-#team .team-list .card .availability,
-#team .team-list .card .booking {
+.team .team-list .card .phone,
+.team .team-list .card .email,
+.team .team-list .card .availability,
+.team .team-list .card .booking {
   background: radial-gradient(hsl(var(--prim)/0) 0%, hsl(var(--prim)/0) 100%);
   align-self: center;
   font-size: calc(var(--scale) / 1.6 * 1rem);
   padding: var(--padd-sm);
   transition: 3s;
 }
-#team .team-list .card .phone svg,
-#team .team-list .card .email svg,
-#team .team-list .card .availability svg,
-#team .team-list .card .booking svg {
+.team .team-list .card .phone svg,
+.team .team-list .card .email svg,
+.team .team-list .card .availability svg,
+.team .team-list .card .booking svg {
   height: 20px;
   position: relative;
   top: 3px;
   width: 20px;
 }
-#team .team-list .card .phone:hover,
-#team .team-list .card .email:hover,
-#team .team-list .card .booking:hover {
+.team .team-list .card .phone:hover,
+.team .team-list .card .email:hover,
+.team .team-list .card .booking:hover {
   background: radial-gradient(hsl(var(--prim)/1) 0%, hsl(var(--prim)/0.6) 100%);
 }
-#team .team-list .card .phone:hover a,
-#team .team-list .card .phone:hover .fa-envelope,
-#team .team-list .card .phone:hover .fa-phone-alt,
-#team .team-list .card .phone:hover .fa-calendar-check,
-#team .team-list .card .email:hover a,
-#team .team-list .card .email:hover .fa-envelope,
-#team .team-list .card .email:hover .fa-phone-alt,
-#team .team-list .card .email:hover .fa-calendar-check,
-#team .team-list .card .booking:hover a,
-#team .team-list .card .booking:hover .fa-envelope,
-#team .team-list .card .booking:hover .fa-phone-alt,
-#team .team-list .card .booking:hover .fa-calendar-check {
+.team .team-list .card .phone:hover a,
+.team .team-list .card .phone:hover .fa-envelope,
+.team .team-list .card .phone:hover .fa-phone-alt,
+.team .team-list .card .phone:hover .fa-calendar-check,
+.team .team-list .card .email:hover a,
+.team .team-list .card .email:hover .fa-envelope,
+.team .team-list .card .email:hover .fa-phone-alt,
+.team .team-list .card .email:hover .fa-calendar-check,
+.team .team-list .card .booking:hover a,
+.team .team-list .card .booking:hover .fa-envelope,
+.team .team-list .card .booking:hover .fa-phone-alt,
+.team .team-list .card .booking:hover .fa-calendar-check {
   color: hsl(var(--white)/1);
 }
-#team .team-list .card .portrait {
+.team .team-list .card .portrait {
   grid-area: 1/1/2/2;
 }
-#team .team-list .card .portrait img {
+.team .team-list .card .portrait img {
   border-radius: var(--rad-lg) 0 0 0;
 }
-#team .team-list .card .name {
+.team .team-list .card .name {
   grid-area: 1/2/2/3;
   overflow: scroll;
   padding: var(--padd-md);
 }
-#team .team-list .card .name h3,
-#team .team-list .card .name h4,
-#team .team-list .card .name p {
+.team .team-list .card .name h3,
+.team .team-list .card .name h4,
+.team .team-list .card .name p {
   margin: 0;
 }
-#team .team-list .card .phone {
+.team .team-list .card .phone {
   grid-area: 2/1/3/2;
 }
-#team .team-list .card .email {
+.team .team-list .card .email {
   grid-area: 2/2/3/3;
 }
-#team .team-list .card .availability {
+.team .team-list .card .availability {
   grid-area: 3/1/4/2;
 }
-#team .team-list .card .booking {
+.team .team-list .card .booking {
   grid-area: 3/2/4/3;
 }
 
 @media only screen and (min-width: 576px) {
-  #team .team-list .card {
+  .team .team-list .card {
     grid-template-columns: 200px 1fr;
     grid-template-rows: 200px 1fr 1fr;
   }
-  #team .team-list .card .portrait {
+  .team .team-list .card .portrait {
     grid-area: 1/1/2/2;
   }
-  #team .team-list .card .name {
+  .team .team-list .card .name {
     grid-area: 1/2/2/3;
   }
-  #team .team-list .card .phone {
+  .team .team-list .card .phone {
     grid-area: 2/1/3/2;
   }
-  #team .team-list .card .email {
+  .team .team-list .card .email {
     grid-area: 2/2/3/3;
   }
-  #team .team-list .card .availability {
+  .team .team-list .card .availability {
     grid-area: 3/1/4/2;
   }
-  #team .team-list .card .booking {
+  .team .team-list .card .booking {
     grid-area: 3/2/4/3;
   }
 }
 @media only screen and (min-width: 768px) {
-  #team .team-list .card {
+  .team .team-list .card {
     grid-template-columns: 200px 1fr 1fr 1fr;
     grid-template-rows: 200px 1fr;
   }
-  #team .team-list .card .portrait {
+  .team .team-list .card .portrait {
     grid-area: 1/1/2/2;
   }
-  #team .team-list .card .name {
+  .team .team-list .card .name {
     grid-area: 1/2/2/5;
   }
-  #team .team-list .card .email {
+  .team .team-list .card .email {
     grid-area: 2/1/3/2;
   }
-  #team .team-list .card .phone {
+  .team .team-list .card .phone {
     grid-area: 2/2/3/3;
   }
-  #team .team-list .card .availability {
+  .team .team-list .card .availability {
     grid-area: 2/3/3/4;
   }
-  #team .team-list .card .booking {
+  .team .team-list .card .booking {
     grid-area: 2/4/3/5;
   }
 }

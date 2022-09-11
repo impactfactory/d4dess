@@ -2,8 +2,8 @@
 code = "main"
 ==
 <header>
-  <section>
-    <div id="logo" style="width: 300px">
+  <nav>
+    <div id="logo">
       <a class="logo" href="/{{ localePicker.activeLocale }}" title="Home">
       {% partial 'html_body/svg-icons/logo-de' %} 
       </a>   
@@ -19,7 +19,7 @@ code = "main"
       <li>
         <a title="{{ item.title }}" 
            class="" 
-           href="/{{ item.url }}"
+           href="{{ item.url }}"
            onclick="hideMenu()">
            {{ item.title }}
         </a>
@@ -27,7 +27,7 @@ code = "main"
     {% endfor %}
     </ul>
 
-  </section>
+  </nav>
 </header>
 
 

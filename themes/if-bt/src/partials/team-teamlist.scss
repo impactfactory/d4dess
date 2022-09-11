@@ -9,18 +9,19 @@
     margin-top: var(--padd-lg);
 
     .card:nth-child(2n) {
-      background: radial-gradient(
-        hsl(var(--grey-lgt) / 1) 0%,
-        hsl(var(--grey-lgt) / 0.2) 100%
-      );
+      background: hsl(var(--light));
+      /*background: radial-gradient(
+        hsl(var(--acc1-lgt) / 1) 0%,
+        hsl(var(--acc1-lgt) / 0.4) 100%
+      );*/
     }
 
     .card {
-      background: hsl(var(--white) / 1);
-      background: radial-gradient(
+      background: hsl(var(--light) / 1);
+      /*background: radial-gradient(
         hsl(var(--white) / 1) 0%,
         hsl(var(--white) / 0.2) 100%
-      );
+      );*/
       border: 2px solid hsl(var(--white) / 0.5);
       border-radius: var(--rad-lg);
       box-shadow: (var(--shad-md));

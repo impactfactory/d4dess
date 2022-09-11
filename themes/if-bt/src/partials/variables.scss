@@ -1,30 +1,36 @@
 :root {
   // Colors /////////////////
 
-  // the dark side of the force
+  // white to black scale
   --black-: 0 0% 0%; /* #000 */
-  --dark: 0 50% 7%; /* hsl(0 0% 7% / 1); /* #111111;*/
-  --grey-drk: 0 0% 20%;
+  --dark: 189 50% 10%; /* hsl(0 0% 7% / 1); /* #111111;*/
+  --white: 0 100% 100%;
+  --light: 189 100% 98%;
 
-  // primary
+  // primary / a friendly playful orange
   --prim-lgt: 32 85% 95%;
   --prim: 32 100% 60%;
   --prim-drk: 32 85% 40%;
 
-  // secondary
-  --sec-lgt: 155 85% 95%;
-  --sec: 155 85% 92%; //#f5f1e3
-  --sec-drk: 155 85% 80%;
+  // main background / a bright blue canvas for everything
+  --main-lgt: 189 60% 95%;
+  --main: 189 50% 70%;
+  --main-drk: 189 30% 70%;
 
-  // accent
-  --acc-lgt: 189 29% 92%;
-  --acc: 189 54% 85%;
-  --acc-drk: 189 85% 80%;
+  // accent 1
+  --acc1-lgt: 46 80% 95%;
+  --acc1: 46 100% 80%;
+  --acc1-drk: 46 30% 70%;
 
-  // jedi power
-  --grey-lgt: 0 0% 90%;
-  --light: 0 100% 98%;
-  --white: 0 100% 100%;
+  // accent 2
+  --acc2-lgt: 100 29% 92%;
+  --acc2: 100 54% 85%;
+  --acc2-drk: 100 85% 80%;
+
+  // technical
+  --tec-lgt: 0 0% 92%;
+  --tec: 0 0% 70%;
+  --tec-drk: 0 0% 25%;
 
   // Buttons /////////////////
   --btn-bg: hsl(var(--prim) / 1);
@@ -61,15 +67,15 @@
   // Body /////////////////
   --body-bg-gradient: linear-gradient(
     to bottom,
-    hsl(var(--acc-drk) / 1) 0%,
-    hsl(var(--acc) / 1) 25%,
-    hsl(var(--acc-lgt) / 1) 50%,
-    hsl(var(--acc) / 1) 75%,
-    hsl(var(--acc-drk) / 1) 90%
+    hsl(var(--main-lgt) / 1) 0%,
+    hsl(var(--main) / 1) 45%,
+    hsl(var(--main-drk) / 1) 50%,
+    hsl(var(--main) / 1) 75%,
+    hsl(var(--main-lgt) / 1) 90%
   );
-  --body-bg: hsl(var(--light) / 1);
+  --body-bg: hsl(var(--white) / 1);
   --body-color: hsl(var(--black) / 1);
-  --body-fs: var(--fs-md);
+  //--body-fs: var(--fs-md);
 
   // Spaces /////////////////
   --padd-xs: 0.25rem;
@@ -100,13 +106,12 @@
     --prim-lgt: 211 52% 22%;
     --prim: 211 52% 22%; /* petrol / #2f8d85 */
     --prim-drk: 211 52% 22%;
-    --sec-lgt: 47 47% 95%;
-    --sec: 47 47% 95%; //#f5f1e3
-    --sec-drk: 47 47% 95%;
-    --acc-lgt: 0 0% 0;
-    --acc: 0 0% 0;
-    --acc-drk: 0 0% 0;
-    --grey-lgt: 0 100% 100%;
+    --main-lgt: 47 47% 95%;
+    --main: 47 47% 95%; //#f5f1e3
+    --main-drk: 47 47% 95%;
+    --acc1-lgt: 0 0% 0;
+    --acc1: 0 0% 0;
+    --acc1-drk: 0 0% 0;
     --light: 0 0% 10%; /* light turns to dark grey */
     --white: 0 100% 0%; /* white turns to dark */
   }

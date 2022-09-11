@@ -340,21 +340,25 @@ template {
 :root {
   --black-: 0 0% 0%;
   /* #000 */
-  --dark: 0 50% 7%;
+  --dark: 189 50% 10%;
   /* hsl(0 0% 7% / 1); /* #111111;*/
-  --grey-drk: 0 0% 20%;
+  --white: 0 100% 100%;
+  --light: 189 100% 98%;
   --prim-lgt: 32 85% 95%;
   --prim: 32 100% 60%;
   --prim-drk: 32 85% 40%;
-  --sec-lgt: 155 85% 95%;
-  --sec: 155 85% 92%;
-  --sec-drk: 155 85% 80%;
-  --acc-lgt: 189 29% 92%;
-  --acc: 189 54% 85%;
-  --acc-drk: 189 85% 80%;
-  --grey-lgt: 0 0% 90%;
-  --light: 0 100% 98%;
-  --white: 0 100% 100%;
+  --main-lgt: 189 60% 95%;
+  --main: 189 50% 70%;
+  --main-drk: 189 30% 70%;
+  --acc1-lgt: 46 80% 95%;
+  --acc1: 46 100% 80%;
+  --acc1-drk: 46 30% 70%;
+  --acc2-lgt: 100 29% 92%;
+  --acc2: 100 54% 85%;
+  --acc2-drk: 100 85% 80%;
+  --tec-lgt: 0 0% 92%;
+  --tec: 0 0% 70%;
+  --tec-drk: 0 0% 25%;
   --btn-bg: hsl(var(--prim) / 1);
   --btn-color: hsl(var(--white) / 1);
   --btn-padding: 0.5rem 0.5rem 0.5rem 0.5rem;
@@ -381,15 +385,14 @@ template {
     0px 10px 15px -3px hsl(var(-dark) / 1);
   --body-bg-gradient: linear-gradient(
     to bottom,
-    hsl(var(--acc-drk) / 1) 0%,
-    hsl(var(--acc) / 1) 25%,
-    hsl(var(--acc-lgt) / 1) 50%,
-    hsl(var(--acc) / 1) 75%,
-    hsl(var(--acc-drk) / 1) 90%
+    hsl(var(--main-lgt) / 1) 0%,
+    hsl(var(--main) / 1) 45%,
+    hsl(var(--main-drk) / 1) 50%,
+    hsl(var(--main) / 1) 75%,
+    hsl(var(--main-lgt) / 1) 90%
   );
-  --body-bg: hsl(var(--light) / 1);
+  --body-bg: hsl(var(--white) / 1);
   --body-color: hsl(var(--black) / 1);
-  --body-fs: var(--fs-md);
   --padd-xs: 0.25rem;
   --padd-sm: 0.5rem;
   --padd-md: 0.75rem;
@@ -420,13 +423,12 @@ template {
     --prim: 211 52% 22%;
     /* petrol / #2f8d85 */
     --prim-drk: 211 52% 22%;
-    --sec-lgt: 47 47% 95%;
-    --sec: 47 47% 95%;
-    --sec-drk: 47 47% 95%;
-    --acc-lgt: 0 0% 0;
-    --acc: 0 0% 0;
-    --acc-drk: 0 0% 0;
-    --grey-lgt: 0 100% 100%;
+    --main-lgt: 47 47% 95%;
+    --main: 47 47% 95%;
+    --main-drk: 47 47% 95%;
+    --acc1-lgt: 0 0% 0;
+    --acc1: 0 0% 0;
+    --acc1-drk: 0 0% 0;
     --light: 0 0% 10%;
     /* light turns to dark grey */
     --white: 0 100% 0%;
@@ -453,7 +455,11 @@ article {
 }
 
 div,
-footer {
+footer,
+header,
+main,
+nav,
+section {
   box-sizing: border-box;
 }
 
@@ -784,7 +790,7 @@ code {
 }
 
 footer {
-  background: hsl(var(--grey-drk)/1);
+  background: hsl(var(--dark)/1);
   color: hsl(var(--light));
   display: block;
   font-size: var(--fs-md);
@@ -1019,24 +1025,28 @@ footer .faq .langselect a.selected {
 }
 
 header {
-  background: hsl(var(--white)/0.95);
+  background: hsl(var(--tec-lgt));
+  height: auto;
   position: fixed;
   width: 100%;
   z-index: 1000;
 }
-header section {
+header nav {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  justify-content: space-evenly;
   color: #fff;
-  height: 50px;
-  max-width: var(--content-width);
+  height: auto;
   margin: 0 auto;
-  padding: 1em;
+  padding: 0 var(--padd-xs) 0 var(--padd-xs);
 }
-
+header nav #logo {
+  background: hsl(var(--light));
+  display: block;
+  width: 300px;
+  height: 100%;
+}
 .menu {
   display: flex;
   flex-direction: row;
@@ -1046,8 +1056,40 @@ header section {
 }
 
 .menu > li {
-  margin: 0 1rem;
+  margin: 0 0;
   overflow: hidden;
+}
+.menu > li a {
+  border-left: 1px solid hsl(var(--dark));
+  color: hsl(var(--dark));
+  display: block;
+  padding: var(--padd-lg) var(--padd-lg) var(--padd-lg) var(--padd-lg);
+  width: 100%;
+  height: 100%;
+}
+.menu > li:nth-child(1) {
+  background: hsl(var(--main-lgt));
+}
+.menu > li:nth-child(1):hover {
+  background: hsl(var(--main));
+}
+.menu > li:nth-child(2) {
+  background: hsl(var(--acc1-lgt));
+}
+.menu > li:nth-child(2):hover {
+  background: hsl(var(--acc1));
+}
+.menu > li:nth-child(3) {
+  background: hsl(var(--acc2-lgt));
+}
+.menu > li:nth-child(3):hover {
+  background: hsl(var(--acc2));
+}
+.menu > li:nth-child(4) {
+  background: hsl(var(--tec-lgt));
+}
+.menu > li:nth-child(4):hover {
+  background: hsl(var(--tec));
 }
 
 .menu-button-container {
@@ -1200,6 +1242,7 @@ header section {
 }
 
 main {
+  --opacity: 1;
   display: grid;
   justify-items: center;
   width: 100%;
@@ -1211,9 +1254,50 @@ main #praxis,
 main #faq,
 main #termin,
 main #anreise {
-  border-top: 3px solid hsl(var(--white)/0.5);
+  border-top: 3px solid hsl(var(--light)/1);
   width: 100%;
 }
+main #team {
+  background: hsl(var(--main-lgt)/var(--opacity));
+  /*background: linear-gradient(
+    to bottom,
+    hsl(var(--main-lgt) / 1) 0%,
+    hsl(var(--main) / 0.5) 100%
+  );*/
+}
+main #praxis {
+  background: hsl(var(--acc1-lgt)/var(--opacity));
+  /*background: linear-gradient(
+    to bottom,
+    hsl(var(--acc1-lgt) / 1) 0%,
+    hsl(var(--acc1) / 0.5) 100%
+  );*/
+}
+main #faq {
+  background: hsl(var(--prim-lgt)/var(--opacity));
+  /*background: linear-gradient(
+    to bottom,
+    hsl(var(--prim-lgt) / 1) 0%,
+    hsl(var(--prim) / 0.5) 100%
+  );*/
+}
+main #termin {
+  background: hsl(var(--acc2-lgt)/var(--opacity));
+  /*background: linear-gradient(
+    to bottom,
+    hsl(var(--acc2-lgt) / 1) 0%,
+    hsl(var(--acc2) / 0.5) 100%
+  );*/
+}
+main #anreise {
+  background: hsl(var(--tec-lgt)/var(--opacity));
+  /*background: linear-gradient(
+    to bottom,
+    hsl(var(--tec-lgt) / 1) 0%,
+    hsl(var(--tec) / 0.5) 100%
+  );*/
+}
+
 .map-snippet h2 {
   padding-top: 0 !important;
 }
@@ -1297,11 +1381,18 @@ main #anreise {
   margin-top: var(--padd-lg);
 }
 #team .team-list .card:nth-child(2n) {
-  background: radial-gradient(hsl(var(--grey-lgt)/1) 0%, hsl(var(--grey-lgt)/0.2) 100%);
+  background: hsl(var(--light));
+  /*background: radial-gradient(
+    hsl(var(--acc1-lgt) / 1) 0%,
+    hsl(var(--acc1-lgt) / 0.4) 100%
+  );*/
 }
 #team .team-list .card {
-  background: hsl(var(--white)/1);
-  background: radial-gradient(hsl(var(--white)/1) 0%, hsl(var(--white)/0.2) 100%);
+  background: hsl(var(--light)/1);
+  /*background: radial-gradient(
+    hsl(var(--white) / 1) 0%,
+    hsl(var(--white) / 0.2) 100%
+  );*/
   border: 2px solid hsl(var(--white)/0.5);
   border-radius: var(--rad-lg);
   box-shadow: var(--shad-md);

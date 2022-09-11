@@ -1,0 +1,56 @@
+{% set keyvisual = '__DEFAULTS/intro.jpg' %}
+
+<div class="introvisual">
+
+          <div class="image-wrap">
+            {# Safari <=14 falls back on img if there is not type attribute present at each line! #}
+            <picture>
+              <source type="image/webp" media="(max-width: 280px)" srcset="{{ keyvisual | media | resize(280, 106, { mode: 'cover', format: 'webp' }) }},
+                                                                           {{ keyvisual | media | resize(560, 212, { mode: 'cover', format: 'webp' }) }} 2x">
+
+              <source type="image/jpg" media="(max-width: 280px)" srcset="{{ keyvisual | media | resize(280, 106, { mode: 'cover' }) }},
+                                                                          {{ keyvisual | media | resize(560, 212, { mode: 'cover' }) }} 2x">
+
+              <source type="image/webp" media="(max-width: 320px)" srcset="{{ keyvisual | media | resize(320, 122, { mode: 'cover', format: 'webp' }) }},
+                                                                           {{ keyvisual | media | resize(640, 244, { mode: 'cover', format: 'webp' }) }} 2x">
+
+              <source type="image/jpg" media="(max-width: 320px)" srcset="{{ keyvisual | media | resize(320, 122, { mode: 'cover' }) }},
+                                                                          {{ keyvisual | media | resize(640, 244, { mode: 'cover' }) }} 2x">
+
+              <source type="image/webp" media="(max-width: 360px)" srcset="{{ keyvisual | media | resize(360, 136, { mode: 'cover', format: 'webp' }) }},
+                                                                           {{ keyvisual | media | resize(720, 274, { mode: 'cover', format: 'webp' }) }} 2x">
+              <source type="image/jpg" media="(max-width: 360px)" srcset="{{ keyvisual | media | resize(360, 136, { mode: 'cover' }) }},
+                                                                          {{ keyvisual | media | resize(720, 274, { mode: 'cover' }) }} 2x">
+
+              <source type="image/webp" media="(max-width: 567px)" srcset="{{ keyvisual | media | resize(567, 215, { mode: 'cover', format: 'webp' }) }},
+                                                                           {{ keyvisual | media | resize(1134, 430, { mode: 'cover', format: 'webp' }) }} 2x">
+              <source type="image/jpg" media="(max-width: 567px)" srcset="{{ keyvisual | media | resize(567, 215, { mode: 'cover' }) }},
+                                                                          {{ keyvisual | media | resize(1134, 430, { mode: 'cover' }) }} 2x">
+
+              <source type="image/webp" media="(max-width: 768px)" srcset="{{ keyvisual | media | resize(768, 292, { mode: 'cover', format: 'webp' }) }},
+                                                                           {{ keyvisual | media | resize(1440, 547, { mode: 'cover', format: 'webp' })}} 2x">
+              <source type="image/jpg" media="(max-width: 768px)" srcset="{{ keyvisual | media | resize(768, 292, { mode: 'cover' }) }},
+                                                                          {{ keyvisual | media | resize(1440, 547, { mode: 'cover' })}} 2x">
+
+              <source type="image/webp" media="(max-width: 1024px)" srcset="{{ keyvisual | media | resize(1024, 1024, { mode: 'cover', format: 'webp' }) }},
+                                                                            {{ keyvisual | media | resize(2048, 2048, { mode: 'cover', format: 'webp' })}} 2x">
+              <source mtype="image/jpg" media="(max-width: 1024px)" srcset="{{ keyvisual | media | resize(1024, 1024, { mode: 'cover' }) }},
+                                                                            {{ keyvisual | media | resize(2048, 2048, { mode: 'cover' })}} 2x">
+
+              <source type="image/webp" media="(max-width: 3600px)" srcset="{{ keyvisual | media | resize(1440, 720, { mode: 'cover', format: 'webp' }) }}">
+              <source type="image/jpg" media="(max-width: 3600px)" srcset="{{ keyvisual | media | resize(1440, 720, { mode: 'cover' }) }}">
+
+              <img type="image/jpg" src="{{ keyvisual  | media | resize(1440, 720, { mode: 'cover' }) }}" alt="Keyvisual" width="1440" height="720">
+              {# Original: 3150x3150 /  Bildformat: 1 zu 0.6 #}
+            
+            </picture>
+          </div>
+
+          <div class="overlay indent-me">
+
+                {% content 'intro.htm' %}
+
+          </div>
+  
+  </div> {# end introvisual #}
+

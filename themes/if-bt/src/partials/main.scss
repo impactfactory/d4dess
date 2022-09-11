@@ -2,6 +2,7 @@ main {
   --opacity: 1;
   display: grid;
   justify-items: center;
+  padding-top: 120px;
   width: 100%;
 
   .intro,
@@ -27,6 +28,7 @@ main {
   }
   .practice {
     background: hsl(var(--acc1-lgt) / var(--opacity));
+    //padding-bottom: var(--padd-lg);
     /*background: linear-gradient(
       to bottom,
       hsl(var(--acc1-lgt) / 1) 0%,

@@ -22,8 +22,6 @@
           </div>
       </details>
 
-      
-
       <div class="langselect">
         {{ 'forms.select.langselect'|_ }}: 
         {% for code, name in locales %} 
@@ -36,11 +34,9 @@
       </div>
 
       <div class="byline">
-
           <a href="https://digital4docs.ch" title="Praxis Websites für Ärzte" rel="noopener">Powered by Digital4Docs</a> &nbsp;&nbsp;|&nbsp;&nbsp;
           <a href="/{{ activeLocale }}">&copy; 2022 - {{ "now"|date("Y") }} {{ orgaMeta.meta.schema_name }}</a> &nbsp;&nbsp;|&nbsp;&nbsp;
           Icons used with kind permission by <a href="https://www.freepik.com" rel="noopener" title="Freepik">Freepik</a> and <a href="https://fontawesome.com/license" rel="noopener">Fontawesome</a>.
-
       </div>
 
     </div>

@@ -4,7 +4,7 @@ code = "main"
 <header>
   <nav>
     <div id="logo">
-      <a class="logo" href="/{{ localePicker.activeLocale }}" title="Home">
+      <a class="logo" href="#intro" title="Home">
       {% partial 'html_body/svg-icons/logo-de' %} 
       </a>   
     </div>
@@ -26,6 +26,8 @@ code = "main"
       </li>
     {% endfor %}
     </ul>
+
+    {% partial 'html_body/contactbox.htm' %}
 
   </nav>
 </header>

@@ -74,7 +74,6 @@ tabs:
             tab: 'SEO (Schema)'
         schema_author_url:
             label: 'Link zu mehr über den Autor der Website (author url)'
-            oc.commentPosition: above
             span: auto
             placeholder: 'https://...'
             type: text
@@ -198,6 +197,12 @@ tabs:
             type: text
             commentAbove: 'Format: "17:00"'
             tab: 'SEO (Schema)'
+        openingtimes:
+            label: 'Öffnungszeiten Kurzform'
+            span: auto
+            type: text
+            commentAbove: 'Format: Mo-Fr, 8-17 Uhr'
+            tab: 'SEO (Schema)'
         founder:
             label: Gründer-Infos
             span: full
@@ -205,7 +210,6 @@ tabs:
             tab: 'SEO (Schema)'
         schema_founder_url:
             label: 'Seite zu Gründer (founder url))'
-            oc.commentPosition: above
             span: auto
             placeholder: 'https://...'
             type: text
@@ -217,7 +221,6 @@ tabs:
             tab: 'SEO (Schema)'
         schema_foundingdate:
             label: 'Gründungsdatum (foundingDate)'
-            oc.commentPosition: above
             span: auto
             placeholder: yyyy
             type: text
@@ -370,5 +373,10 @@ tabs:
             label: 'Telefonnummer (telephone)'
             span: auto
             placeholder: '+412345678'
+            type: text
+            tab: 'SEO (Adresse)'
+        email:
+            label: E-Mail
+            span: left
             type: text
             tab: 'SEO (Adresse)'

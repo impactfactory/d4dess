@@ -1,14 +1,13 @@
-#faq,
 .faq {
   width: 100%;
 
   details {
-    border-top: 1px solid hsl(var(--light) / 0.5);
-    padding: 1rem 0 1rem 0;
+    border-top: 1px solid hsl(var(--dark) / 0.2);
+    padding: var(--padd-xs) 0 var(--padd-xs) 0;
   }
 
   details:last-child {
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid hsl(var(--dark) / 0.2);
   }
 
   details[open] {
@@ -38,9 +37,18 @@
     height: 10px;
     transform: rotate(45deg);
     transition: all 0.5s ease-out;
-    border-bottom: 1px solid hsl(var(--light));
-    border-right: 1px solid hsl(var(--light));
+    border-bottom: 1px solid hsl(var(--dark));
+    border-right: 1px solid hsl(var(--dark));
     float: right;
+    position: relative;
+    top: -30px;
+  }
+
+  h3 {
+    font-size: inherit;
+    font-weight: var(--fw-md);
+    margin: 0;
+    padding: var(--padd-xs) 0 var(--padd-xs) 0;
   }
 
   details div {

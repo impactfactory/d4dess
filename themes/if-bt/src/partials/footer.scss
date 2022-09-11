@@ -5,33 +5,39 @@ footer {
   font-size: var(--fs-md);
   height: auto;
 
-  a {
-    color: hsl(var(--light));
-  }
-
-  a:hover,
-  a:focus {
-    text-decoration: underline;
-  }
-
   .faq {
-    background: hsl(var(--grey-drk) / 1);
-    margin: 0 auto;
-    max-width: var(--content-width);
+    details {
+      border-top: 1px solid hsl(var(--light) / 0.6);
+      padding: var(--padd-md) 0 var(--padd-md) 0;
 
-    .byline {
-      border-top: 1px solid hsl(var(--light) / 0.5);
-      line-height: 1.1rem;
-      padding: var(--content-padding);
+      &:last-child {
+        border-bottom: 1px solid hsl(var(--light) / 0.6);
+      }
+
+      summary:after {
+        border-bottom: 1px solid hsl(var(--light));
+        border-right: 1px solid hsl(var(--light));
+        position: relative;
+        top: 2px;
+      }
+
+      div a {
+        color: hsl(var(--light));
+      }
     }
 
     .langselect {
-      border-top: 1px solid hsl(var(--light) / 0.5);
-      padding: var(--content-padding);
+      border-top: 1px solid hsl(var(--light) / 0.6);
+      padding: var(--padd-md) 0 var(--padd-md) var(--padd-1);
 
       a {
+        color: hsl(var(--light));
         display: inline-block;
         padding: var(--padd-xs);
+
+        &:hover {
+          color: hsl(var(--prim));
+        }
       }
 
       a.selected {
@@ -40,57 +46,18 @@ footer {
       }
     }
 
-    /*.faq {
-      
-      border-bottom: 1px solid hsl(var(--light) / 0.5);
-      padding: var(--content-padding);
-    }*/
-  }
-}
+    .byline {
+      border-top: 1px solid hsl(var(--light) / 0.6);
+      line-height: 1.1rem;
+      padding: var(--padd-md) 0 var(--padd-md) var(--padd-1);
 
-@media only screen and (min-width: 76px) {
-  footer section {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 80% 20%;
+      a {
+        color: hsl(var(--light));
 
-    div:nth-child(3) {
-      grid-column: 1 / 3;
-    }
-  }
-}
-
-/*
-  a {
-    text-decoration: none;
-  }
-
-  a:hover, a:active, a:focus {
-    text-decoration: underline !important;
-  }
-
-  .fas, .far { width: 1.5rem; }
-
-
-  .contact {
-    background-color: var(--secondary);
-    color: var(--white);
-
-    a, a:hover, a:visited, a:focus, a:active {
-      color: var(--white);
-      text-decoration:underline;
-    }
-
-    h3 { padding:0; }
-
-    img {
-      border: 1px solid var(--white);
-      filter: grayscale(10);
+        &:hover {
+          color: hsl(var(--prim));
+        }
       }
-
-    img:hover {
-      filter: grayscale(0);
     }
-
-
   }
-  */
+}

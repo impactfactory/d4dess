@@ -357,7 +357,7 @@ template {
   --acc2: 100 54% 85%;
   --acc2-drk: 100 85% 80%;
   --tec-lgt: 0 0% 92%;
-  --tec: 0 0% 70%;
+  --tec: 0 25% 80%;
   --tec-drk: 0 0% 25%;
   --btn-bg: hsl(var(--prim) / 1);
   --btn-color: hsl(var(--white) / 1);
@@ -391,11 +391,12 @@ template {
     hsl(var(--main) / 1) 75%,
     hsl(var(--main-lgt) / 1) 90%
   );
-  --body-bg: hsl(var(--white) / 1);
+  --body-bg: hsl(var(--light) / 1);
   --body-color: hsl(var(--black) / 1);
   --padd-xs: 0.25rem;
   --padd-sm: 0.5rem;
   --padd-md: 0.75rem;
+  --padd-1: 1rem;
   --padd-lg: 2rem;
   --padd-xl: 4rem;
   --content-width: 1100px;
@@ -441,7 +442,6 @@ html {
 
 body {
   background: var(--body-bg);
-  background: var(--body-bg-gradient);
   min-height: 100vh;
   overflow-x: hidden;
 }
@@ -686,78 +686,88 @@ code {
   width: 100%;
 }
 
-#contactbox {
-  background: var(--primary);
-  color: var(--white);
-  position: fixed;
-  bottom: 1rem;
-  right: 1rem;
-  text-align: center;
+.contactbox {
+  background: hsl(var(--prim)/0.5);
+  border-left: 1px solid hsl(var(--dark)/1);
+  color: hsl(var(--dark));
+  height: 100%;
+  padding: var(--padd-lg) 0 var(--padd-lg) 0;
+  width: auto;
 }
-#contactbox a {
-  color: var(--white);
-  text-decoration: none !important;
+.contactbox div {
+  padding: 0 var(--padd-md) 0 0;
+  position: relative;
+  left: 5px;
+  top: 2px;
+  text-align: right;
 }
-#contactbox a:hover, #contactbox a:focus, #contactbox a:active {
-  text-decoration: underline !important;
+.contactbox div a {
+  color: hsl(var(--light)/1);
+  border: none;
+  display: inline-block;
+  margin-right: 12px;
 }
-#contactbox div#links {
-  font-size: var(--fs-xs) !important;
+.contactbox div a:hover {
+  color: hsl(var(--prim));
 }
-#contactbox div#booking {
-  background: rgb(var(--white), 0.5);
-  border: 0px solid var(--white);
-  border-radius: 4px;
-  font-size: var(--fs-xs) !important;
-  margin: 0.4rem auto 0.5rem auto;
-  padding: 0 0 0 0;
-  width: 90%;
+.contactbox div a svg {
+  height: 25px;
+  width: 25px;
+  filter: drop-shadow(2px 2px 2px hsl(var(--dark)));
+}
+.contactbox div a .fa-clock {
+  top: 4px;
+}
+.contactbox div a .fa-envelope {
+  top: 5px;
+}
+.contactbox div a .fa-phone-alt {
+  top: 2px;
 }
 
-#faq,
 .faq {
   width: 100%;
 }
-#faq details,
 .faq details {
-  border-top: 1px solid hsl(var(--light)/0.5);
-  padding: 1rem 0 1rem 0;
+  border-top: 1px solid hsl(var(--dark)/0.2);
+  padding: var(--padd-xs) 0 var(--padd-xs) 0;
 }
-#faq details:last-child,
 .faq details:last-child {
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid hsl(var(--dark)/0.2);
 }
-#faq details[open],
 .faq details[open] {
   padding-bottom: 0;
 }
-#faq summary,
 .faq summary {
   padding: 0 1rem 0 1rem;
   margin: 0;
   cursor: pointer;
   border-radius: 5px;
 }
-#faq summary::-webkit-details-marker,
-#faq summary::marker,
 .faq summary::-webkit-details-marker,
 .faq summary::marker {
   display: none !important;
   content: "";
   /* fix for chrome */
 }
-#faq summary:after,
 .faq summary:after {
   content: "";
   width: 10px;
   height: 10px;
   transform: rotate(45deg);
   transition: all 0.5s ease-out;
-  border-bottom: 1px solid hsl(var(--light));
-  border-right: 1px solid hsl(var(--light));
+  border-bottom: 1px solid hsl(var(--dark));
+  border-right: 1px solid hsl(var(--dark));
   float: right;
+  position: relative;
+  top: -30px;
 }
-#faq details[open] div,
+.faq h3 {
+  font-size: inherit;
+  font-weight: var(--fw-md);
+  margin: 0;
+  padding: var(--padd-xs) 0 var(--padd-xs) 0;
+}
 .faq details[open] div {
   animation: blend-in 0.5s ease-out;
   /*background: linear-gradient(to bottom, #fff 0%, #eee 100%);*/
@@ -772,25 +782,21 @@ code {
     opacity: 1;
   }
 }
-#faq details[open] summary:after,
 .faq details[open] summary:after {
   content: "";
   transform: rotate(-135deg);
   margin-top: 8px;
 }
-#faq details[open] summary:after,
 .faq details[open] summary:after {
   content: "";
   transform: rotate(-135deg);
   margin-top: 8px;
 }
-#faq summary > h4,
 .faq summary > h4 {
   display: inline;
   font-size: 20px;
   font-weight: 400;
 }
-#faq details[open] summary > h3,
 .faq details[open] summary > h3 {
   font-weight: 800;
 }
@@ -802,85 +808,50 @@ footer {
   font-size: var(--fs-md);
   height: auto;
 }
-footer a {
+footer .faq details {
+  border-top: 1px solid hsl(var(--light)/0.6);
+  padding: var(--padd-md) 0 var(--padd-md) 0;
+}
+footer .faq details:last-child {
+  border-bottom: 1px solid hsl(var(--light)/0.6);
+}
+footer .faq details summary:after {
+  border-bottom: 1px solid hsl(var(--light));
+  border-right: 1px solid hsl(var(--light));
+  position: relative;
+  top: 2px;
+}
+footer .faq details div a {
   color: hsl(var(--light));
 }
-footer a:hover,
-footer a:focus {
-  text-decoration: underline;
-}
-footer .faq {
-  background: hsl(var(--grey-drk)/1);
-  margin: 0 auto;
-  max-width: var(--content-width);
-  /*.faq {
-
-    border-bottom: 1px solid hsl(var(--light) / 0.5);
-    padding: var(--content-padding);
-  }*/
-}
-footer .faq .byline {
-  border-top: 1px solid hsl(var(--light)/0.5);
-  line-height: 1.1rem;
-  padding: var(--content-padding);
-}
 footer .faq .langselect {
-  border-top: 1px solid hsl(var(--light)/0.5);
-  padding: var(--content-padding);
+  border-top: 1px solid hsl(var(--light)/0.6);
+  padding: var(--padd-md) 0 var(--padd-md) var(--padd-1);
 }
 footer .faq .langselect a {
+  color: hsl(var(--light));
   display: inline-block;
   padding: var(--padd-xs);
+}
+footer .faq .langselect a:hover {
+  color: hsl(var(--prim));
 }
 footer .faq .langselect a.selected {
   background: hsl(var(--light)/0.2);
   border-radius: var(--rad-xs);
 }
-
-@media only screen and (min-width: 76px) {
-  footer section {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 80% 20%;
-  }
-  footer section div:nth-child(3) {
-    grid-column: 1/3;
-  }
+footer .faq .byline {
+  border-top: 1px solid hsl(var(--light)/0.6);
+  line-height: 1.1rem;
+  padding: var(--padd-md) 0 var(--padd-md) var(--padd-1);
 }
-/*
-  a {
-    text-decoration: none;
-  }
+footer .faq .byline a {
+  color: hsl(var(--light));
+}
+footer .faq .byline a:hover {
+  color: hsl(var(--prim));
+}
 
-  a:hover, a:active, a:focus {
-    text-decoration: underline !important;
-  }
-
-  .fas, .far { width: 1.5rem; }
-
-
-  .contact {
-    background-color: var(--secondary);
-    color: var(--white);
-
-    a, a:hover, a:visited, a:focus, a:active {
-      color: var(--white);
-      text-decoration:underline;
-    }
-
-    h3 { padding:0; }
-
-    img {
-      border: 1px solid var(--white);
-      filter: grayscale(10);
-      }
-
-    img:hover {
-      filter: grayscale(0);
-    }
-
-
-  }
-  */
 .gallery {
   /*
   	100% Height for Opera as the max-height seems to be ignored, not optimal for large screens
@@ -1031,34 +1002,39 @@ footer .faq .langselect a.selected {
 }
 
 header {
-  background: hsl(var(--tec-lgt));
+  background: hsl(var(--light));
   height: auto;
   position: fixed;
   width: 100%;
   z-index: 1000;
 }
 header nav {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-evenly;
+  display: grid;
+  grid-template-columns: 2fr 4fr 1.5fr;
+  justify-items: stretch;
   color: #fff;
   height: auto;
-  margin: 0 auto;
-  padding: 0 var(--padd-xs) 0 var(--padd-xs);
+  padding: 0 0 0 0;
+  width: 100%;
 }
 header nav #logo {
   background: hsl(var(--light));
-  display: block;
-  width: 300px;
-  height: 100%;
+  align-self: center;
+  place-self: center;
+  width: 90%;
 }
+header nav #logo svg {
+  display: block;
+  margin-right: var(--padd-md);
+}
+
 .menu {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   list-style-type: none;
   margin: 0;
   padding: 0;
+  width: 100%;
 }
 
 .menu > li {
@@ -1069,7 +1045,8 @@ header nav #logo {
   border-left: 1px solid hsl(var(--dark));
   color: hsl(var(--dark));
   display: block;
-  padding: var(--padd-lg) var(--padd-lg) var(--padd-lg) var(--padd-lg);
+  padding: var(--padd-lg) 0 var(--padd-lg) 0;
+  text-align: center;
   width: 100%;
   height: 100%;
 }

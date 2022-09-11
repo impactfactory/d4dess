@@ -1,24 +1,33 @@
-{% set orgameta = orgaMeta.meta %}
+{% set meta = orgaMeta.meta %}
+{% set mail = meta.email|split('@') %}
 
-<div id="contactbox" class="pt-1 px-0 rounded d-print-none">
-    <div class="px-2">
-      <a href="tel:{{ orgameta.schema_phone }}"
-       class="text-white"
-       title="{{ orgameta.schema_phone }}">
-      {{ orgameta.schema_phone }}
-      </a><br>
-    </div>
-    <div id="links" class="px-2">
-      <a href="{{ 'herzzentrum-anreise-neu.htm' | staticPage }}" class="text-white">{{ 'contactbox.url.label'|_ }}</a> <span class="text-white">|</span>
-      <span class="scrambledbox"></span>
-      <span class="text-white">|</span>
-      <a href="{{ 'patienteninformation-faqs.htm' | staticPage }}" title="FAQ" class="text-white">
-        FAQ
+<div class="contactbox">
+
+   <div>
+      <a href="#arrival">
+        {% partial 'html_body/svg-icons/clock' %}
       </a>
-    </div>
-    <div id="booking" class="">
-      <a href="{{ 'online-buchung.htm' | staticPage }}" class="text-white" title="{{ 'contactbox.booking.label'|_ }}">
-        {{ 'contactbox.booking.label'|_ }}
+  
+
+    {% if meta.schema_phone %}
+      <a href="tel:{{ meta.schema_phone }}" title="{{ meta.schema_phone }}">
+        {% partial 'html_body/svg-icons/phone' %} 
       </a>
-    </div>
+    {% endif %}
+
+    {% if meta.email %}
+      <script>
+          user = '{{ mail[0] }}';
+          site = '{{ mail[1] }}';
+          document.write('<a href=\"mailto:' + user + '@' + site + '\">');
+        </script>
+        {% partial 'html_body/svg-icons/email' %} 
+      </a>
+    {% endif %}
+
+      <a href="#faq">
+        {% partial 'html_body/svg-icons/question' %} 
+      </a>
+  </div>  
+
 </div>

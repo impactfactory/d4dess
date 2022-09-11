@@ -51,6 +51,8 @@ class BuilderTableCreateImpactFactoryTeamOrganisations extends Migration
             $table->text('schema_no')->nullable();
             $table->text('socials')->nullable();
             $table->string('url', 255)->nullable();
+            $table->string('email', 255)->nullable();
+            $table->string('openingtimes', 255)->nullable();
         });
 
         Schema::create('impactfactory_team_teams', function($table)

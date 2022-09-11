@@ -1,31 +1,44 @@
-#contactbox {
-  background: var(--primary);
-  color: var(--white);
-  position: fixed;
-  bottom: 1rem;
-  right: 1rem;
-  text-align: center;
+.contactbox {
+  background: hsl(var(--prim) / 0.5);
+  border-left: 1px solid hsl(var(--dark) / 1);
+  color: hsl(var(--dark));
+  height: 100%;
+  padding: var(--padd-lg) 0 var(--padd-lg) 0;
+  width: auto;
 
-  a {
-    color: var(--white);
-    text-decoration: none !important;
-  }
+  div {
+    padding: 0 var(--padd-md) 0 0;
+    position: relative;
+    left: 5px;
+    top: 2px;
+    text-align: right;
 
-  a:hover, a:focus, a:active {
-        text-decoration: underline !important;
+    a {
+      color: hsl(var(--light) / 1);
+      border: none;
+      display: inline-block;
+      margin-right: 12px;
+
+      &:hover {
+        color: hsl(var(--prim));
       }
 
-  div#links {
-    font-size: var(--fs-xs)!important;
-  }
+      svg {
+        //display: inline-block;
+        height: 25px;
+        width: 25px;
+        filter: drop-shadow(2px 2px 2px hsl(var(--dark)));
+      }
 
-  div#booking {
-    background: rgb(var(--white), 0.5);
-    border: 0px solid var(--white);
-    border-radius: 4px;
-    font-size: var(--fs-xs)!important;
-    margin: .4rem auto .5rem auto;
-    padding: 0 0 0 0;
-    width: 90%;
+      .fa-clock {
+        top: 4px;
+      }
+      .fa-envelope {
+        top: 5px;
+      }
+      .fa-phone-alt {
+        top: 2px;
+      }
+    }
   }
 }

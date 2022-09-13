@@ -584,7 +584,7 @@ h2 {
 }
 
 h3 {
-  font-size: calc(1 * var(--scale) * 1rem);
+  font-size: calc(0.9 * var(--scale) * 1rem);
 }
 
 h4 {
@@ -1588,27 +1588,24 @@ main .arrival {
 }
 .team .team-list .card:nth-child(2n) {
   background: hsl(var(--light));
-  /*background: radial-gradient(
-    hsl(var(--acc1-lgt) / 1) 0%,
-    hsl(var(--acc1-lgt) / 0.4) 100%
-  );*/
 }
 .team .team-list .card {
   background: hsl(var(--light)/1);
-  /*background: radial-gradient(
-    hsl(var(--white) / 1) 0%,
-    hsl(var(--white) / 0.2) 100%
-  );*/
   border: 2px solid hsl(var(--white)/0.5);
   border-radius: var(--rad-lg);
   box-shadow: var(--shad-md);
   display: grid;
-  grid-template-columns: 200px 1fr;
-  grid-template-rows: 200px 1fr 1fr;
-  gap: 2px;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  gap: var(--padd-md);
   overflow: hidden;
-  padding: 10px;
+  padding: var(--padd-md);
   width: 100%;
+}
+.team .team-list .card h3,
+.team .team-list .card h4,
+.team .team-list .card p {
+  margin-top: 0;
 }
 .team .team-list .card a {
   color: var(--body-color);
@@ -1616,27 +1613,42 @@ main .arrival {
 .team .team-list .card a:hover {
   color: var(--primary);
 }
+.team .team-list .card .desc {
+  padding-left: var(--padd-xs);
+}
 .team .team-list .card .phone,
 .team .team-list .card .email,
 .team .team-list .card .availability,
 .team .team-list .card .booking {
-  background: radial-gradient(hsl(var(--prim)/0) 0%, hsl(var(--prim)/0) 100%);
-  align-self: center;
+  background: hsl(var(--dark)/0.1);
+  border-radius: var(--rad-lg);
+  align-self: start;
   font-size: calc(var(--scale) / 1.6 * 1rem);
-  padding: var(--padd-sm);
+  padding: var(--padd-md);
   transition: 3s;
 }
-.team .team-list .card .phone svg,
-.team .team-list .card .email svg,
-.team .team-list .card .availability svg,
-.team .team-list .card .booking svg {
+.team .team-list .card .phone a,
+.team .team-list .card .email a,
+.team .team-list .card .availability a,
+.team .team-list .card .booking a {
+  display: block;
+  width: 100%;
+}
+.team .team-list .card .phone a svg,
+.team .team-list .card .email a svg,
+.team .team-list .card .availability a svg,
+.team .team-list .card .booking a svg {
+  display: inline-block;
+  float: left;
   height: 20px;
+  margin-right: var(--padd-md);
   position: relative;
-  top: 3px;
+  top: 1px;
   width: 20px;
 }
 .team .team-list .card .phone:hover,
 .team .team-list .card .email:hover,
+.team .team-list .card .availability:hover,
 .team .team-list .card .booking:hover {
   background: radial-gradient(hsl(var(--prim)/1) 0%, hsl(var(--prim)/0.6) 100%);
 }
@@ -1648,87 +1660,53 @@ main .arrival {
 .team .team-list .card .email:hover .fa-envelope,
 .team .team-list .card .email:hover .fa-phone-alt,
 .team .team-list .card .email:hover .fa-calendar-check,
+.team .team-list .card .availability:hover a,
+.team .team-list .card .availability:hover .fa-envelope,
+.team .team-list .card .availability:hover .fa-phone-alt,
+.team .team-list .card .availability:hover .fa-calendar-check,
 .team .team-list .card .booking:hover a,
 .team .team-list .card .booking:hover .fa-envelope,
 .team .team-list .card .booking:hover .fa-phone-alt,
 .team .team-list .card .booking:hover .fa-calendar-check {
   color: hsl(var(--white)/1);
 }
-.team .team-list .card .portrait {
-  grid-area: 1/1/2/2;
-}
 .team .team-list .card .portrait img {
-  border-radius: var(--rad-lg) 0 0 0;
-}
-.team .team-list .card .name {
-  grid-area: 1/2/2/3;
-  overflow: scroll;
-  padding: var(--padd-md);
-}
-.team .team-list .card .name h3,
-.team .team-list .card .name h4,
-.team .team-list .card .name p {
-  margin: 0;
-}
-.team .team-list .card .phone {
-  grid-area: 2/1/3/2;
-}
-.team .team-list .card .email {
-  grid-area: 2/2/3/3;
-}
-.team .team-list .card .availability {
-  grid-area: 3/1/4/2;
-}
-.team .team-list .card .booking {
-  grid-area: 3/2/4/3;
+  border-radius: var(--rad-lg);
+  height: auto;
+  width: 100%;
 }
 
-@media only screen and (min-width: 576px) {
+@media only screen and (min-width: 567px) {
   .team .team-list .card {
-    grid-template-columns: 200px 1fr;
-    grid-template-rows: 200px 1fr 1fr;
-  }
-  .team .team-list .card .portrait {
-    grid-area: 1/1/2/2;
+    grid-template-columns: 1fr 1fr;
   }
   .team .team-list .card .name {
-    grid-area: 1/2/2/3;
-  }
-  .team .team-list .card .phone {
-    grid-area: 2/1/3/2;
-  }
-  .team .team-list .card .email {
-    grid-area: 2/2/3/3;
-  }
-  .team .team-list .card .availability {
-    grid-area: 3/1/4/2;
-  }
-  .team .team-list .card .booking {
-    grid-area: 3/2/4/3;
+    grid-column: span 2;
   }
 }
 @media only screen and (min-width: 768px) {
   .team .team-list .card {
-    grid-template-columns: 200px 1fr 1fr 1fr;
-    grid-template-rows: 200px 1fr;
-  }
-  .team .team-list .card .portrait {
-    grid-area: 1/1/2/2;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
   .team .team-list .card .name {
-    grid-area: 1/2/2/5;
+    grid-column: span 4;
   }
-  .team .team-list .card .email {
-    grid-area: 2/1/3/2;
+  .team .team-list .card .desc {
+    grid-column: span 3;
   }
-  .team .team-list .card .phone {
-    grid-area: 2/2/3/3;
+  .team .team-list .card .email,
+.team .team-list .card .phone,
+.team .team-list .card .availability,
+.team .team-list .card .booking {
+    grid-column: span 2;
   }
-  .team .team-list .card .availability {
-    grid-area: 2/3/3/4;
-  }
-  .team .team-list .card .booking {
-    grid-area: 2/4/3/5;
+}
+@media only screen and (min-width: 1024px) {
+  .team .team-list .card .email,
+.team .team-list .card .phone,
+.team .team-list .card .availability,
+.team .team-list .card .booking {
+    grid-column: span 1;
   }
 }
 .tooltips {

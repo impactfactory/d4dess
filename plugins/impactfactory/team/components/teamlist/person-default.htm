@@ -5,6 +5,11 @@
 
 <section class="card">
 
+  <div class="name">
+    <h3>{% if person.honorific %}{{ person.honorific }} {% endif%}{{ person.name }}</h3>
+    <h4>{{ person.role }}</h4>
+  </div>
+
   <div class="portrait">
     <picture>
         {# Safari <=14 falls back on img if there is not type attribute present at each line! #}
@@ -16,42 +21,54 @@
     </picture>
   </div>
 
-  <div class="name">
-    <h3>{% if person.honorific %}{{ person.honorific }} {% endif%}{{ person.name }}</h3>
-    <h4>{{ person.role }}</h4>
-    {{ person.background | raw }}
-  </div>
+    {% if (person.role or person.background) %}
+      <div class="desc">
+        {{ person.background | raw }}
+      </div>
+    {% endif %}
+
+  {% if person.availability %}
+    <div class="availability">
+        <a href="#reservation">
+          {% partial 'html_body/svg-icons/clock' %}
+          {{ person.availability}}
+        </a>
+     </div>
+  {% endif %}
 
   {% if person.email %}
     <div class="email">
-    {% partial 'html_body/svg-icons/email' %}
+    <script>
+          user = '{{ mail[0] }}';
+          site = '{{ mail[1] }}';
+          document.write('<a href=\"mailto:' + user + '@' + site + '\">');
+        </script>
+        {% partial "html_body/svg-icons/email" %}
+      </a>
 
         <script>
           user = '{{ mail[0] }}';
           site = '{{ mail[1] }}';
-          document.write('<a href=\"mailto:' + user + '@' + site + '\" data-toggle=\"tooltip\" data-placement=\"top\" title=\"{{ 'contactbox.mail.tooltip'|_ }}\">E-Mail</a>');
+          document.write('<a href=\"mailto:' + user + '@' + site + '\">E-Mail</a>');
         </script>
      </div>
     {% endif %}
 
     {% if person.phone %}
     <div class="phone">
-          {% partial 'html_body/svg-icons/phone' %}
-           <a href="tel:{{ person.phone }}" title="{{ person.phone }}">{{ person.phone }}</a>
-     </div>
-    {% endif %}
-
-    {% if person.availability %}
-    <div class="availability">
-          {% partial 'html_body/svg-icons/clock' %}
-          {{ person.availability}}
+          <a href="tel:{{ person.phone }}" title="{{ person.phone }}">
+            {% partial 'html_body/svg-icons/phone' %}
+           {{ person.phone }}
+          </a>
      </div>
     {% endif %}
 
     {% if person.booking == 1 %}
     <div class="booking">
-        {% partial 'html_body/svg-icons/calendarcheck' %}
-        <a href="#termin" title="Konsultation buchen">Termin</a>
+        <a href="#reservation" title="Konsultation buchen">
+          {% partial 'html_body/svg-icons/calendarcheck' %}
+          anmelden
+        </a>
      </div>
     {% endif %}
 

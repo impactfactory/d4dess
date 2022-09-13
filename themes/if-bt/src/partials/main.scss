@@ -2,10 +2,8 @@ main {
   --opacity: 1;
   display: grid;
   justify-items: center;
-  //padding-top: var(--padd-lg);
   width: 100%;
 
-  .intro,
   .team,
   .practice,
   .faq,
@@ -15,49 +13,24 @@ main {
     width: 100%;
   }
 
-  .intro {
-    //background: hsl(var(--light) / var(--opacity));
+  .introvisual {
+    width: 100%;
   }
+
   .team {
     background: hsl(var(--main-lgt) / var(--opacity));
-    /*background: linear-gradient(
-      to bottom,
-      hsl(var(--main-lgt) / 1) 0%,
-      hsl(var(--main) / 0.5) 100%
-    );*/
   }
   .practice {
     background: hsl(var(--acc1-lgt) / var(--opacity));
-    //padding-bottom: var(--padd-lg);
-    /*background: linear-gradient(
-      to bottom,
-      hsl(var(--acc1-lgt) / 1) 0%,
-      hsl(var(--acc1) / 0.5) 100%
-    );*/
   }
   .faq {
     background: hsl(var(--prim-lgt) / var(--opacity));
-    /*background: linear-gradient(
-      to bottom,
-      hsl(var(--prim-lgt) / 1) 0%,
-      hsl(var(--prim) / 0.5) 100%
-    );*/
   }
   .reservation {
     background: hsl(var(--acc2-lgt) / var(--opacity));
-    /*background: linear-gradient(
-      to bottom,
-      hsl(var(--acc2-lgt) / 1) 0%,
-      hsl(var(--acc2) / 0.5) 100%
-    );*/
   }
   .arrival {
     background: hsl(var(--tec-lgt) / var(--opacity));
-    /*background: linear-gradient(
-      to bottom,
-      hsl(var(--tec-lgt) / 1) 0%,
-      hsl(var(--tec) / 0.5) 100%
-    );*/
   }
 
   /* base for modules */

@@ -2,10 +2,13 @@
 <main>
   
   <div class="intro">
-    <div id="intro" class="anchor"></div>
-    Text hier
-     {# {% partial 'html_body/introvisual.htm' %} #}
+      <div id="intro" class="anchor"></div>
+      {% partial 'html_body/introvisual.htm' %}
+      <div class="introtext indent-me"> 
+          {% content 'intro.htm' %}
+      </div>
   </div>
+ 
    
 
   <div class="team">
@@ -14,6 +17,7 @@
       {% content 'team.htm' %} {% component 'teamList' %}
     </section>
   </div>
+   
 
   <div class="practice">
     <div id="practice" class="anchor"></div>
@@ -21,6 +25,7 @@
       {% content 'praxis.htm' %} {% component 'gallerydisplay' %}
     </section>
   </div>
+
   
   {#}
   <div class="reservation">
@@ -41,6 +46,7 @@
   </div>
 
   {% partial 'html_body/map' %}
+  
 
   <div class="faq">
     <div id="faq" class="anchor"></div>
@@ -48,4 +54,5 @@
       {% content 'faq.htm' %} {% component 'faq' %}
     </section>
   </div>
+ 
 </main>

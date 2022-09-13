@@ -1,55 +1,56 @@
 {% set keyvisual = '__DEFAULTS/intro.jpg' %}
+{% set keyvisual2 = '__DEFAULTS/intro-quer.jpg' %}
+{% set keyvisual3 = '__DEFAULTS/intro-2874x1600.jpg' %}
 
 <div class="introvisual">
-
           
             {# Safari <=14 falls back on img if there is not type attribute present at each line! #}
             <picture>
-              <source type="image/webp" media="(max-width: 280px)" srcset="{{ keyvisual | media | resize(280, 280, { mode: 'cover', format: 'webp' }) }},
-                                                                           {{ keyvisual | media | resize(560, 560, { mode: 'cover', format: 'webp' }) }} 2x">
+              <source type="image/webp" media="(max-width: 280px)" srcset="{{ keyvisual2 | media | resize(280, 390, { mode: 'cover', format: 'webp' }) }},
+                                                                           {{ keyvisual2 | media | resize(560, 780, { mode: 'cover', format: 'webp' }) }} 2x">
 
-              <source type="image/jpg" media="(max-width: 280px)" srcset="{{ keyvisual | media | resize(280, 106, { mode: 'cover' }) }},
-                                                                          {{ keyvisual | media | resize(560, 212, { mode: 'cover' }) }} 2x">
+              <source type="image/jpg" media="(max-width: 280px)" srcset="{{ keyvisual2 | media | resize(280, 512, { mode: 'cover' }) }},
+                                                                          {{ keyvisual2 | media | resize(560, 1024, { mode: 'cover' }) }} 2x">
 
-              <source type="image/webp" media="(max-width: 320px)" srcset="{{ keyvisual | media | resize(320, 122, { mode: 'cover', format: 'webp' }) }},
-                                                                           {{ keyvisual | media | resize(640, 244, { mode: 'cover', format: 'webp' }) }} 2x">
+              <source type="image/webp" media="(max-width: 320px)" srcset="{{ keyvisual | media | resize(320, 512, { mode: 'cover', format: 'webp' }) }},
+                                                                           {{ keyvisual | media | resize(640, 1024, { mode: 'cover', format: 'webp' }) }} 2x">
 
-              <source type="image/jpg" media="(max-width: 320px)" srcset="{{ keyvisual | media | resize(320, 122, { mode: 'cover' }) }},
-                                                                          {{ keyvisual | media | resize(640, 244, { mode: 'cover' }) }} 2x">
+              <source type="image/jpg" media="(max-width: 320px)" srcset="{{ keyvisual | media | resize(320, 512, { mode: 'cover' }) }},
+                                                                          {{ keyvisual | media | resize(640, 1024, { mode: 'cover' }) }} 2x">
 
-              <source type="image/webp" media="(max-width: 360px)" srcset="{{ keyvisual | media | resize(360, 136, { mode: 'cover', format: 'webp' }) }},
-                                                                           {{ keyvisual | media | resize(720, 274, { mode: 'cover', format: 'webp' }) }} 2x">
-              <source type="image/jpg" media="(max-width: 360px)" srcset="{{ keyvisual | media | resize(360, 136, { mode: 'cover' }) }},
-                                                                          {{ keyvisual | media | resize(720, 274, { mode: 'cover' }) }} 2x">
+              <source type="image/webp" media="(max-width: 360px)" srcset="{{ keyvisual | media | resize(360, 540, { mode: 'cover', format: 'webp' }) }},
+                                                                           {{ keyvisual | media | resize(720, 1080, { mode: 'cover', format: 'webp' }) }} 2x">
+              <source type="image/jpg" media="(max-width: 360px)" srcset="{{ keyvisual | media | resize(360, 540, { mode: 'cover' }) }},
+                                                                          {{ keyvisual | media | resize(720, 1080, { mode: 'cover' }) }} 2x">
 
-              <source type="image/webp" media="(max-width: 567px)" srcset="{{ keyvisual | media | resize(567, 215, { mode: 'cover', format: 'webp' }) }},
-                                                                           {{ keyvisual | media | resize(1134, 430, { mode: 'cover', format: 'webp' }) }} 2x">
-              <source type="image/jpg" media="(max-width: 567px)" srcset="{{ keyvisual | media | resize(567, 215, { mode: 'cover' }) }},
-                                                                          {{ keyvisual | media | resize(1134, 430, { mode: 'cover' }) }} 2x">
+              <source type="image/webp" media="(max-width: 567px)" srcset="{{ keyvisual2 | media | resize(567, 850, { mode: 'cover', format: 'webp' }) }},
+                                                                           {{ keyvisual2 | media | resize(1134, 1700, { mode: 'cover', format: 'webp' }) }} 2x">
+              <source type="image/jpg" media="(max-width: 567px)" srcset="{{ keyvisual2 | media | resize(567, 850, { mode: 'cover' }) }},
+                                                                          {{ keyvisual2 | media | resize(1134, 1700, { mode: 'cover' }) }} 2x">
 
-              <source type="image/webp" media="(max-width: 768px)" srcset="{{ keyvisual | media | resize(768, 292, { mode: 'cover', format: 'webp' }) }},
-                                                                           {{ keyvisual | media | resize(1440, 547, { mode: 'cover', format: 'webp' })}} 2x">
-              <source type="image/jpg" media="(max-width: 768px)" srcset="{{ keyvisual | media | resize(768, 292, { mode: 'cover' }) }},
-                                                                          {{ keyvisual | media | resize(1440, 547, { mode: 'cover' })}} 2x">
+              <source type="image/webp" media="(max-width: 768px)" srcset="{{ keyvisual | media | resize(768, 768, { mode: 'cover', format: 'webp' }) }},
+                                                                           {{ keyvisual | media | resize(1440, 1536, { mode: 'cover', format: 'webp' })}} 2x">
+              <source type="image/jpg" media="(max-width: 768px)" srcset="{{ keyvisual | media | resize(768, 768, { mode: 'cover' }) }},
+                                                                          {{ keyvisual | media | resize(1440, 1536, { mode: 'cover' })}} 2x">
 
-              <source type="image/webp" media="(max-width: 1024px)" srcset="{{ keyvisual | media | resize(1024, 1024, { mode: 'cover', format: 'webp' }) }},
-                                                                            {{ keyvisual | media | resize(2048, 2048, { mode: 'cover', format: 'webp' })}} 2x">
-              <source mtype="image/jpg" media="(max-width: 1024px)" srcset="{{ keyvisual | media | resize(1024, 1024, { mode: 'cover' }) }},
-                                                                            {{ keyvisual | media | resize(2048, 2048, { mode: 'cover' })}} 2x">
+              <source type="image/webp" media="(max-width: 1024px)" srcset="{{ keyvisual2 | media | resize(1024, 716, { mode: 'cover', format: 'webp' }) }},
+                                                                            {{ keyvisual2 | media | resize(2048, 1432, { mode: 'cover', format: 'webp' })}} 2x">
+              <source mtype="image/jpg" media="(max-width: 1024px)" srcset="{{ keyvisual2 | media | resize(1024, 716, { mode: 'cover' }) }},
+                                                                            {{ keyvisual2 | media | resize(2048, 1432, { mode: 'cover' })}} 2x">
 
-              <source type="image/webp" media="(max-width: 3600px)" srcset="{{ keyvisual | media | resize(1440, 720, { mode: 'cover', format: 'webp' }) }}">
-              <source type="image/jpg" media="(max-width: 3600px)" srcset="{{ keyvisual | media | resize(1440, 720, { mode: 'cover' }) }}">
+              <source type="image/webp" media="(max-width: 3600px)" srcset="{{ keyvisual3 | media | resize(1437, 800, { mode: 'cover', format: 'webp' }) }},
+                                                                            {{ keyvisual3 | media | resize(2874, 1120, { mode: 'cover', format: 'webp' })}} 2x">
+              <source type="image/jpg" media="(max-width: 3600px)" srcset="{{ keyvisual3 | media | resize(1437, 800, { mode: 'cover' }) }},
+                                                                           {{ keyvisual3 | media | resize(2874, 1600, { mode: 'cover' })}} 2x">
 
-              <img type="image/jpg" src="{{ keyvisual  | media | resize(1440, 720, { mode: 'cover' }) }}" alt="Keyvisual" width="1440" height="720">
-              {# Original: 3150x3150 /  Bildformat: 1 zu 0.6 #}
+              <img type="image/jpg" src="{{ keyvisual2  | media | resize(1440, 560, { mode: 'cover' }) }}" alt="Keyvisual" width="1440" height="560">
+              {# Original Teddy: 3150x3150 #}
             
             </picture>
-       
 
           <div class="overlay indent-me">
             {% content 'slogan.htm' %}
           </div>
-          
-  
-  </div> {# end introvisual #}
+
+  </div> 
 

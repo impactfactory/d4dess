@@ -1250,7 +1250,7 @@ header nav #menu-toggle:checked ~ .menu li a {
 }
 .intro .introvisual img {
   animation: kenburns 8s ease;
-  filter: saturate(0.3);
+  filter: saturate(0.4);
   height: var(--shift);
   position: relative;
   width: 100%;
@@ -1327,7 +1327,7 @@ header nav #menu-toggle:checked ~ .menu li a {
 }
 @media only screen and (min-width: 361px) and (max-width: 567px) {
   .intro .introvisual {
-    --shift: 150vw;
+    --shift: 120vw;
     --font-size: calc(var(--shift) / 15);
   }
   .intro .introvisual .overlay {
@@ -1355,7 +1355,7 @@ header nav #menu-toggle:checked ~ .menu li a {
 @media only screen and (min-width: 1025px) and (max-width: 1399px) {
   .intro .introvisual {
     --shift: 40vw;
-    --font-size: calc(var(--shift) / 8);
+    --font-size: calc(var(--shift) / 11);
   }
   .intro .introvisual .overlay {
     transform: translateY(calc(var(--shift) * -1));
@@ -1364,11 +1364,10 @@ header nav #menu-toggle:checked ~ .menu li a {
 @media only screen and (min-width: 1400px) {
   .intro .introvisual {
     --shift: 40vw;
-    --font-size: calc(var(--shift) / 1);
-    max-height: 600px;
+    --font-size: calc(var(--shift) / 11);
   }
   .intro .introvisual .overlay {
-    transform: translateY(calc(var(--shift) * -0.8));
+    transform: translateY(calc(var(--shift) * -1));
   }
 }
 #languageselect, #languageselect-footer {

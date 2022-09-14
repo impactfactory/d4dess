@@ -436,6 +436,28 @@ template {
     /* white turns to dark */
   }
 }
+.dark-mode {
+  --black: 0 100% 100%;
+  /* black turns white */
+  --dark: 0 100% 98%;
+  /* dark turn to light */
+  --grey-drk: 0 0% 20%;
+  --prim-lgt: 211 52% 22%;
+  --prim: 211 52% 22%;
+  /* petrol / #2f8d85 */
+  --prim-drk: 211 52% 22%;
+  --main-lgt: 47 47% 95%;
+  --main: 47 47% 95%;
+  --main-drk: 47 47% 95%;
+  --acc1-lgt: 0 0% 0;
+  --acc1: 0 0% 0;
+  --acc1-drk: 0 0% 0;
+  --light: 0 0% 10%;
+  /* light turns to dark grey */
+  --white: 0 100% 0%;
+  /* white turns to dark */
+}
+
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
@@ -706,6 +728,9 @@ code {
 }
 .contactbox a .fa-phone-alt {
   top: 2px;
+}
+.contactbox a .fa-lightdark {
+  color: hsl(var(--dark));
 }
 
 header nav #menu-toggle:checked ~ .contactbox {

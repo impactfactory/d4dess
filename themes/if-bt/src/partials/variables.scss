@@ -57,8 +57,8 @@
 
   --fs-xs: 10px;
   --fs-sm: 14px;
-  --fs-md: 18px;
-  --fs-lg: 36px;
+  --fs-md: calc(var(--baseFontSize) / 16 * 100%);
+  --fs-medico: calc(var(--baseFontSize) / 16 * 106.5%);
   --fs-xl: 64px;
 
   --fw-xs: 200;
@@ -86,7 +86,6 @@
   );
   --body-bg: hsl(var(--light) / 1);
   --body-color: hsl(var(--black) / 1);
-  //--body-fs: var(--fs-md);
 
   // Spaces /////////////////
   --padd-xs: 0.25rem;

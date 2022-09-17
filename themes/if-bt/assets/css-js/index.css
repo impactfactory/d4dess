@@ -822,7 +822,6 @@ footer {
   background: hsl(var(--dark)/1);
   color: hsl(var(--light));
   display: block;
-  font-size: var(--fs-md);
   height: auto;
 }
 footer .faq details {
@@ -1496,7 +1495,10 @@ main .arrival {
   display: none !important;
 }
 .reservation .medicosearch-widget #medicosearchWidget.mbw-impactfactory .mbw-widget-header,
-.reservation .medicosearch-widget #medicosearchWidget.mbw-impactfactory .mbw-slot {
+.reservation .medicosearch-widget #medicosearchWidget.mbw-impactfactory .mbw-slot,
+.reservation .medicosearch-widget #medicosearchWidget.mbw-impactfactory .mbw-button-fill,
+.reservation .medicosearch-widget #medicosearchWidget.mbw-impactfactory .mbw-login-option-txt span::before,
+.reservation .medicosearch-widget #medicosearchWidget.mbw-impactfactory .mbw-login-option-txt span::after {
   background-color: hsl(var(--prim));
 }
 .reservation .medicosearch-widget #medicosearchWidget.mbw-impactfactory .mbw-step-wrap {
@@ -1504,12 +1506,29 @@ main .arrival {
 }
 .reservation .medicosearch-widget #medicosearchWidget.mbw-impactfactory .mbw-step-number,
 .reservation .medicosearch-widget #medicosearchWidget.mbw-impactfactory .mbw-dropdown-wrap,
-.reservation .medicosearch-widget #medicosearchWidget.mbw-impactfactory .mbw-label {
+.reservation .medicosearch-widget #medicosearchWidget.mbw-impactfactory .mbw-label,
+.reservation .medicosearch-widget #medicosearchWidget.mbw-impactfactory .mbw-widget-wrap,
+.reservation .medicosearch-widget #medicosearchWidget.mbw-impactfactory .mbw-button-fill,
+.reservation .medicosearch-widget #medicosearchWidget.mbw-impactfactory .mbw-input,
+.reservation .medicosearch-widget #medicosearchWidget.mbw-impactfactory .mbw-form-bg-block {
   border-color: hsl(var(--prim));
 }
+.reservation .medicosearch-widget #medicosearchWidget.mbw-impactfactory .mbw-form-bg-block {
+  background-color: hsl(var(--acc1-lgt));
+}
+.reservation .medicosearch-widget #medicosearchWidget.mbw-impactfactory .mbw-layer-bg {
+  background-color: hsl(var(--acc1)/0.3);
+}
 .reservation .medicosearch-widget #medicosearchWidget.mbw-impactfactory .mbw-step-number span,
-.reservation .medicosearch-widget #medicosearchWidget.mbw-impactfactory .mbw-icon-close {
+.reservation .medicosearch-widget #medicosearchWidget.mbw-impactfactory .mbw-icon-close,
+.reservation .medicosearch-widget #medicosearchWidget.mbw-impactfactory .mbw-icon,
+.reservation .medicosearch-widget #medicosearchWidget.mbw-impactfactory .mbw-link-text,
+.reservation .medicosearch-widget #medicosearchWidget.mbw-impactfactory .mbw-login-option-txt,
+.reservation .medicosearch-widget #medicosearchWidget.mbw-impactfactory .mbw-page-wrap a {
   color: hsl(var(--prim));
+}
+.reservation .medicosearch-widget #medicosearchWidget.mbw-impactfactory .mbw-icon {
+  border-right: hsl(var(--prim));
 }
 .reservation .medicosearch-widget #medicosearchWidget.mbw-impactfactory .mbw-link-edit {
   border-radius: 4px;

@@ -43,7 +43,10 @@
     }
 
     .mbw-widget-header,
-    .mbw-slot {
+    .mbw-slot,
+    .mbw-button-fill,
+    .mbw-login-option-txt span::before,
+    .mbw-login-option-txt span::after {
       background-color: hsl(var(--prim));
     }
 
@@ -53,13 +56,33 @@
 
     .mbw-step-number,
     .mbw-dropdown-wrap,
-    .mbw-label {
+    .mbw-label,
+    .mbw-widget-wrap,
+    .mbw-button-fill,
+    .mbw-input,
+    .mbw-form-bg-block {
       border-color: hsl(var(--prim));
     }
 
+    .mbw-form-bg-block {
+      background-color: hsl(var(--acc1-lgt));
+    }
+
+    .mbw-layer-bg {
+      background-color: hsl(var(--acc1) / 0.3);
+    }
+
     .mbw-step-number span,
-    .mbw-icon-close {
+    .mbw-icon-close,
+    .mbw-icon,
+    .mbw-link-text,
+    .mbw-login-option-txt,
+    .mbw-page-wrap a {
       color: hsl(var(--prim));
+    }
+
+    .mbw-icon {
+      border-right: hsl(var(--prim));
     }
 
     .mbw-link-edit {

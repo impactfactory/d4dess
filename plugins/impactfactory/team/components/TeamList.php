@@ -35,10 +35,7 @@ class TeamList extends ComponentBase
         return Organisation::all()->pluck('name', 'id')->toArray();
     }
 
-    public function init()
-    {
-        $this->addJs('assets/js/teamlist.js');
-    }
+   
 
     public function onRun()
     {

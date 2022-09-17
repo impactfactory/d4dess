@@ -1,8 +1,19 @@
 :root {
+  /*Breakpoints
+  // custom properties don't work in media queries ;(
+  --break-xs: 280px;
+  --break-sm: 320px;
+  --break-sm: 360px;
+  --break-md: 567px;
+  --break-lg: 768px;
+  --break-xl: 1024px;
+  --break-xxl: 1400px;
+  */
+
   // Colors /////////////////
 
   // white to black scale
-  --black-: 0 0% 0%; /* #000 */
+  --black: 0 0% 0%; /* #000 */
   --dark: 189 50% 10%; /* hsl(0 0% 7% / 1); /* #111111;*/
   --white: 0 100% 100%;
   --light: 189 100% 98%;
@@ -86,39 +97,9 @@
   --padd-xl: 4rem;
   --content-width: 1100px;
   --content-padding: var(--padd-lg);
-
-  /*Breakpoints
-  // custom properties don't work in media queries ;(
-  --break-xs: 280px;
-  --break-sm: 320px;
-  --break-sm: 360px;
-  --break-md: 567px;
-  --break-lg: 768px;
-  --break-xl: 1024px;
-  --break-xxl: 1400px;
-  */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --black: 0 100% 100%; /* black turns white */
-    --dark: 0 100% 98%; /* dark turn to light */
-    --grey-drk: 0 0% 20%;
-    --prim-lgt: 211 52% 22%;
-    --prim: 211 52% 22%; /* petrol / #2f8d85 */
-    --prim-drk: 211 52% 22%;
-    --main-lgt: 47 47% 95%;
-    --main: 47 47% 95%; //#f5f1e3
-    --main-drk: 47 47% 95%;
-    --acc1-lgt: 0 0% 0;
-    --acc1: 0 0% 0;
-    --acc1-drk: 0 0% 0;
-    --light: 0 0% 10%; /* light turns to dark grey */
-    --white: 0 100% 0%; /* white turns to dark */
-  }
-}
-
-.dark-mode {
+body.dark {
   --black: 0 100% 100%; /* black turns white */
   --dark: 0 100% 98%; /* dark turn to light */
   --grey-drk: 0 0% 20%;

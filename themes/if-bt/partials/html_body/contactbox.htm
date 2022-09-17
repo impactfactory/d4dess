@@ -28,39 +28,48 @@
         {% partial 'html_body/svg-icons/question' %} 
       </a>
 
-      <a href="#" class="mode-toggle">
+      <a href="#" onclick="toggleMode()" class="mode-toggle">
         {% partial 'html_body/svg-icons/lightdark' %} 
       </a>
 
 </div>
 
-{# https://css-tricks.com/a-complete-guide-to-dark-mode-on-the-web/#combining #}
-
 {% put scripts %}
-  <script>
+<script>
 
-    const btn = document.querySelector(".mode-toggle");
+    const btn = document.querySelector(".mode-toggle"); 
     const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
     const currentTheme = localStorage.getItem("theme");
-
-    if (currentTheme == "dark") {
-      document.body.classList.add("dark-mode");
-    } 
-    else if (currentTheme == "light") {
-      document.body.classList.add("light-mode");
+  
+    if (prefersDarkScheme.matches && (currentTheme == "dark")) {
+      document.body.classList.add("dark");
+      }
+    else if (prefersDarkScheme.matches && (currentTheme == "light")) {
+      document.body.classList.remove("dark");
+      console.log('yepp');
+      }
+    else if (prefersDarkScheme.matches) {
+      document.body.classList.add("dark");
     }
+    else if ((prefersDarkScheme.matches == false) && (currentTheme == "dark")) {
+      document.body.classList.add("dark");
+    }
+    else if ((prefersDarkScheme.matches == false) && (currentTheme == "light")) {}
+    else if (prefersDarkScheme.matches == false) {}
+    else {}
 
-    btn.addEventListener("click", function() {
-      if (prefersDarkScheme.matches) {
-        document.body.classList.remove('dark-mode');
-        var theme = document.body.classList.contains("light-mode") ? "light" : "dark";
-      } 
-      else {
-       document.body.classList.add("dark-mode");
-       var theme = document.body.classList.contains("dark-mode") ? "dark" : "light";
-      } 
-      localStorage.setItem("theme", theme);
-    });
+    function toggleMode(){
+        if (document.body.classList.contains("dark")){
+            document.body.classList.remove("dark");
+            var theme = "light";
+            localStorage.setItem("theme", theme);
+          }
+        else {
+            document.body.classList.add("dark");
+            var theme = "dark";
+            localStorage.setItem("theme", theme);
+          }
+        }
+</script>
 
-  </script>
 {% endput %}

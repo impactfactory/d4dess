@@ -18,7 +18,8 @@
 import "./custom.scss";
 
 
-/////////////////////////// octobercms cookies plugin modal /////////////////////////
+/////////////////////////// octobercms cookies plugin modal ////////////////////////
+/*
 $('#cookies-manage-save-modal').click(function() {
 
         var date = new Date();
@@ -76,50 +77,7 @@ $('#cookies-bar .btn-accept-all').click(function(e) {
   location.reload(true);
 });
 
-
-//////////////////////////////// open lightbox for search ////////////////////////
-/*
-$(function () {
-    $('a[href="#search"]').on('click', function(event) {
-        event.preventDefault();
-        $('#search').addClass('open');
-        $('#languageselect').remove();
-        $('#search > form > input[type="search"]').focus();
-    });
-
-    $('#search, #search button.close').on('click keyup', function(event) {
-        if (event.target == this || event.target.className == 'close' || event.keyCode == 27) {
-            $(this).removeClass('open');
-        }
-    });
-
-});
-
-
-//////////////////////////////// hide navbar /////////////////////////////////////
-// When the user scrolls down, hide the navbar.
-// When the user scrolls up, show the navbar
-// var prevScrollpos = window.pageYOffset;
-// window.onscroll = function() {
-// var currentScrollPos = window.pageYOffset;
-//   if (prevScrollpos > currentScrollPos) {
-//     document.getElementById("navbar").style.top = "0";
-//   } else {
-//     document.getElementById("navbar").style.top = "-110px";
-//   }
-//   prevScrollpos = currentScrollPos;
-// }
-
-//////////////////////////////// hide bootstrap focus rings if not used ///////////
-// providing focus rings to keyboard users, but not to others
-// https://medium.com/hackernoon/removing-that-ugly-focus-ring-and-keeping-it-too-6c8727fefcd2
-
-function handleFirstTab(e) {
-    if (e.keyCode === 9) { // the "I am a keyboard user" key
-        document.body.classList.add('user-is-tabbing');
-        window.removeEventListener('keydown', handleFirstTab);
-    }
-}
-
-window.addEventListener('keydown', handleFirstTab);
 */
+
+
+

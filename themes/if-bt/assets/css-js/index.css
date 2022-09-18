@@ -416,9 +416,6 @@ template {
 body.dark {
   --black: 0 100% 100%;
   /* black turns white */
-  --dark: 0 100% 98%;
-  /* dark turn to light */
-  --grey-drk: 0 0% 20%;
   --prim-lgt: 211 52% 22%;
   --prim: 211 52% 22%;
   /* petrol / #2f8d85 */
@@ -429,10 +426,36 @@ body.dark {
   --acc1-lgt: 0 0% 0;
   --acc1: 0 0% 0;
   --acc1-drk: 0 0% 0;
-  --light: 0 0% 10%;
-  /* light turns to dark grey */
   --white: 0 100% 0%;
   /* white turns to dark */
+  --body-bg: black;
+  --body-color: hsl(var(--light) / 0.6);
+}
+body.dark main {
+  --opacity: 1;
+}
+body.dark main .team {
+  background: hsl(var(--main-lgt)/var(--opacity));
+}
+body.dark main .practice {
+  background: hsl(var(--dark)/var(--opacity));
+}
+body.dark main .reservation {
+  background: hsl(var(--acc2-drk)/0.2);
+}
+body.dark main .arrival {
+  background: hsl(var(--tec-drk)/var(--opacity));
+}
+body.dark main .faq {
+  background: hsl(var(--dark));
+}
+body.dark footer {
+  background: black;
+  color: hsl(var(--light)/0.6);
+}
+body.dark footer .langselect a,
+body.dark footer .byline a {
+  color: hsl(var(--light)/0.6);
 }
 
 html {

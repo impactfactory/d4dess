@@ -133,7 +133,6 @@ header {
 @media (min-width: 768px) {
   header {
     background: hsl(var(--light));
-    //height: auto;
     position: fixed;
     width: 100%;
     z-index: 1000;
@@ -142,22 +141,14 @@ header {
       display: grid;
       grid-template-columns: 2fr 4fr 1.5fr;
       justify-items: stretch;
-      //color: #fff;
       height: auto;
       padding: 0 0 0 0;
       width: 100%;
 
       /* Logo /////////////////////////////////////*/
       #logo {
-        //background: hsl(var(--light));
-        //display: block;
         align-self: center;
         place-self: center;
-
-        /*svg {
-          display: block;
-          margin-right: var(--padd-md);
-        }*/
       }
 
       /* Switch ////////////////////////////////*/

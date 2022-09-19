@@ -99,57 +99,64 @@
 }
 
 body.dark {
-  --black: 0 100% 100%; /* black turns white */
-  //--dark: 0 100% 98%; /* dark turn to light */
-  --prim-lgt: 211 52% 22%;
-  --prim: 211 52% 22%; /* petrol / #2f8d85 */
-  --prim-drk: 211 52% 22%;
-  --main-lgt: 47 47% 95%;
-  --main: 47 47% 95%; //#f5f1e3
-  --main-drk: 47 47% 95%;
-  --acc1-lgt: 0 0% 0;
-  --acc1: 0 0% 0;
-  --acc1-drk: 0 0% 0;
-  //--light: 0 0% 70%; /* light turns to dark grey */
-  --white: 0 100% 0%; /* white turns to dark */
-
   --body-bg: black;
   --body-color: hsl(var(--light) / 0.6);
 
-  main {
-    --opacity: 1;
+  --dark: 189 50% 90%;
+  --acc1-lgt: 46 55% 05%;
+  --acc2-lgt: 100 55% 05%;
+  --main-lgt: 189 85% 05%;
+  --prim: 32 85% 05%;
+  --prim-lgt: 32 85% 05%;
+  --tec-lgt: 0 0% 10%;
 
-    .team {
-      background: hsl(var(--main-lgt) / var(--opacity));
+  --btn-bg: hsl(var(--light) / 0.3);
+  --btn-color: hsl(var(--light) / 1);
+
+  header {
+    background-color: black;
+
+    nav ul li a,
+    .contactbox {
+      border-left: 1px solid hsl(var(--light) / 0.2);
     }
-
-    .practice {
-      background: hsl(var(--dark) / var(--opacity));
-    }
-
-    .reservation {
-      background: hsl(var(--acc2-drk) / 0.2);
-    }
-
-    .arrival {
-      background: hsl(var(--tec-drk) / var(--opacity));
-    }
-
-    .faq {
-      background: hsl(var(--dark));
-
+    .contactbox {
       a {
+        color: hsl(var(--light) / 0.7);
+      }
+      svg {
+        filter: none;
       }
     }
   }
 
+  .intro .introvisual img {
+    filter: brightness(0.4);
+  }
+
+  .team,
+  .practice,
+  .faq,
+  .reservation,
+  .arrival {
+    border-top: 3px solid hsl(var(--light) / 0.2);
+  }
+
+  .team .team-list .card {
+    background: hsl(var(--dark) / 0.1);
+    border: none;
+    box-shadow: 5px 5px 20px hsl(0 05% 05% / 1);
+  }
+
+  iframe {
+    filter: invert(90%);
+  }
+
   footer {
     background: black;
-    color: hsl(var(--light) / 0.6);
 
     .langselect a,
     .byline a {
-      color: hsl(var(--light) / 0.6);
     }
   }
 }

@@ -103,11 +103,11 @@ body.dark {
   --body-color: hsl(var(--light) / 0.6);
 
   --dark: 189 50% 90%;
-  --acc1-lgt: 46 55% 05%;
-  --acc2-lgt: 100 55% 05%;
-  --main-lgt: 189 85% 05%;
-  --prim: 32 85% 05%;
-  --prim-lgt: 32 85% 05%;
+  --acc1-lgt: 46 55% 03%;
+  --acc2-lgt: 100 55% 03%;
+  --main-lgt: 189 85% 03%;
+  --prim: 32 85% 03%;
+  --prim-lgt: 32 85% 03%;
   --tec-lgt: 0 0% 10%;
 
   --btn-bg: hsl(var(--light) / 0.3);
@@ -154,9 +154,11 @@ body.dark {
 
   footer {
     background: black;
+    color: var(--body-color);
 
     .langselect a,
     .byline a {
+      color: var(--body-color);
     }
   }
 }

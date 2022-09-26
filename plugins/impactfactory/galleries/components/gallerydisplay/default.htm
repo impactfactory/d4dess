@@ -2,10 +2,10 @@
 
 {% if gallery.is_published == 1 %}
 
-<div id="gallery-{{ gallery.id }}" class="fullwrap pt-2 pb-4 gallery">
+<div id="gallery-{{ gallery.id }}" class="gallery">
   <div class="indent-me">
 
-  <ul class="lb-album p-0 m-0">
+  <ul class="lb-album">
       {% for index, image in gallery.images %}
       	<li>
 
@@ -15,7 +15,7 @@
               <source type="image/jpg" srcset="{{ image.path | resize(150,120, { mode: 'crop', format: 'jpg' }) }}">
               <img type="image/jpg"
                    src="{{  image.path | resize(150,120, { mode: 'crop', format: 'jpg' }) }}"
-                   class="img-fluid mr-3 rounded"
+                   class=""
                    alt="{{ image.title }}"
                    width="150"
                    height="120"
@@ -40,7 +40,7 @@
               <source type="image/webp" srcset="{{ image.path | modify({ format: 'webp' }) }}">
               <img type="image/jpg"
                    src="{{  image.path }}"
-                   class="rounded"
+                   class=""
                    alt="{{ image.title }}"
                    width="auto"
                    height="auto"

@@ -416,6 +416,7 @@ template {
 body.dark {
   --body-bg: black;
   --body-color: hsl(var(--light) / 0.6);
+  /* Colors */
   --dark: 189 50% 90%;
   --acc1-lgt: 46 55% 03%;
   --acc2-lgt: 100 55% 03%;
@@ -423,8 +424,23 @@ body.dark {
   --prim: 32 85% 03%;
   --prim-lgt: 32 85% 03%;
   --tec-lgt: 0 0% 10%;
+  /* Buttons */
   --btn-bg: hsl(var(--light) / 0.3);
   --btn-color: hsl(var(--light) / 1);
+  /* Images */
+  --img-bright: 0.9;
+  /* Keyvisual */
+  /* Google Map */
+  /* Team */
+  /* Gallery */
+  /* Footer */
+}
+body.dark .team,
+body.dark .practice,
+body.dark .faq,
+body.dark .reservation,
+body.dark .arrival {
+  border-top: 3px solid hsl(var(--light)/0.2);
 }
 body.dark header {
   background-color: black;
@@ -442,27 +458,37 @@ body.dark header .contactbox svg {
 body.dark .intro .introvisual img {
   filter: brightness(0.4);
 }
-body.dark .team,
-body.dark .practice,
-body.dark .faq,
-body.dark .reservation,
-body.dark .arrival {
-  border-top: 3px solid hsl(var(--light)/0.2);
+body.dark iframe {
+  filter: invert(90%);
 }
 body.dark .team .team-list .card {
   background: hsl(var(--dark)/0.1);
   border: none;
   box-shadow: 5px 5px 20px #0d0c0c;
 }
-body.dark iframe {
-  filter: invert(90%);
+body.dark .team .team-list .card img {
+  filter: brightness(var(--img-bright));
+}
+body.dark .gallery img {
+  filter: brightness(var(--img-bright));
+}
+body.dark .gallery .lb-overlay {
+  background: var(--body-bg);
+}
+body.dark .gallery .lb-overlay .svg-inline--fa,
+body.dark .gallery .lb-overlay .info {
+  color: var(--body-color);
+}
+body.dark .gallery .lb-overlay h3 {
+  border-right: 1px solid var(--body-color);
 }
 body.dark footer {
   background: black;
   color: var(--body-color);
 }
 body.dark footer .langselect a,
-body.dark footer .byline a {
+body.dark footer .byline a,
+body.dark footer .faq details div a {
   color: var(--body-color);
 }
 
@@ -561,6 +587,7 @@ p {
   margin-bottom: 0;
 }
 p a {
+  color: var(--body-color);
   text-decoration: underline;
 }
 
@@ -917,6 +944,7 @@ footer .faq .byline a:hover {
 }
 .gallery .lb-album li > a,
 .gallery .lb-album li > a img {
+  border-radius: var(--rad-md);
   display: block;
 }
 .gallery .lb-album li > a {
@@ -924,7 +952,7 @@ footer .faq .byline a:hover {
   height: 150px;
 }
 .gallery .lb-overlay {
-  background: hsl(var(--grey-drk)/1);
+  background: hsl(var(--dark)/1);
   display: none !important;
   height: 0px;
   overflow: hidden;

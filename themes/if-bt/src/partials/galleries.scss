@@ -12,6 +12,7 @@
 
     li > a,
     li > a img {
+      border-radius: var(--rad-md);
       display: block;
     }
 
@@ -22,7 +23,7 @@
   }
 
   .lb-overlay {
-    background: hsl(var(--grey-drk) / 1);
+    background: hsl(var(--dark) / 1);
     display: none !important;
     height: 0px;
     overflow: hidden;

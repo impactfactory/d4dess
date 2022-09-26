@@ -58,7 +58,7 @@
   --fs-xs: 10px;
   --fs-sm: 14px;
   --fs-md: calc(var(--baseFontSize) / 16 * 100%);
-  --fs-medico: calc(var(--baseFontSize) / 16 * 106.5%);
+
   --fs-xl: 64px;
 
   --fw-xs: 200;
@@ -66,6 +66,10 @@
   --fw-md: 400;
   --fw-lg: 600;
   --fw-xl: 700;
+
+  // MedicoSearch iFrame ////////
+  --fs-medico: calc(var(--baseFontSize) / 16 * 100%);
+  --body-color-medico: hsl(var(--black) / 1);
 
   // Components /////////////////
   --rad-xs: 4px;

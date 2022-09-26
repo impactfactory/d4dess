@@ -380,13 +380,14 @@ template {
   --fs-xs: 10px;
   --fs-sm: 14px;
   --fs-md: calc(var(--baseFontSize) / 16 * 100%);
-  --fs-medico: calc(var(--baseFontSize) / 16 * 106.5%);
   --fs-xl: 64px;
   --fw-xs: 200;
   --fw-sm: 300;
   --fw-md: 400;
   --fw-lg: 600;
   --fw-xl: 700;
+  --fs-medico: calc(var(--baseFontSize) / 16 * 100%);
+  --body-color-medico: hsl(var(--black) / 1);
   --rad-xs: 4px;
   --rad-md: 8px;
   --rad-lg: 16px;
@@ -418,21 +419,28 @@ body.dark {
   --body-color: hsl(var(--light) / 0.6);
   /* Colors */
   --dark: 189 50% 90%;
+  --acc1: 46 100% 20%;
   --acc1-lgt: 46 55% 03%;
+  --acc2: 100 54% 20%;
   --acc2-lgt: 100 55% 03%;
+  --main: 189 50% 20%;
   --main-lgt: 189 85% 03%;
   --prim: 32 85% 03%;
   --prim-lgt: 32 85% 03%;
+  --tec: 0 25% 20%;
   --tec-lgt: 0 0% 10%;
   /* Buttons */
   --btn-bg: hsl(var(--light) / 0.3);
   --btn-color: hsl(var(--light) / 1);
   /* Images */
   --img-bright: 0.9;
+  /* Header */
   /* Keyvisual */
   /* Google Map */
   /* Team */
   /* Gallery */
+  /* MedicoSearch iFrame */
+  --body-color-medico: var(--body-color);
   /* Footer */
 }
 body.dark .team,
@@ -451,6 +459,9 @@ body.dark header .contactbox {
 }
 body.dark header .contactbox a {
   color: hsl(var(--light)/0.7);
+}
+body.dark header .contactbox a:hover {
+  color: hsl(var(--dark));
 }
 body.dark header .contactbox svg {
   filter: none;
@@ -481,6 +492,27 @@ body.dark .gallery .lb-overlay .info {
 }
 body.dark .gallery .lb-overlay h3 {
   border-right: 1px solid var(--body-color);
+}
+body.dark .reservation .medicosearch-widget #medicosearchWidget.mbw-impactfactory .mbw-dropdown-selected-value,
+body.dark .reservation .medicosearch-widget #medicosearchWidget.mbw-impactfactory .mbw-empty-option-active,
+body.dark .reservation .medicosearch-widget #medicosearchWidget.mbw-impactfactory .mbw-dropdown li a span,
+body.dark .reservation .medicosearch-widget #medicosearchWidget.mbw-impactfactory .mbw-icon-calendar {
+  color: hsl(var(--black)) !important;
+}
+body.dark .reservation .medicosearch-widget #medicosearchWidget.mbw-impactfactory .mbw-form-bg-block {
+  background-color: hsl(var(--acc1-lgt));
+}
+body.dark .reservation .medicosearch-widget #medicosearchWidget.mbw-impactfactory .mbw-layer-bg {
+  background-color: hsl(var(--acc1)/0.1);
+}
+body.dark .reservation .medicosearch-widget #medicosearchWidget.mbw-impactfactory .mbw-column {
+  background: hsl(var(--tec)/0.2);
+}
+body.dark .reservation .medicosearch-widget #medicosearchWidget.mbw-impactfactory .mbw-widget-header {
+  background: hsl(var(--tec)/0.6);
+}
+body.dark .reservation .medicosearch-widget #medicosearchWidget.mbw-impactfactory .mbw-table-day-row {
+  background: hsl(var(--tec)/0.4);
 }
 body.dark footer {
   background: black;
@@ -764,10 +796,6 @@ code {
 .contactbox a .fa-phone-alt {
   top: 2px;
 }
-.contactbox a .fa-lightdark {
-  color: hsl(var(--dark));
-}
-
 header nav #menu-toggle:checked ~ .contactbox {
   background: transparent;
   border: none;
@@ -1510,6 +1538,9 @@ main .arrival {
   line-height: 0;
 }
 
+.reservation .medicosearch-widget #medicosearchWidget.mbw-impactfactory {
+  /* text on darker color */
+}
 .reservation .medicosearch-widget #medicosearchWidget.mbw-impactfactory .mbw-title-h2,
 .reservation .medicosearch-widget #medicosearchWidget.mbw-impactfactory .mbw-title-h1,
 .reservation .medicosearch-widget #medicosearchWidget.mbw-impactfactory .mbw-checkbox-label,
@@ -1532,9 +1563,15 @@ main .arrival {
 .reservation .medicosearch-widget #medicosearchWidget.mbw-impactfactory .mbw-table-slots,
 .reservation .medicosearch-widget #medicosearchWidget.mbw-impactfactory .mbw-dropdown-option-treatment-name,
 .reservation .medicosearch-widget #medicosearchWidget.mbw-impactfactory .mbw-treatment-selector,
-.reservation .medicosearch-widget #medicosearchWidget.mbw-impactfactory .mbw-slot {
-  color: hsl(var(--black)/1);
+.reservation .medicosearch-widget #medicosearchWidget.mbw-impactfactory .mbw-slot,
+.reservation .medicosearch-widget #medicosearchWidget.mbw-impactfactory .mbw-icon-calendar {
+  color: var(--body-color-medico) !important;
   font-size: var(--fs-medico);
+}
+.reservation .medicosearch-widget #medicosearchWidget.mbw-impactfactory .mbw-today-link,
+.reservation .medicosearch-widget #medicosearchWidget.mbw-impactfactory .mbw-slot,
+.reservation .medicosearch-widget #medicosearchWidget.mbw-impactfactory .mbw-button {
+  color: hsl(var(--white)) !important;
 }
 .reservation .medicosearch-widget #medicosearchWidget.mbw-impactfactory .mbw-form-row,
 .reservation .medicosearch-widget #medicosearchWidget.mbw-impactfactory .mbw-name-sign-txt,

@@ -4,11 +4,15 @@ body.dark {
 
   /* Colors */
   --dark: 189 50% 90%;
+  --acc1: 46 100% 20%;
   --acc1-lgt: 46 55% 03%;
+  --acc2: 100 54% 20%;
   --acc2-lgt: 100 55% 03%;
+  --main: 189 50% 20%;
   --main-lgt: 189 85% 03%;
   --prim: 32 85% 03%;
   --prim-lgt: 32 85% 03%;
+  --tec: 0 25% 20%;
   --tec-lgt: 0 0% 10%;
 
   /* Buttons */
@@ -26,6 +30,7 @@ body.dark {
     border-top: 3px solid hsl(var(--light) / 0.2);
   }
 
+  /* Header */
   header {
     background-color: black;
 
@@ -36,6 +41,10 @@ body.dark {
     .contactbox {
       a {
         color: hsl(var(--light) / 0.7);
+
+        &:hover {
+          color: hsl(var(--dark));
+        }
       }
       svg {
         filter: none;
@@ -80,6 +89,35 @@ body.dark {
 
       h3 {
         border-right: 1px solid var(--body-color);
+      }
+    }
+  }
+
+  /* MedicoSearch iFrame */
+  --body-color-medico: var(--body-color);
+
+  .reservation {
+    .medicosearch-widget #medicosearchWidget.mbw-impactfactory {
+      .mbw-dropdown-selected-value,
+      .mbw-empty-option-active,
+      .mbw-dropdown li a span,
+      .mbw-icon-calendar {
+        color: hsl(var(--black)) !important;
+      }
+      .mbw-form-bg-block {
+        background-color: hsl(var(--acc1-lgt));
+      }
+      .mbw-layer-bg {
+        background-color: hsl(var(--acc1) / 0.1);
+      }
+      .mbw-column {
+        background: hsl(var(--tec) / 0.2);
+      }
+      .mbw-widget-header {
+        background: hsl(var(--tec) / 0.6);
+      }
+      .mbw-table-day-row {
+        background: hsl(var(--tec) / 0.4);
       }
     }
   }

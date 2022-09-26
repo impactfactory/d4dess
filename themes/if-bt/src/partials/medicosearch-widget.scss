@@ -22,9 +22,17 @@
     .mbw-table-slots,
     .mbw-dropdown-option-treatment-name,
     .mbw-treatment-selector,
-    .mbw-slot {
-      color: hsl(var(--black) / 1);
+    .mbw-slot,
+    .mbw-icon-calendar {
+      color: var(--body-color-medico) !important;
       font-size: var(--fs-medico);
+    }
+
+    /* text on darker color */
+    .mbw-today-link,
+    .mbw-slot,
+    .mbw-button {
+      color: hsl(var(--white)) !important;
     }
 
     .mbw-form-row,
@@ -101,4 +109,5 @@
       max-width: 140px;
     }
   }
+  // */
 }

@@ -13,10 +13,46 @@
   <div class="portrait">
     <picture>
         {# Safari <=14 falls back on img if there is not type attribute present at each line! #}
-      <source type="image/webp" srcset="{{ person.imglist | media | resize(200, 200, { mode: 'cover', format: 'webp' }) }}">
-      <source type="image/jpg" srcset="{{ person.imglist | media | resize(200, 200, { mode: 'cover' }) }}">
+            
+      <source type="image/webp" media="(max-width: 280px)" srcset="{{ person.imglist | media | resize(262, 262, { mode: 'cover', format: 'webp' })}},
+                                                                   {{ person.imglist | media | resize(524, 524, { mode: 'cover', format: 'webp' })}} 2x">
+      <source type="image/jpg"  media="(max-width: 280px)" srcset="{{ person.imglist | media | resize(262, 262, { mode: 'cover' }) }},
+                                                                   {{ person.imglist | media | resize(524, 524, { mode: 'cover' })}} 2x">
+
+      <source type="image/webp" media="(max-width: 320px)" srcset="{{ person.imglist | media | resize(262, 262, { mode: 'cover', format: 'webp' })}},
+                                                                   {{ person.imglist | media | resize(524, 524, { mode: 'cover', format: 'webp' })}} 2x">
+      <source type="image/jpg"  media="(max-width: 320px)" srcset="{{ person.imglist | media | resize(262, 262, { mode: 'cover' }) }},
+                                                                   {{ person.imglist | media | resize(524, 524, { mode: 'cover' })}} 2x">
+
+      <source type="image/webp" media="(max-width: 360px)" srcset="{{ person.imglist | media | resize(262, 262, { mode: 'cover', format: 'webp' })}},
+                                                                   {{ person.imglist | media | resize(524, 524, { mode: 'cover', format: 'webp' })}} 2x">
+      <source type="image/jpg"  media="(max-width: 360px)" srcset="{{ person.imglist | media | resize(262, 262, { mode: 'cover' }) }},
+                                                                   {{ person.imglist | media | resize(524, 524, { mode: 'cover' })}} 2x">
+
+      <source type="image/webp" media="(max-width: 566px)" srcset="{{ person.imglist | media | resize(438, 438, { mode: 'cover', format: 'webp' })}},
+                                                                   {{ person.imglist | media | resize(876, 876, { mode: 'cover', format: 'webp' })}} 2x">
+      <source type="image/jpg"  media="(max-width: 566px)" srcset="{{ person.imglist | media | resize(380, 380, { mode: 'cover' }) }},
+                                                                   {{ person.imglist | media | resize(760, 760, { mode: 'cover' })}} 2x">
+
+      <source type="image/webp" media="(max-width: 767px)" srcset="{{ person.imglist | media | resize(311, 311, { mode: 'cover', format: 'webp' })}},
+                                                                   {{ person.imglist | media | resize(622, 622, { mode: 'cover', format: 'webp' })}} 2x">
+      <source type="image/jpg"  media="(max-width: 767px)" srcset="{{ person.imglist | media | resize(311, 311, { mode: 'cover' }) }},
+                                                                   {{ person.imglist | media | resize(622, 622, { mode: 'cover' })}} 2x">
+
+      <source type="image/webp" media="(max-width: 1024px)" srcset="{{ person.imglist | media | resize(211, 211, { mode: 'cover', format: 'webp' })}},
+                                                                   {{ person.imglist | media | resize(422, 422, { mode: 'cover', format: 'webp' })}} 2x">
+      <source type="image/jpg"  media="(max-width: 1024px)" srcset="{{ person.imglist | media | resize(211, 211, { mode: 'cover' }) }},
+                                                                   {{ person.imglist | media | resize(422, 422, { mode: 'cover' })}} 2x"> 
+                                                                   
+
+      <source type="image/webp" media="(max-width: 3600px)" srcset="{{ person.imglist | media | resize(230, 230, { mode: 'cover', format: 'webp' })}},
+                                                                    {{ person.imglist | media | resize(460, 460, { mode: 'cover', format: 'webp' })}} 2x">
+
+      <source type="image/jpg"  media="(max-width: 3600px)" srcset="{{ person.imglist | media | resize(230, 230, { mode: 'cover' })}},
+                                                                    {{ person.imglist | media | resize(460, 460, { mode: 'cover' })}} 2x">   
+                                                                                                   
       <img type="image/jpg"
-          src="{{ person.imglist|media|resize(200, 200, { mode: 'cover'}) }}"
+          src="{{ person.imglist|media|resize(876, 876, { mode: 'cover'}) }}"
           alt="{{ person.name }}">
     </picture>
   </div>

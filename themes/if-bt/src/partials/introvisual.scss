@@ -35,9 +35,9 @@
 
   /* Animation Keyframes */
 
-  @-webkit-keyframes kenburns {
+  @keyframes kenburns {
     0% {
-      //transform-origin: center; Lighthosue doesnt love me ;(
+      //transform-origin: center; Lighthouse doesnt love me ;(
       transform: scale(1.2);
     }
     50% {

@@ -1,17 +1,17 @@
 body.dark {
   --body-bg: black;
-  --body-color: hsl(var(--light) / 0.6);
+  --body-color: hsl(var(--light) / 0.7);
 
   /* Colors */
   --dark: 189 50% 10%;
   --acc1: 46 100% 20%;
-  --acc1-lgt: 46 55% 03%;
+  --acc1-lgt: 46 55% 05%;
   --acc2: 100 54% 20%;
-  --acc2-lgt: 100 55% 03%;
+  --acc2-lgt: 100 55% 05%;
   --main: 189 50% 20%;
-  --main-lgt: 189 85% 03%;
-  --prim: 32 85% 03%;
-  --prim-lgt: 32 85% 03%;
+  --main-lgt: 189 85% 05%;
+  --prim: 32 85% 05%;
+  --prim-lgt: 32 85% 05%;
   --tec: 0 25% 20%;
   --tec-lgt: 0 0% 10%;
 
@@ -32,20 +32,19 @@ body.dark {
 
   /* Header */
   header {
-    background-color: black;
+    background: var(--body-bg);
+
+    nav ul.menu {
+      li a {
+        color: var(--body-color);
+      }
+    }
 
     label.menu-button-container {
       .menu-button,
       .menu-button::before,
       .menu-button::after {
         background-color: var(--body-color);
-      }
-    }
-
-    #menu-toggle:checked ~ .menu {
-      background: var(--body-bg);
-      li a {
-        color: var(--body-color);
       }
     }
 

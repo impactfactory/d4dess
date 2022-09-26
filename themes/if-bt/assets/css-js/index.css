@@ -416,17 +416,17 @@ template {
 
 body.dark {
   --body-bg: black;
-  --body-color: hsl(var(--light) / 0.6);
+  --body-color: hsl(var(--light) / 0.7);
   /* Colors */
   --dark: 189 50% 10%;
   --acc1: 46 100% 20%;
-  --acc1-lgt: 46 55% 03%;
+  --acc1-lgt: 46 55% 05%;
   --acc2: 100 54% 20%;
-  --acc2-lgt: 100 55% 03%;
+  --acc2-lgt: 100 55% 05%;
   --main: 189 50% 20%;
-  --main-lgt: 189 85% 03%;
-  --prim: 32 85% 03%;
-  --prim-lgt: 32 85% 03%;
+  --main-lgt: 189 85% 05%;
+  --prim: 32 85% 05%;
+  --prim-lgt: 32 85% 05%;
   --tec: 0 25% 20%;
   --tec-lgt: 0 0% 10%;
   /* Buttons */
@@ -451,18 +451,15 @@ body.dark .arrival {
   border-top: 3px solid hsl(var(--light)/0.2);
 }
 body.dark header {
-  background-color: black;
+  background: var(--body-bg);
+}
+body.dark header nav ul.menu li a {
+  color: var(--body-color);
 }
 body.dark header label.menu-button-container .menu-button,
 body.dark header label.menu-button-container .menu-button::before,
 body.dark header label.menu-button-container .menu-button::after {
   background-color: var(--body-color);
-}
-body.dark header #menu-toggle:checked ~ .menu {
-  background: var(--body-bg);
-}
-body.dark header #menu-toggle:checked ~ .menu li a {
-  color: var(--body-color);
 }
 body.dark header nav ul li a,
 body.dark header .contactbox {
@@ -1235,6 +1232,7 @@ header nav #menu-toggle:checked ~ .menu li a {
     z-index: 1000;
   }
   header nav {
+    background: hsl(var(--main));
     display: grid;
     grid-template-columns: 2fr 4fr 1.5fr;
     justify-items: stretch;
@@ -1345,18 +1343,18 @@ header nav #menu-toggle:checked ~ .menu li a {
 }
 .intro .introvisual img {
   animation: kenburns 8s ease;
-  filter: saturate(0.4);
   height: var(--shift);
   position: relative;
   width: 100%;
 }
 .intro .introvisual .overlay {
   text-align: center;
-  text-shadow: 1px 1px 20px hsl(var(--light));
   width: 100%;
   z-index: 100;
 }
 .intro .introvisual .overlay h1 {
+  color: hsl(var(--light));
+  display: inline;
   font-size: var(--font-size);
   line-height: calc(var(--font-size) * var(--leading));
 }

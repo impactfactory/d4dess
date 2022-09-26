@@ -138,6 +138,7 @@ header {
     z-index: 1000;
 
     nav {
+      background: hsl(var(--main));
       display: grid;
       grid-template-columns: 2fr 4fr 1.5fr;
       justify-items: stretch;

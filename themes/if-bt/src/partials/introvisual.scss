@@ -8,7 +8,7 @@
 
     img {
       animation: kenburns 8s ease;
-      filter: saturate(0.4);
+      //filter: blur(2px);
       height: var(--shift);
       position: relative;
       width: 100%;
@@ -16,13 +16,18 @@
 
     .overlay {
       text-align: center;
-      text-shadow: 1px 1px 20px hsl(var(--light));
+      //text-shadow: 1px 1px 15px hsl(var(--light));
       width: 100%;
       z-index: 100;
 
       h1 {
+        //background: hsl(var(--acc1-lgt) / 1);
+        color: hsl(var(--light));
+        display: inline;
         font-size: var(--font-size);
         line-height: calc(var(--font-size) * var(--leading));
+        //box-shadow: 10px 0 0 hsl(var(--acc1-lgt) / 1),
+        //  -10px 0 0 hsl(var(--acc1-lgt) / 1);
       }
     }
   }

@@ -1,0 +1,98 @@
+body.dark {
+  --body-bg: black;
+  --body-color: hsl(var(--light) / 0.6);
+
+  /* Colors */
+  --dark: 189 50% 90%;
+  --acc1-lgt: 46 55% 03%;
+  --acc2-lgt: 100 55% 03%;
+  --main-lgt: 189 85% 03%;
+  --prim: 32 85% 03%;
+  --prim-lgt: 32 85% 03%;
+  --tec-lgt: 0 0% 10%;
+
+  /* Buttons */
+  --btn-bg: hsl(var(--light) / 0.3);
+  --btn-color: hsl(var(--light) / 1);
+
+  /* Images */
+  --img-bright: 0.9;
+
+  .team,
+  .practice,
+  .faq,
+  .reservation,
+  .arrival {
+    border-top: 3px solid hsl(var(--light) / 0.2);
+  }
+
+  header {
+    background-color: black;
+
+    nav ul li a,
+    .contactbox {
+      border-left: 1px solid hsl(var(--light) / 0.2);
+    }
+    .contactbox {
+      a {
+        color: hsl(var(--light) / 0.7);
+      }
+      svg {
+        filter: none;
+      }
+    }
+  }
+
+  /* Keyvisual */
+  .intro .introvisual img {
+    filter: brightness(0.4);
+  }
+
+  /* Google Map */
+  iframe {
+    filter: invert(90%);
+  }
+
+  /* Team */
+  .team .team-list .card {
+    background: hsl(var(--dark) / 0.1);
+    border: none;
+    box-shadow: 5px 5px 20px hsl(0 05% 05% / 1);
+
+    img {
+      filter: brightness(var(--img-bright));
+    }
+  }
+
+  /* Gallery */
+  .gallery {
+    img {
+      filter: brightness(var(--img-bright));
+    }
+
+    .lb-overlay {
+      background: var(--body-bg);
+
+      .svg-inline--fa,
+      .info {
+        color: var(--body-color);
+      }
+
+      h3 {
+        border-right: 1px solid var(--body-color);
+      }
+    }
+  }
+
+  /* Footer */
+  footer {
+    background: black;
+    color: var(--body-color);
+
+    .langselect a,
+    .byline a,
+    .faq details div a {
+      color: var(--body-color);
+    }
+  }
+}

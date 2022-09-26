@@ -1112,6 +1112,9 @@ footer .faq .byline a:hover {
   height: 100%;
 }
 
+header {
+  background: hsl(var(--main));
+}
 header nav {
   display: flex;
   justify-content: space-between;
@@ -1123,7 +1126,7 @@ header nav {
   /* ! contactbox.scss */
 }
 header nav #logo {
-  width: 90%;
+  width: 70%;
 }
 header nav #logo svg {
   display: block;
@@ -1134,10 +1137,10 @@ header nav input#menu-toggle {
 }
 header nav label.menu-button-container {
   display: flex;
-  height: 100%;
-  position: relative;
+  height: auto;
+  position: absolute;
   top: 2rem;
-  right: 2rem;
+  right: 1rem;
   width: 30px;
   cursor: pointer;
   flex-direction: column;
@@ -1226,13 +1229,11 @@ header nav #menu-toggle:checked ~ .menu li a {
 
 @media (min-width: 768px) {
   header {
-    background: hsl(var(--light));
     position: fixed;
     width: 100%;
     z-index: 1000;
   }
   header nav {
-    background: hsl(var(--main));
     display: grid;
     grid-template-columns: 2fr 4fr 1.5fr;
     justify-items: stretch;

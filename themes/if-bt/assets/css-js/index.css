@@ -1309,30 +1309,6 @@ header nav #menu-toggle:checked ~ .menu li a {
     background: hsl(var(--tec));
   }
 }
-.intro h1 span {
-  animation: blendIn 4s ease-in-out 1s forwards;
-  font-size: calc(1.8 * var(--scale) * 1rem);
-  font-weight: var(--fw-xl);
-  line-height: calc(1.8 * var(--leading));
-  opacity: 0;
-}
-@keyframes blendIn {
-  0% {
-    opacity: 0;
-  }
-  75% {
-    color: hsl(var(--dark));
-    opacity: 1;
-  }
-  85% {
-    color: hsl(var(--prim-lgt));
-    opacity: 0.3;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
 .intro {
   width: 100%;
   /* Animation Keyframes */
@@ -1372,22 +1348,6 @@ header nav #menu-toggle:checked ~ .menu li a {
   }
   100% {
     transform: scale(1);
-  }
-}
-@-webkit-keyframes movefirst {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@-webkit-keyframes movesecond {
-  0% {
-    transform: translateX(-400%);
-  }
-  100% {
-    transform: translateX(0%);
   }
 }
 
@@ -1449,45 +1409,21 @@ header nav #menu-toggle:checked ~ .menu li a {
 @media only screen and (min-width: 1025px) and (max-width: 1399px) {
   .intro .introvisual {
     --shift: 40vw;
-    --font-size: calc(var(--shift) / 11);
+    --font-size: calc(var(--shift) / 9);
   }
   .intro .introvisual .overlay {
-    transform: translateY(calc(var(--shift) * -1));
+    transform: translateY(calc(var(--shift) * -0.7));
   }
 }
 @media only screen and (min-width: 1400px) {
   .intro .introvisual {
     --shift: 40vw;
-    --font-size: calc(var(--shift) / 11);
+    --font-size: calc(var(--shift) / 9);
   }
   .intro .introvisual .overlay {
-    transform: translateY(calc(var(--shift) * -1));
+    transform: translateY(calc(var(--shift) * -0.7));
   }
 }
-#languageselect, #languageselect-footer {
-  width: auto;
-  border: none !important;
-  box-shadow: none !important;
-  background-color: rgb(var(--secondary), 0.5);
-  border-radius: 4px 0 0 4px;
-  color: var(--black);
-  font-size: 12px;
-  font-variant: small-caps;
-}
-
-#languageselect {
-  position: absolute !important;
-  top: 0px;
-  right: 0px;
-}
-
-#languageselect-footer {
-  border-radius: 4px;
-  position: relative !important;
-  top: -13px;
-  display: inline-block;
-}
-
 main {
   --opacity: 1;
   display: grid;
@@ -1527,27 +1463,6 @@ main .arrival {
     padding-top: 125px;
   }
 }
-.map-snippet h2 {
-  padding-top: 0 !important;
-}
-.map-snippet .svg-inline--fa {
-  color: var(--primary);
-  width: 1.5rem;
-}
-.map-snippet a, .map-snippet a:active, .map-snippet a:visited {
-  text-decoration: none;
-}
-.map-snippet a:hover {
-  text-decoration: underline;
-}
-.map-snippet a.btn:hover {
-  text-decoration: none;
-}
-
-.map-frame {
-  line-height: 0;
-}
-
 .reservation .medicosearch-widget #medicosearchWidget.mbw-impactfactory {
   /* text on darker color */
 }
@@ -1779,45 +1694,6 @@ main .arrival {
     grid-column: span 1;
   }
 }
-.tooltips {
-  position: relative;
-}
-
-.tooltips::before {
-  background: var(--black);
-  border-radius: 5px;
-  color: var(--white);
-  content: attr(data);
-  display: inline-block;
-  position: absolute;
-  bottom: 50%;
-  left: -50%;
-  opacity: 0;
-  overflow: hidden;
-  padding: 1rem;
-  pointer-events: none;
-  /* prevents tooltip from firing on pseudo hover */
-  text-align: left;
-  transition: 0.3s;
-}
-
-.tooltips:hover::before {
-  bottom: 100%;
-  opacity: 1;
-}
-
-#contactbox .tooltips::before {
-  left: -100px;
-}
-
-#map-snippet .tooltips::before {
-  left: -100px;
-}
-
-#contactsection .tooltips::before {
-  left: -100px;
-}
-
 @media print {
   @page {
     size: A4 portrait;

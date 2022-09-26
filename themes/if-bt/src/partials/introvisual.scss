@@ -8,7 +8,6 @@
 
     img {
       animation: kenburns 8s ease;
-      //filter: blur(2px);
       height: var(--shift);
       position: relative;
       width: 100%;
@@ -16,18 +15,14 @@
 
     .overlay {
       text-align: center;
-      //text-shadow: 1px 1px 15px hsl(var(--light));
       width: 100%;
       z-index: 100;
 
       h1 {
-        //background: hsl(var(--acc1-lgt) / 1);
         color: hsl(var(--light));
         display: inline;
         font-size: var(--font-size);
         line-height: calc(var(--font-size) * var(--leading));
-        //box-shadow: 10px 0 0 hsl(var(--acc1-lgt) / 1),
-        //  -10px 0 0 hsl(var(--acc1-lgt) / 1);
       }
     }
   }
@@ -51,26 +46,6 @@
 
     100% {
       transform: scale(1);
-    }
-  }
-
-  @-webkit-keyframes movefirst {
-    0% {
-      opacity: 0;
-    }
-
-    100% {
-      opacity: 1;
-    }
-  }
-
-  @-webkit-keyframes movesecond {
-    0% {
-      transform: translateX(-400%);
-    }
-
-    100% {
-      transform: translateX(0%);
     }
   }
 }
@@ -146,10 +121,10 @@
 @media only screen and (min-width: 1025px) and (max-width: 1399px) {
   .intro .introvisual {
     --shift: 40vw;
-    --font-size: calc(var(--shift) / 11);
+    --font-size: calc(var(--shift) / 9);
 
     .overlay {
-      transform: translateY(calc(var(--shift) * -1));
+      transform: translateY(calc(var(--shift) * -0.7));
     }
   }
 }
@@ -157,11 +132,11 @@
 @media only screen and (min-width: 1400px) {
   .intro .introvisual {
     --shift: 40vw;
-    --font-size: calc(var(--shift) / 11);
+    --font-size: calc(var(--shift) / 9);
     //max-height: 600px;
 
     .overlay {
-      transform: translateY(calc(var(--shift) * -1));
+      transform: translateY(calc(var(--shift) * -0.7));
     }
   }
 }

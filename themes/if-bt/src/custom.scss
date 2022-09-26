@@ -24,26 +24,10 @@
 @import "partials/footer.scss";
 @import "partials/galleries.scss";
 @import "partials/header.scss";
-@import "partials/intro.scss";
 @import "partials/introvisual.scss";
-@import "partials/languageswitch.scss";
 @import "partials/main.scss";
-@import "partials/map-snippet.scss";
 @import "partials/medicosearch-widget.scss";
 @import "partials/team-teamlist.scss";
-@import "partials/tooltips.scss";
-
-///////////////// Bootstrap imports /////////////////////////
-// see bootsrap base file for details; unused modules are commented out
-// same with javascript modules
-
-//@import "../node_modules/bootstrap/scss/bootstrap";
-
-///////////////// extending classes ////////////////////////
-//we make our life easier and extend some global elements with already existing for this projects
-//- f.e. indent x-dimension with the class, but adapt y-dimension locally
-
-//@import "partials/globals-extensions.scss";
 
 //////////////// print ////////////////////////
 //at the very end of all we can do the print adaptions, thats reducing some loading time

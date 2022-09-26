@@ -3,7 +3,7 @@ body.dark {
   --body-color: hsl(var(--light) / 0.6);
 
   /* Colors */
-  --dark: 189 50% 90%;
+  --dark: 189 50% 10%;
   --acc1: 46 100% 20%;
   --acc1-lgt: 46 55% 03%;
   --acc2: 100 54% 20%;
@@ -33,6 +33,21 @@ body.dark {
   /* Header */
   header {
     background-color: black;
+
+    label.menu-button-container {
+      .menu-button,
+      .menu-button::before,
+      .menu-button::after {
+        background-color: var(--body-color);
+      }
+    }
+
+    #menu-toggle:checked ~ .menu {
+      background: var(--body-bg);
+      li a {
+        color: var(--body-color);
+      }
+    }
 
     nav ul li a,
     .contactbox {
@@ -64,7 +79,7 @@ body.dark {
 
   /* Team */
   .team .team-list .card {
-    background: hsl(var(--dark) / 0.1);
+    background: hsl(var(--dark) / 1);
     border: none;
     box-shadow: 5px 5px 20px hsl(0 05% 05% / 1);
 

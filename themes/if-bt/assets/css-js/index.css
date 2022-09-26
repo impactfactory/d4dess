@@ -418,7 +418,7 @@ body.dark {
   --body-bg: black;
   --body-color: hsl(var(--light) / 0.6);
   /* Colors */
-  --dark: 189 50% 90%;
+  --dark: 189 50% 10%;
   --acc1: 46 100% 20%;
   --acc1-lgt: 46 55% 03%;
   --acc2: 100 54% 20%;
@@ -453,6 +453,17 @@ body.dark .arrival {
 body.dark header {
   background-color: black;
 }
+body.dark header label.menu-button-container .menu-button,
+body.dark header label.menu-button-container .menu-button::before,
+body.dark header label.menu-button-container .menu-button::after {
+  background-color: var(--body-color);
+}
+body.dark header #menu-toggle:checked ~ .menu {
+  background: var(--body-bg);
+}
+body.dark header #menu-toggle:checked ~ .menu li a {
+  color: var(--body-color);
+}
 body.dark header nav ul li a,
 body.dark header .contactbox {
   border-left: 1px solid hsl(var(--light)/0.2);
@@ -473,7 +484,7 @@ body.dark iframe {
   filter: invert(90%);
 }
 body.dark .team .team-list .card {
-  background: hsl(var(--dark)/0.1);
+  background: hsl(var(--dark)/1);
   border: none;
   box-shadow: 5px 5px 20px #0d0c0c;
 }
